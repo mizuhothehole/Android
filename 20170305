@@ -1,0 +1,24 @@
+SOME QUICK COMMAND IN ANDROID STUDIO
+
+Today I will write some kinds of quick command about android studio.and recently I am working for Sony mobile phone which makes
+the Xperia series.
+Learning more about the commands will help me to learn more about the env.
+
+The first command is shift,ctrl,plus/minus this will fold or unfold the blocks about the method or the inner class.Sometimes in 
+the development of the android when do not know exactly what the arrow marks are showing and we just unfold the source code and
+well it is java source in it. And this time we could just use shift,ctrl,plus/minus.
+
+The second I recommand is CTRL,SHIFT,F12, which will hide all windows in the IDE.If we want to see source code in full screen we 
+could use this quick command. And see the source code more clearly.
+
+
+The third commad is the CTRL,SHIFT,BACKSPACE command. This command will go to the last place we editted last time.Of cuz it is quite
+useful.
+
+The best command is CTRL,SHIFT,I. This command will show the source of a override method and will not close the window. Sometimes 
+we want to see some kind of overwrited classes in exteded classes and do not want to close the window, we could use this.
+
+Another good command. When we want to move a line upper or lower, we will use CTRL,SHIFT,UP/DOWN.This would make the row upper
+and lower without ctrl,x and ctrl,v.
+
+Also we can edit a block by using ALT.Block editing is usable.
