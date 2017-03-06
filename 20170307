@@ -1,0 +1,41 @@
+USING PENDINGINTENT TO BIND GEOFENCE
+
+ProximityActivity.java
+
+/**
+ * Created by Jay on 2015/11/21 0021.
+ */
+public class ProximityActivity extends AppCompatActivity {
+    private LocationManager lm;
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_proximity);
+        lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        //定义固定点的经纬度
+        double longitude = 113.56843;
+        double latitude = 22.374937;
+        float radius = 10;     //定义半径，米
+        Intent intent = new Intent(this, ProximityReceiver.class);
+        PendingIntent pi = PendingIntent.getBroadcast(this, -1, intent, 0);
+        lm.addProximityAlert(latitude, longitude, radius, -1, pi);
+    }
+}
+
+ProximityReceiver.java
+
+/**
+ * Created by Jay on 2015/11/21 0021.
+ */
+public class ProximityReceiver extends BroadcastReceiver{
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        boolean isEnter = intent.getBooleanExtra( LocationManager.KEY_PROXIMITY_ENTERING, false);
+        if(isEnter) Toast.makeText(context, "你已到达南软B1栋附近", Toast.LENGTH_LONG).show();
+        else Toast.makeText(context, "你已离开南软B1栋附近", Toast.LENGTH_LONG).show();
+    }
+}
+
+Manifest.xml
+
+<receiver android:name=".ProximityReceiver"/>
