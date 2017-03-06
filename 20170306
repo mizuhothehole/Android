@@ -1,0 +1,23 @@
+USAGE OF ACTIVITY IN ANDROID
+
+TO START A ACTIVITY：they are defined in Activity.java
+
+startActivity（Intent intent）
+startActivityForResult（Intent i，int requestCode）（setResult、onActivityResult）
+
+TO START A SERVICE：they are defined in Context.java
+
+startService（Intent intent）
+bindService(Intent intent, ServiceConnection, BIND_AUTO_CREATE);
+
+TO SEND A BROADCAST：it is defined in Context.java
+
+sendBroadcast（Intent intent）
+
+TO DEFINE A PENDINGINTENT：they are definec in context
+
+getActivity
+geyService
+getBroadcastReceiver
+
+they are in the status of pending and will not be done instantly. After using the sending method it will be activated at once.
