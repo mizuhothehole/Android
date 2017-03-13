@@ -6,3 +6,6 @@ by using the properties in it called current process。And it has the properties
 It has the newest properties with a callback。And this can let us define what will happen when we start changing the tramp ，stop
 changing the tramp or changing the tramp。
 We can also change the image of the tramp。
+3.animation
+We can achieve this by using a alpha animation.By setting the front popupdialog with a view with animation this can be easily
+achieved.
