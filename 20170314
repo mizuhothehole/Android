@@ -1,0 +1,16 @@
+Something about the debug version and the release version in android studio
+
+Now I am using the gradlew assemble command to build all the versiona of the
+application. The control of different versions of apk is controllef by the 
+build type in gradle define.
+
+There are two different ways having a effect on this build file. The first 
+option is to effect it in package infomation of the meta data。 And the second
+option is effect the data ditectly by buildConfigField property.
+
+When we want to know what will effect the source code of the process we will 
+just investigate the different buildtype options.
+
+Try to learn something about gradle which is also a kind of groove language.
+
+Now I am working in a AI project in Sony mobile.
