@@ -1,6 +1,6 @@
 Using Reflect To Using The Methods Of Field Of A Class When Having The Pointor
 
-1.ChildClass.java
+1.1 ChildClass.java
 
 package com.example.user.androidreflect;
 
@@ -21,7 +21,7 @@ public class ChildClass {
     }
 }
 
-2.MainActivity.java
+1.2 MainActivity.java
 
 package com.example.user.androidreflect;
 
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 
-3.ReflectTest.java
+1.3 ReflectTest.java
 
 package com.example.user.androidreflect;
 
@@ -86,7 +86,7 @@ public class ReflectTest {
     }
 }
 
-4.Logcat 
+1.4 Logcat 
 
 03-28 14:59:41.986 30782-30782/com.example.user.androidreflect D/----field log----: mChildClass
 03-28 14:59:41.998 30782-30782/com.example.user.androidreflect D/----method log----: makeText
@@ -96,3 +96,6 @@ public class ReflectTest {
 03-28 14:59:41.998 30782-30782/com.example.user.androidreflect D/TAG: -----------Success log---------------
 03-28 14:59:41.998 30782-30782/com.example.user.androidreflect D/TAG: -----------Success log---------------
 03-28 14:59:41.998 30782-30782/com.example.user.androidreflect D/TAG: -----------Success log---------------
+
+
+2 Uploading File In Android By Using Json
