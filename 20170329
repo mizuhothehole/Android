@@ -1,0 +1,98 @@
+Using Reflect To Using The Methods Of Field Of In A Class
+
+1.ChildClass.java
+
+package com.example.user.androidreflect;
+
+import android.util.Log;
+import android.widget.Toast;
+
+/**
+ * Created by user on 2017/03/28.
+ */
+
+public class ChildClass {
+    public void makeText(){
+        Log.d("TAG","-----------Success log---------------");
+        Log.d("TAG","-----------Success log---------------");
+        Log.d("TAG","-----------Success log---------------");
+        Log.d("TAG","-----------Success log---------------");
+        Log.d("TAG","-----------Success log---------------");
+    }
+}
+
+2.MainActivity.java
+
+package com.example.user.androidreflect;
+
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
+public class MainActivity extends AppCompatActivity {
+
+    ReflectTest mReflect;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        mReflect = new ReflectTest();
+        mReflect.initialize();
+        try {
+            Field field = mReflect.getClass().getDeclaredField("mChildClass");
+            field.setAccessible(true);
+            ChildClass theClass = (ChildClass)field.get(mReflect);
+            field.setAccessible(true);
+            Log.d("----field log----",field.getName());
+            Method method = field.getType().getDeclaredMethod("makeText");
+            Log.d("----method log----",method.getName());
+            Method myM = theClass.getClass().getDeclaredMethod("makeText");
+            Log.d("----myClass log----","success");
+            myM.invoke(theClass);
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+3.ReflectTest.java
+
+package com.example.user.androidreflect;
+
+/**
+ * Created by user on 2017/03/28.
+ */
+
+public class ReflectTest {
+    private ChildClass mChildClass;
+
+    public void initialize(){
+        this.mChildClass = new ChildClass();
+    }
+    public void makeLog(){
+        mChildClass.makeText();
+    }
+}
+
+4.Logcat 
+
+03-28 14:59:41.986 30782-30782/com.example.user.androidreflect D/----field log----: mChildClass
+03-28 14:59:41.998 30782-30782/com.example.user.androidreflect D/----method log----: makeText
+03-28 14:59:41.998 30782-30782/com.example.user.androidreflect D/----myClass log----: success
+03-28 14:59:41.998 30782-30782/com.example.user.androidreflect D/TAG: -----------Success log---------------
+03-28 14:59:41.998 30782-30782/com.example.user.androidreflect D/TAG: -----------Success log---------------
+03-28 14:59:41.998 30782-30782/com.example.user.androidreflect D/TAG: -----------Success log---------------
+03-28 14:59:41.998 30782-30782/com.example.user.androidreflect D/TAG: -----------Success log---------------
+03-28 14:59:41.998 30782-30782/com.example.user.androidreflect D/TAG: -----------Success log---------------
