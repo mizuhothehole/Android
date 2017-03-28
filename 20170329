@@ -99,3 +99,6 @@ public class ReflectTest {
 
 
 2 Uploading File In Android By Using Json
+
+This function in android is based on Java socket and will use the client outputstream to make sure the upload stream.
+File --> Java Object --> serialized stream --> output stream -->http url connection --> write and flush
