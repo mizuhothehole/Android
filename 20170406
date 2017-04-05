@@ -1,0 +1,17 @@
+关于LocalBroadcastManager的一些思考
+1.关于本地广播和普通广播
+近期对于项目中安卓的东西进行了一些作业，其中感觉目前基本上就是这么几种。一个是LocalBroadcastManager这个东西，这是用来进行本地的BroadcastManager的操作
+另外一种则是进行全安卓系统的broadcast发送和接受。感觉这些都是很普通的而已，只不过本地广播一定是同一个context。这里要把本地广播，普通广播的区别和静态广播
+和动态广播的区别区分开来，一个是由参数决定的，另一个是由是不是提前注册，以及生命周期决定的。然而LocalBroadcastManager也是这样一个东西。需要一个注册的
+动作。因此也是动态的。
+
+2.关于context的一些研究。在service和activity里面我们一直都是在用getApplication，然而在其他的场景之下，比如在onReceive里面，我们要应用getApplication
+Context。另外我还知道，两个不同的context一定不会支持同一个LocalBroadcast.关于getContext()、getApplication()、getApplicationContext()、
+getActivity()的区别：
+(1).getContext():获取到当前对象的上下文。
+(2).getApplication():获得Application的对象
+(3).getApplicationContext():获得应用程序的上下文。有且仅有一个相同的对象。生命周期随着应用程序的摧毁而销毁。就像是社会，所有的都发生在这个社会上，
+仅且只有一个社会。每个Activity都有自己的上下文，而整个应用只有一个上下文
+(4)getActivity():获得Fragment依附的Activity对象。Fragment里边的getActivity()不推荐使用原因如下：这个方法会返回当前Fragment所附加的Activity，
+当Fragment生命周期结束并销毁时，getActivity()返回的是null，所以在使用时要注意判断null或者捕获空指针异常。所以只要判断getActivity()为空，就可以
+不再执行下面的代码，这完全不影响业务的使用
