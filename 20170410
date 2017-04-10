@@ -8,4 +8,7 @@ ctrl shift backspace ：jump to the place just be edited.
 ctrl G ：search where a function or parameter is used.
 F4 ：shows the extending between classes.
 F2 ：shows the API of a class.
-shift F6 ：rename
+shift F6 ：rename.
+shift click ：close a file.
+alt up ：move to upper code block.
+alt down ：move to lower code block.
