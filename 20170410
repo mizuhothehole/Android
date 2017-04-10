@@ -12,3 +12,4 @@ shift F6 ：rename.
 shift click ：close a file.
 alt up ：move to upper code block.
 alt down ：move to lower code block.
+ctrl N ：see the defination of a file or class.
