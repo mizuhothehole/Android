@@ -1,0 +1,11 @@
+Android Studio Hot Keys
+
+ctrl shift - ：fold a method.
+ctrl shift + ：unfold a method.
+ctrl shift up ：jump to the upper searched place.
+ctrl shift down ：jump to the lower searched place.
+ctrl shift backspace ：jump to the place just be edited.
+ctrl G ：search where a function or parameter is used.
+F4 ：shows the extending between classes.
+F2 ：shows the API of a class.
+shift F6 ：rename
