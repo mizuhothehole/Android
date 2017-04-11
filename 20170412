@@ -1,0 +1,22 @@
+Adb debug android system
+
+adb devices 
+    show the devices current connecting.
+adb logcat
+    shows the system logs.
+    -c clear buffer
+    -b
+        main
+        events
+        radio
+    -v output log in format
+        time
+    -f output log into a file
+adb install/uninstall
+    when using install point the apk file and when using uninstall using packagename
+adb pull/push
+    transfer files between android phone and debug pc
+adb start/kill -server
+    kill or starr adb server
+adb shell
+    high level usage
