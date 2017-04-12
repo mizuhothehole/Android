@@ -1,0 +1,20 @@
+HIGH LEVEL USAGE OF ADB SHELL AM
+
+adb shell am start -n package name/package name.activity class name（test pass）
+
+adb shell am start -n com.android.alarmclock/com.android.alarmclock.Alarmclock
+
+adb shell am start -n com.android.calendar/com.android.calendar.LaunchActivity
+
+...com.android.music/com.android.music.MusicBrowerActivity
+...com.android.music/com.android.music.VideoBrowerActivity
+...com.android.music/com.android.music.MediaPlaybackActivity
+...com.android.camera/com.android.camera.Camera
+...com.android.brower/com.android.brower.BrowerActivity
+
+make a telephone：
+
+am start -a android.intent.action.CALL -d tel：10086
+
+
+
