@@ -17,4 +17,7 @@ make a telephone：
 am start -a android.intent.action.CALL -d tel：10086
 
 
+am start -a android.intent.action.VIEW geo:0,0?q=beijing
+
+
 
