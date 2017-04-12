@@ -20,3 +20,11 @@ adb start/kill -server
     kill or starr adb server
 adb shell
     high level usage
+adb connect/disconnect
+    remote debugging，using adb tcpip 5555 first
+    
+adb shell pm
+adb shell am
+adb shell dumpsys
+adb shell screencap
+adb shell screenrecord
