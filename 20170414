@@ -1,0 +1,11 @@
+Android Debug Bridge Toolkit
+
+adb shell am：
+    1.using am to start a service.
+        adb shell am startservice -n packagename/package.service name
+        （caution： android：exported in manifest should be setten true for permission security.）
+    2.using am to start a activity.
+        adb shell am start -n packagensme/packagename.activity name
+        （no security limitation in manifest.xml）
+    3.
+    
