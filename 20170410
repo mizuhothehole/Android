@@ -13,3 +13,7 @@ shift click ：close a file.
 alt up ：move to upper code block.
 alt down ：move to lower code block.
 ctrl N ：see the defination of a file or class.
+ctrl x : delete blank row.
+ctrl left/right : jump by words.
+ctrl up/down : move the background of code.
+ctrl shift left/right : select code by blocks
