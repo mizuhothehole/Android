@@ -25,3 +25,9 @@ This is the folder that contains the data about the program. Which is all functi
 resources.arsc
 
 this is a file listing all resources of the APP. which can be used for indexing the app resources.
+
+classes.dex
+
+this is a classes file of java files included. All the java source files compiled are here.
+we can uncompile it using some tools. so that we can get smali files having the mapping relationship to java files. Just like looking at the
+java source files. Well, even through I do not want to learn the smali this time.
