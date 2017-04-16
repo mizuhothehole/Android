@@ -1,0 +1,27 @@
+APK File Analyse
+
+CERT.RSA
+this is a file containing the infomation of key SHA1 calculating method.
+CERT.SF
+this contains the manifest datas of the developer, that has been calculated by SHA1 counting method.
+MANIFEST.MF
+another MF file will be automatically made while installing the APK, and will be compared to the CERT.SF
+
+双重认证：用私匙加密的数据只能用公匙解密，用公匙加密的数据也只能用私匙解密。RSA文件就是一个公匙文件，而CERT.SF则是一个私匙加密之后生成的文件。
+
+APK文件的认证方式，第一步骤如下，首先是经过一个完全的去掉了加密的文件以及文件夹的文件的一个manifest文件，这个文件是用来和MANIFEST.MF元数据
+文件进行比对的，比对之后，再进一步的进行下个验证，这一步的验证就是再把自动生成的元数据文件进行相关的私匙加密的处理，然后再经过公匙解密之后和
+元数据文件进行比对，比对之后就可以得知，是不是OK的。也就是说其实APK的授权也就是给用户一个私匙。用来加密自己的东西。私匙的算法没有的话，用户是
+没有办法通过第二层验证的。
+
+AndroidManifest.xml
+
+This is the same as the manifest file while developing the apk by developers. And anyway, it is also seems give us a lot of infomation
+about the codes. And MANIFEST.MF just give us some infomation about the file system at all.
+
+res(folder)
+This is the folder that contains the data about the program. Which is all functions of the APK.
+
+resources.arsc
+
+this is a file listing all resources of the APP. which can be used for indexing the app resources.
