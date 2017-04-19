@@ -23,3 +23,11 @@ out or not.
 
 In fact Prem is just wanting me to do this.Not making
 some file or some other things.
+
+This time I tested the migration of databases. V1->V3 and V2->V3.
+This is a kind of test using test case. For Android test 
+upgraded App DB migration，It goes the onupdate method
+while there is a data update. Also there will be going
+oncreate in databasehelper while the App is newly installized.
+Simple logic for db version.The first install always go the oncreate
+no matter what the version is.
