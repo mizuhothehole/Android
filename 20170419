@@ -14,3 +14,10 @@ And the winner is who tests out the mistakes.
 The second point of view is that the test method 
 determines the success of the test.
 
+Seems that I am testing errors by using class UT
+and user cases. Well，whether I can win the difficulty
+depends on whether the errors of the code can be tested
+out or not.
+
+In fact Prem is just wanting me to do this.Not making
+some file or some other things.
