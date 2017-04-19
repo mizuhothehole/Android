@@ -1,0 +1,16 @@
+Android test concepts
+
+We are using and trying some new works called
+Android manual test. It is a little hard 
+for a new tester because we do not even know
+anything about the program. We also do not have enough 
+time to see the source code. So how can I continue 
+this work.
+
+The first point of view is that test is for 
+testing out the mistakes of the source code.
+And the winner is who tests out the mistakes.
+
+The second point of view is that the test method 
+determines the success of the test.
+
