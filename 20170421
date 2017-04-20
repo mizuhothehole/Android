@@ -1,0 +1,12 @@
+Using Logs in Android Development
+
+1.when using + in java, it will make the later object to the String. for example, "show me the string" + null , this will be made 
+into "show me the string" and will not make any compile error. Also "show me the string" + 1 will show us "show me the string1".
++ will put out the char as it is in memory. It is a very strong calculating mark.
+There is a skill when using Log.d(TAG,"some string" + anything in memory); TAG is always the class name.
+
+2.when we use the logs in android development,it seems that we must make a standard to output log. The first way is always make a 
+TAG which is the class name of current class. And using "+" is also a good way to make a log without type transfering.Also in my 
+point of view, the String before "+" should be the method name at first and then the content of the thing that we want to output.
+At last it should be the memory raw data. If it is a kind of edge log, after "+" it should be the "starting", "ending" or something.
+Well, anyway we must make a good concept of making a standard.
