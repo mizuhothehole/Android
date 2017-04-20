@@ -10,3 +10,5 @@ TAG which is the class name of current class. And using "+" is also a good way t
 point of view, the String before "+" should be the method name at first and then the content of the thing that we want to output.
 At last it should be the memory raw data. If it is a kind of edge log, after "+" it should be the "starting", "ending" or something.
 Well, anyway we must make a good concept of making a standard.
+
+3.log.d is always used because d means debug. log.i is meaning information, log.e means error, log.w means warning or something.
