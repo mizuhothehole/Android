@@ -12,3 +12,6 @@ At last it should be the memory raw data. If it is a kind of edge log, after "+"
 Well, anyway we must make a good concept of making a standard.
 
 3.log.d is always used because d means debug. log.i is meaning information, log.e means error, log.w means warning or something.
+
+4.cutting line + classname+methodname+parametername+parametervalue +cutting line or cutting line + classname+methodname+returnname+returnvalue + cutting line
+this will be the best way to show the log in logcat I think.
