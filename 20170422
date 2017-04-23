@@ -45,3 +45,10 @@ XMPP Service：这个是用来以XMPP(一种XML的变种)格式进行数据传�
 五。Linux可调参数
 
 在安卓系统目录的 sys/kernel下面。这里面的可调参数在如下的文件当中。uevent_helper, kexec_loader, mm, slab。其他的在(proc/sys/kernel)接口中
+动态调试功能就是你可以决定在程序运行过程中是否要 pr_debug(), dev_dbg(), print_hex_dump_debug(), print_hex_dump_bytes() 这些函数正常运行起来。
+
+echo –n 'file suspend.c line 340 +p' > /sys/kernel/debug/dynamic_debug/control     让 kernel/power/suspend.c 源码第340行的 pr_debug() 函数打印日志：
+echo -n 'file test.c +p' >            /sys/kernel/debug/dynamic_debug/control      让 test.c file 中的pr_debug()，dev_dbg()等函数打印日志：
+echo -n 'func test_control -p' > /sys/kernel/debug/dynamic_debug/control            让 test_control 函数不打印日志：
+echo -n 'module test +p' >    /sys/kernel/debug/dynamic_debug/control                 让 module test中的pr_debug()，dev_dbg()等函数打印日志：
+
