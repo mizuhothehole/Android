@@ -2,6 +2,11 @@ Create Crossfading Animate In Android
 
 1.MainAvtivity.java
 
+Two ways to make animation in android view. Another 
+way is to use AnimationUtil to make view into a
+animate object and using this way you can use xml
+file to avoid hard-coding.
+
 public class MainActivity extends Activity {
 
 private View mView；
