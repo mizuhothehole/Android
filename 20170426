@@ -1,0 +1,28 @@
+Create Crossfading Animate In Android
+
+1.MainAvtivity.java
+
+public class MainActivity extends Activity {
+
+private View mView；
+private int mAnimateDuration；
+
+@Override
+protected void onCreate（Bundle savedInstanceState）{
+
+super.onCreate（savedInstanceState）；
+setContentView（R.layout.activityMain）
+mView = findViewById（R.id.textViewSample）；
+mView.setVisibility（View.GONE）；
+mAnimateDutation = getResource.getInteger（android.R.integer.config_shortAnimTime）；
+
+animateDutation.animate（）.setDuration（mAnimateDuration）.setAlpha（0f）.setListener（new AnimatorListenerAdaptor（）
+{
+@Override
+public void onAnimationEnd（）{
+mView.setVisibility（View.GONE）；
+}
+}
+）；
+}
+}
