@@ -1,0 +1,16 @@
+Research about AnimationUtil
+
+AnimationUtil is a tool class for process of Animation in android.
+
+currentAnimationTimeMillis（）：
+
+this is for showing the current milliseconds of the current animation.
+For example， if the animation started at 1234567890123，and the animation
+is having the total play time of 1000ms，the value will be between 1234567890123
+and 1234567891123， which means it is a full-recording time. However it is
+using systemclock of android. It is not using the timestamp in java runtime.
+We can get how long the animation is played by using AnimationUtil.currentAnimationTimeMillis-
+aninationStartTime（got by other ways）. The value will be between 0 and the 
+duration of the animation. If the animation has not been started the value will
+be zero.
+
