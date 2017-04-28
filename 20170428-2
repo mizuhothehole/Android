@@ -1,0 +1,33 @@
+Hard-coding of android anination in java source
+
+We can use AlphaAnimtion， RotateAnimation， ScaleAnimation and TranslateAnimation in android，also use the
+AnimationSet to contain all of them.
+
+ImageView img = (ImageView)findViewById（R.Id.ImageView1）；
+
+AlphaAnimation：
+AlphaAnination alpha = new AlphaAnimation（1， 0.5f）；
+alpha.setDuration（3000）；
+img.startAnimation（alpha）；
+
+RotateAnimation：
+RotationAnimation rotate = new Rotation（0，360，img.getWidth/2，img.getHeight/2）；
+rotate.setDuration（3000）；
+img.startAnimate（rotate）；
+
+ScaleAnimation：
+ScaleAnimation scale = new ScaleAnimation（1，0.5f，1，0.5f）；
+scale.setDuration（3000）；
+img.startAnimate（scale）；
+
+TranslateAnimation：
+TranslateAnimation translate = new TranslateAnimation（0，100，0，100）；
+translate.setDuration（3000）；
+img.startAnimate（translate）；
+
+AnimateSet set = new AninateSet（true）；
+set.add（rotate）；
+set.add（translate）；
+set.add（alpha）；
+set.add（scale）；
+ima.startAnimate（set）；
