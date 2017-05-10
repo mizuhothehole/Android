@@ -1,0 +1,18 @@
+Android permission dynamic operation
+
+android.content.pm
+
+content is not same as context. the relationship is like this：android.content.context.java
+
+PackageManager API
+
+1.addpermission
+    in order to use this permission we have to make a defination of permission tree in manifest file. And this will make the addpermission api usable. this tree is called permission space.
+    Also we can use another method like change linux files but it is not allowed due to security issues. But in tech it is possible but no one break the android policy. But sometimes the data in SdCard seems to be readable and writable.
+
+2.removepermission
+    same as addpermission.It refers to a permission space and the modifying of permissions in android package can be done dynamic.
+
+3.addpermissionsync
+    seems no one is using this api.
+    
