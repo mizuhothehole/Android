@@ -4,3 +4,4 @@ Always use InstrumentationRegistry.getTargetContext（） to get the context of 
 If we try to register a receiver we must use this because android do not support the cases of broadcastreceiver.
 This may be the reason of the failure today.
 Because I used the wrong context so there is no reaching the on receive method.
+Activity のテストなら ActivityInstrumentationTestCase2 、 Service なら ServiceTestCase を使うべきなんでしょうけど、Android って事あるごとに Context が必要なので、ただのクラスライブラリのテストでも必要なことがシバシバ。
