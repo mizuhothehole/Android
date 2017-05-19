@@ -1,7 +1,22 @@
-Context objects in Junit4 test
+Context objects in Junit4 test usage.
 
 Always use InstrumentationRegistry.getTargetContext（） to get the context of the application.
 If we try to register a receiver we must use this because android do not support the cases of broadcastreceiver.
 This may be the reason of the failure today.
 Because I used the wrong context so there is no reaching the on receive method.
 Activity のテストなら ActivityInstrumentationTestCase2 、 Service なら ServiceTestCase を使うべきなんでしょうけど、Android って事あるごとに Context が必要なので、ただのクラスライブラリのテストでも必要なことがシバシバ。 
+
+The night yesterday I tried to make some tests about the contexts and I find the instremtationregistery.gettargetcontext（）.getapplicationcontext will give me a pointor pointing to the object of the real-app in the test-app. So we can use this application to do a lot of things. 
+
+The huge diffetence between the context objects is that of we use Instrumentionregistry.getcontext（）.getpackagename（），it will give us string of XXXApp-test，but using the Instrumentionregistry.gettargetcontext（）.getpackagename（） will give us a string of XXXApp.
+
+Also the application context has a lot of methods to be used. Like register a alarm receiver， unregister a receiver，sending a intent， start a service， stop a service， start a activity， end a activity，getting a contentproviderresolver or any other behaviors.
+
+About the data aspects， it is also can be asserted. If we use the real-app context object we can use the sharedpreference. And if we use the database， well， because it is not in a life circle and always there，it seems no any matter with the context object.
+
+the extending of those classes are like this：
+
+context（abstract）->contextwrapper-> applicationcontext（we can use this because it is stability）
+丨
+v
+contextimpl
