@@ -1,0 +1,30 @@
+Leakcanary tool for testing the leak of memory in java
+
+Some objects are created by new in java. And these leak objects in android development will never be recycled by GC in JVM.As a result,the objects not recycled will be always in the memory. So,what we need to do is to try to make the objects we created to be null while some processes are done. This is the basical thing.
+
+So, what about other conditions. If we register a listener,we must unregister it.If we started a service, we must stop it. If we initialize something,we must terminate it.If we are using a stream,we must close it after using.After using a db connection,we must close it.
+
+Anyway, it seems that the bestway is to use the leakcanary to watch the whole application.If we are developing a background service,we can watch the service in destroy method.etc.
+So we just need to use it like this.
+
+1.add the dependency of it 
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:support-v13:+'
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.3'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.3'
+}
+
+2.make a watch method in app like this and always use it 
+Class Xxxapp extends application {
+refWatcher = Leakcanary.install (this)
+}
+
+Xxx extends xxxmodule of android {
+
+Xxx.ondestroy ();
+refwatcher = Xxxapp.getwatcher ;
+refwatcher.watch (this);
+}
+
+And when there is something leaking when destroy, the alarm will happen and tell you in logcat.
