@@ -4,6 +4,8 @@ Some objects are created by new in java. And these leak objects in android devel
 
 So, what about other conditions. If we register a listener,we must unregister it.If we started a service, we must stop it. If we initialize something,we must terminate it.If we are using a stream,we must close it after using.After using a db connection,we must close it.
 
+Always pay attentions on the fields of the class. Whether the fields are cycled or not after some terminal methods.And put some null check before making the big objects while creating big objects.
+
 Anyway, it seems that the bestway is to use the leakcanary to watch the whole application.If we are developing a background service,we can watch the service in destroy method.etc.
 So we just need to use it like this.
 
