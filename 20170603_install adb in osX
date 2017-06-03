@@ -1,3 +1,0 @@
-1.$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-2.brew cask install android-platform-tools
-3.adb devices

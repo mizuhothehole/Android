@@ -1,0 +1,105 @@
+1.$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+2.brew cask install android-platform-tools
+3.adb devices
+
+HUAWEI P9 ANDROID:
+
+ishiiryounoAir:AndroidStudioProjects ishiiaya$ adb root
+adbd cannot run as root in production builds
+
+1|HWVNS-H:/ $ ls -a                                                                                                                                                                                        
+ls: ./modem_log: Permission denied
+ls: ./mnvm2:0: Permission denied
+ls: ./modem_fw: Permission denied
+ls: ./patch_hw: Permission denied
+ls: ./sec_storage: Permission denied
+ls: ./wifi_cfg: Permission denied
+ls: ./verity_key: Permission denied
+ls: ./ueventd.rc: Permission denied
+ls: ./ueventd.hi6250.rc: Permission denied
+ls: ./ueventd.6198.rc: Permission denied
+ls: ./ueventd.61457.rc: Permission denied
+ls: ./ueventd.61285.rc: Permission denied
+ls: ./ueventd.61202.rc: Permission denied
+ls: ./ueventd.51316.rc: Permission denied
+ls: ./ueventd.4873.rc: Permission denied
+ls: ./ueventd.4541.rc: Permission denied
+ls: ./ueventd.3584.rc: Permission denied
+ls: ./service_contexts: Permission denied
+ls: ./sepolicy: Permission denied
+ls: ./selinux_version: Permission denied
+ls: ./seapp_contexts: Permission denied
+ls: ./rootscan.conf: Permission denied
+ls: ./resetFactory.cfg: Permission denied
+ls: ./ram_reg_test_cfg: Permission denied
+ls: ./init.zygote64_32.rc: Permission denied
+ls: ./init.zygote32.rc: Permission denied
+ls: ./init.usb.rc: Permission denied
+ls: ./init.usb.configfs.rc: Permission denied
+ls: ./init.tee.rc: Permission denied
+ls: ./init.recovery.huawei.rc: Permission denied
+ls: ./init.recovery.hisi.rc: Permission denied
+ls: ./init.recovery.balong_modem.rc: Permission denied
+ls: ./init.rc: Permission denied
+ls: ./init.protocol.rc: Permission denied
+ls: ./init.post-fs-data.rc: Permission denied
+ls: ./init.platform.rc: Permission denied
+ls: ./init.performance.rc: Permission denied
+ls: ./init.manufacture.rc: Permission denied
+ls: ./init.hisi.usb.rc: Permission denied
+ls: ./init.hisi.rc: Permission denied
+ls: ./init.hi6250.rc: Permission denied
+ls: ./init.extmodem.rc: Permission denied
+ls: ./init.environ.rc: Permission denied
+ls: ./init.device.rc: Permission denied
+ls: ./init.connectivity.rc: Permission denied
+ls: ./init.connectivity.hisi.rc: Permission denied
+ls: ./init.connectivity.gps.rc: Permission denied
+ls: ./init.connectivity.bcm43xx.rc: Permission denied
+ls: ./init.connectivity.bcm43455.rc: Permission denied
+ls: ./init.chip.usb.rc: Permission denied
+ls: ./init.chip.charger.rc: Permission denied
+ls: ./init.charger.rc: Permission denied
+ls: ./init.balong_modem.rc: Permission denied
+ls: ./init.audio.rc: Permission denied
+ls: ./init.6198.rc: Permission denied
+ls: ./init.61457.rc: Permission denied
+ls: ./init.61285.rc: Permission denied
+ls: ./init.61202.rc: Permission denied
+ls: ./init.51316.rc: Permission denied
+ls: ./init.4873.rc: Permission denied
+ls: ./init.4541.rc: Permission denied
+ls: ./init.3584.rc: Permission denied
+ls: ./init: Permission denied
+ls: ./fstab.zram512m: Permission denied
+ls: ./fstab.zram1536m: Permission denied
+ls: ./fstab.zram1280m: Permission denied
+ls: ./fstab.zram1024m: Permission denied
+ls: ./fstab.hi6250: Permission denied
+ls: ./file_contexts.bin: Permission denied
+ls: ./default.prop: Permission denied
+ls: ./cr4_regmem_u1.bin: Permission denied
+ls: ./cr4_regmem.bin: Permission denied
+ls: ./cr4_asic.bin: Permission denied
+ls: ./bfgx_cfg: Permission denied
+ls: ./bfgx_and_wifi_cfg: Permission denied
+ls: ./CPU_RAM_WBS.bin: Permission denied
+ls: ./CPU_RAM_SCHED.bin: Permission denied
+.  3rdmodem    3rdmodemnvmbkp bugreports charger cust      cust_spec data dload hw_oem mnt patch product           res  sbin   splash2 sys    vendor  
+.. 3rdmodemnvm acct           cache      config  cust_comm d         dev  etc   log    oem proc  property_contexts root sdcard storage system version 
+1|HWVNS-H:/ $ cd system
+HWVNS-H:/system $ ls
+app bin build.prop cameraplugins emui etc extras fake-libs fake-libs64 fonts framework global lang lib lib64 lost+found media priv-app rfs system tts usr vendor watermark xbin 
+HWVNS-H:/system $ cd app
+HWVNS-H:/system/app $ ls
+BasicDreams          CotaDecompressService GoogleCalendarSyncAdapter        HwARService       HwIMonitor                   HwMagazine           KeyChain             PartnerBookmarksProvider WatchSync     
+BluetoothMidiService CtsShimPrebuilt       GoogleContactsSyncAdapter        HwAps             HwIndexSearchObserverService HwPowerGenieEngine3  LiveWallpapersPicker PhotoTable               WebViewGoogle 
+BookmarkProvider     DownloadProviderUi    GoogleExtShared                  HwBluetoothImport HwInstantShare               HwResolver           Maps                 Photos                   YouTube       
+CaptivePortalLogin   Drive                 GooglePrintRecommendationService HwFloatTasks      HwInternetAudioService       HwSecurityMgrService MirrorShare          SmartcardService         iConnect      
+CertInstaller        Duo                   GoogleTTS                        HwHealthMidware   HwLBSService                 HwTrustAgent         Music2               UserDictionaryProvider   
+Chrome               Gmail2                HTMLViewer                       HwIAware          HwLauncher6                  HwWifiproBqeService  PacProcessor         Videos                   
+HWVNS-H:/system/app $ cd YouTube/                                                                                                                                                                          
+HWVNS-H:/system/app/YouTube $ ls
+YouTube.apk
+
+I can install applications in the product version.
