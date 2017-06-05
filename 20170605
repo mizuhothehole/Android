@@ -1,0 +1,44 @@
+Get root authority of huawei p9 lite
+
+Now i will show you how to get root of a huawei p9 lite version
+
+for security.
+
+1.make sure that your mobile do not have a screen lock，because recovery may make the code be changed by some ways.
+2.do not forget to back up your phone data because all the data may be cleaned in the middle of getting root.
+3.make sure the oem switch is open in developer options
+4.enable usb debug
+
+for do flashing hard precondition
+
+1.a sd card
+2.a huawei p9 lite phone
+
+for doing flashing soft precondition
+
+if you are doing the rooting operation，you must have these soft preconditions below
+1.a twrp software which is a customer recovery software.
+2.a device unlock code provided by huawei
+3.adb in android platform tools
+4.superSU
+5.some commands
+6.emui.com（huawei official homepage）
+
+here is the commands you need：
+fastboot devices.
+fastboot oem unlock xxxxxxxxxxxxxx（the unlock code provided by huawei）
+fastboot flash recovery twrp.img
+
+Dial *#*#1357946#*#*
+Dial *#06# 
+
+handset1 vol+ and power
+handset2 vol- and power
+
+So let us begin
+
+1.use dial command and emui.com to get the unlock code
+2.use fastboot command and handset2 unlock code provided by step 1 to unlock the phone. 
+3.use fastboot comnand and handset1 to go into the superSU boit image（before doing this do not forget to pull out your usb cable！ because when connecting the computer it will go into eRecovery which is provided by huawei）
+4.operate i superSU and get root authority.
+5.reboot the phone
