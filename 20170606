@@ -1,0 +1,88 @@
+Android Instrumention Log Using The Android Application Of leaktest In Android-project repo
+
+06-07 01:07:13.506 1545-2759/system_process I/ActivityManager: Force stopping com.example.ishiiaya.leaktest appid=10062 user=0: from pid 12931
+06-07 01:07:14.179 2922-2936/com.android.defcontainer D/DefContainer: Copying /data/local/tmp/com.example.ishiiaya.leaktest.test to base.apk
+06-07 01:07:14.310 1545-1576/system_process D/PackageManager: Renaming /data/app/vmdl667801815.tmp to /data/app/com.example.ishiiaya.leaktest.test-2
+06-07 01:07:14.311 1545-1566/system_process I/ActivityManager: Force stopping com.example.ishiiaya.leaktest.test appid=10063 user=-1: uninstall pkg
+06-07 01:07:14.330 1545-1576/system_process I/PackageManager: Package com.example.ishiiaya.leaktest.test codePath changed from /data/app/com.example.ishiiaya.leaktest.test-1 to /data/app/com.example.ishiiaya.leaktest.test-2; Retaining data and using new
+06-07 01:07:14.331 1545-1576/system_process I/PackageManager: Running dexopt on: /data/app/com.example.ishiiaya.leaktest.test-2/base.apk pkg=com.example.ishiiaya.leaktest.test isa=x86 vmSafeMode=false
+06-07 01:07:14.344 12959-12959/? I/dex2oat: /system/bin/dex2oat --zip-fd=5 --zip-location=/data/app/com.example.ishiiaya.leaktest.test-2/base.apk --oat-fd=6 --oat-location=/data/dalvik-cache/x86/data@app@com.example.ishiiaya.leaktest.test-2@base.apk@classes.dex --instruction-set=x86 --instruction-set-features=default --runtime-arg -Xms64m --runtime-arg -Xmx512m --swap-fd=11
+06-07 01:07:18.070 1545-1566/system_process I/ActivityManager: Force stopping com.example.ishiiaya.leaktest.test appid=10063 user=-1: update pkg
+06-07 01:07:18.072 1545-1576/system_process W/PackageManager: Code path for pkg : com.example.ishiiaya.leaktest.test changing from /data/app/com.example.ishiiaya.leaktest.test-1 to /data/app/com.example.ishiiaya.leaktest.test-2
+06-07 01:07:18.072 1545-1576/system_process W/PackageManager: Resource path for pkg : com.example.ishiiaya.leaktest.test changing from /data/app/com.example.ishiiaya.leaktest.test-1 to /data/app/com.example.ishiiaya.leaktest.test-2
+06-07 01:07:18.097 1545-1576/system_process I/ActivityManager: Force stopping com.example.ishiiaya.leaktest.test appid=10063 user=0: pkg removed
+06-07 01:07:18.102 1545-1545/system_process D/BackupManagerService: Received broadcast Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.example.ishiiaya.leaktest.test flg=0x4000010 (has extras) }
+06-07 01:07:18.124 1545-1545/system_process D/BackupManagerService: Received broadcast Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.example.ishiiaya.leaktest.test flg=0x4000010 (has extras) }
+06-07 01:07:18.125 1545-1545/system_process W/BackupManagerService: Removing schedule queue dupe of com.example.ishiiaya.leaktest.test
+06-07 01:07:18.153 2311-12973/com.google.android.gms D/Wear_Controller: Received broadcast action=android.intent.action.PACKAGE_REMOVED and uri=com.example.ishiiaya.leaktest.test
+06-07 01:07:18.165 2311-12643/com.google.android.gms E/Drive.UninstallOperation: Package still installed com.example.ishiiaya.leaktest.test
+06-07 01:07:18.242 2311-12971/com.google.android.gms D/Wear_Controller: Received broadcast action=android.intent.action.PACKAGE_ADDED and uri=com.example.ishiiaya.leaktest.test
+06-07 01:07:18.330 1992-12976/com.google.android.googlequicksearchbox:search I/UpdateIcingCorporaServi: Updating corpora: APPS=com.example.ishiiaya.leaktest.test, CONTACTS=MAYBE
+06-07 01:07:19.038 1545-1560/system_process I/ActivityManager: Force stopping com.example.ishiiaya.leaktest appid=10062 user=0: start instr
+06-07 01:07:19.056 1545-1560/system_process I/ActivityManager: Start proc 12993:com.example.ishiiaya.leaktest/u0a62 for added application com.example.ishiiaya.leaktest
+06-07 01:07:19.101 12993-12993/com.example.ishiiaya.leaktest I/MonitoringInstrumentation: Instrumentation Started!
+06-07 01:07:19.102 12993-12993/com.example.ishiiaya.leaktest I/MonitoringInstrumentation: Setting context classloader to 'dalvik.system.PathClassLoader[DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/com.example.ishiiaya.leaktest.test-2/base.apk", zip file "/data/app/com.example.ishiiaya.leaktest-2/base.apk"],nativeLibraryDirectories=[/vendor/lib, /system/lib]]]', Original: 'dalvik.system.PathClassLoader[DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/com.example.ishiiaya.leaktest.test-2/base.apk", zip file "/data/app/com.example.ishiiaya.leaktest-2/base.apk"],nativeLibraryDirectories=[/vendor/lib, /system/lib]]]'
+06-07 01:07:19.148 12993-12993/com.example.ishiiaya.leaktest I/MonitoringInstrumentation: No JSBridge.
+06-07 01:07:19.153 12993-13009/com.example.ishiiaya.leaktest D/InfraTrack: Tracking disabled due to lack of internet permissions
+06-07 01:07:19.154 12993-13009/com.example.ishiiaya.leaktest I/UsageTrackerFacilitator: Usage tracking disabled
+06-07 01:07:19.170 12993-13009/com.example.ishiiaya.leaktest D/TestExecutor: Adding listener android.support.test.internal.runner.listener.LogRunListener
+06-07 01:07:19.170 12993-13009/com.example.ishiiaya.leaktest D/TestExecutor: Adding listener android.support.test.internal.runner.listener.InstrumentationResultPrinter
+06-07 01:07:19.170 12993-13009/com.example.ishiiaya.leaktest D/TestExecutor: Adding listener android.support.test.internal.runner.listener.ActivityFinisherRunListener
+06-07 01:07:19.172 12993-13009/com.example.ishiiaya.leaktest I/TestRunner: run started: 6 tests
+06-07 01:07:19.175 12993-13009/com.example.ishiiaya.leaktest I/TestRunner: started: useAppContext_2(com.example.ishiiaya.leaktest.ExampleInstrumentedTest)
+06-07 01:07:19.179 12993-12993/com.example.ishiiaya.leaktest I/MonitoringInstrumentation: Activities that are still in CREATED to STOPPED: 0
+06-07 01:07:19.180 12993-13009/com.example.ishiiaya.leaktest D/testInt: 1
+06-07 01:07:19.180 12993-13009/com.example.ishiiaya.leaktest D/testInt: 2
+06-07 01:07:19.188 12993-12993/com.example.ishiiaya.leaktest D/testInt: started
+06-07 01:07:19.189 12993-12993/com.example.ishiiaya.leaktest D/testInt: destroyed
+06-07 01:07:19.189 12993-13009/com.example.ishiiaya.leaktest I/TestRunner: finished: useAppContext_2(com.example.ishiiaya.leaktest.ExampleInstrumentedTest)
+06-07 01:07:19.194 12993-12993/com.example.ishiiaya.leaktest I/MonitoringInstrumentation: Activities that are still in CREATED to STOPPED: 0
+06-07 01:07:19.196 12993-13009/com.example.ishiiaya.leaktest I/TestRunner: started: useAppContext_3(com.example.ishiiaya.leaktest.ExampleInstrumentedTest)
+06-07 01:07:19.203 12993-12993/com.example.ishiiaya.leaktest I/MonitoringInstrumentation: Activities that are still in CREATED to STOPPED: 0
+06-07 01:07:19.207 12993-13009/com.example.ishiiaya.leaktest D/testInt: 1
+06-07 01:07:19.207 12993-13009/com.example.ishiiaya.leaktest D/testInt: 2
+06-07 01:07:19.212 12993-12993/com.example.ishiiaya.leaktest D/testInt: started
+06-07 01:07:19.214 12993-12993/com.example.ishiiaya.leaktest D/testInt: destroyed
+06-07 01:07:19.215 12993-13009/com.example.ishiiaya.leaktest I/TestRunner: finished: useAppContext_3(com.example.ishiiaya.leaktest.ExampleInstrumentedTest)
+06-07 01:07:19.216 12993-12993/com.example.ishiiaya.leaktest I/MonitoringInstrumentation: Activities that are still in CREATED to STOPPED: 0
+06-07 01:07:19.217 12993-13009/com.example.ishiiaya.leaktest I/TestRunner: started: useAppContext(com.example.ishiiaya.leaktest.ExampleInstrumentedTest)
+06-07 01:07:19.221 12993-12993/com.example.ishiiaya.leaktest I/MonitoringInstrumentation: Activities that are still in CREATED to STOPPED: 0
+06-07 01:07:19.222 12993-13009/com.example.ishiiaya.leaktest D/testInt: 1
+06-07 01:07:19.222 12993-13009/com.example.ishiiaya.leaktest D/testInt: android.app.ContextImpl@1d34e008
+06-07 01:07:19.222 12993-13009/com.example.ishiiaya.leaktest D/testInt: com.example.ishiiaya.leaktest.ExampleApplication@19f603a1
+06-07 01:07:19.223 12993-13009/com.example.ishiiaya.leaktest D/testInt: 2
+06-07 01:07:19.224 12993-13006/com.example.ishiiaya.leaktest I/art: Background sticky concurrent mark sweep GC freed 11308(534KB) AllocSpace objects, 0(0B) LOS objects, 14% free, 960KB/1117KB, paused 7.079ms total 61.996ms
+06-07 01:07:19.225 12993-12993/com.example.ishiiaya.leaktest D/testInt: started
+06-07 01:07:19.225 12993-13009/com.example.ishiiaya.leaktest I/TestRunner: finished: useAppContext(com.example.ishiiaya.leaktest.ExampleInstrumentedTest)
+06-07 01:07:19.225 12993-12993/com.example.ishiiaya.leaktest D/testInt: destroyed
+06-07 01:07:19.226 12993-12993/com.example.ishiiaya.leaktest I/MonitoringInstrumentation: Activities that are still in CREATED to STOPPED: 0
+06-07 01:07:19.227 12993-13009/com.example.ishiiaya.leaktest I/TestRunner: started: useAppContext_13(com.example.ishiiaya.leaktest.ExampleInstrumentedTest)
+06-07 01:07:19.228 12993-12993/com.example.ishiiaya.leaktest I/MonitoringInstrumentation: Activities that are still in CREATED to STOPPED: 0
+06-07 01:07:19.229 12993-13009/com.example.ishiiaya.leaktest D/testInt: 1
+06-07 01:07:19.229 12993-13009/com.example.ishiiaya.leaktest D/testInt: 2
+06-07 01:07:19.231 12993-12993/com.example.ishiiaya.leaktest D/testInt: started
+06-07 01:07:19.231 12993-13009/com.example.ishiiaya.leaktest I/TestRunner: finished: useAppContext_13(com.example.ishiiaya.leaktest.ExampleInstrumentedTest)
+06-07 01:07:19.231 12993-12993/com.example.ishiiaya.leaktest D/testInt: destroyed
+06-07 01:07:19.233 12993-12993/com.example.ishiiaya.leaktest I/MonitoringInstrumentation: Activities that are still in CREATED to STOPPED: 0
+06-07 01:07:19.233 12993-13009/com.example.ishiiaya.leaktest I/TestRunner: started: useAppContext_32(com.example.ishiiaya.leaktest.ExampleInstrumentedTest)
+06-07 01:07:19.234 12993-12993/com.example.ishiiaya.leaktest I/MonitoringInstrumentation: Activities that are still in CREATED to STOPPED: 0
+06-07 01:07:19.234 12993-13009/com.example.ishiiaya.leaktest D/testInt: 1
+06-07 01:07:19.234 12993-13009/com.example.ishiiaya.leaktest D/testInt: 2
+06-07 01:07:19.236 12993-12993/com.example.ishiiaya.leaktest D/testInt: started
+06-07 01:07:19.236 12993-13009/com.example.ishiiaya.leaktest I/TestRunner: finished: useAppContext_32(com.example.ishiiaya.leaktest.ExampleInstrumentedTest)
+06-07 01:07:19.237 12993-12993/com.example.ishiiaya.leaktest D/testInt: destroyed
+06-07 01:07:19.237 12993-12993/com.example.ishiiaya.leaktest I/MonitoringInstrumentation: Activities that are still in CREATED to STOPPED: 0
+06-07 01:07:19.238 12993-13009/com.example.ishiiaya.leaktest I/TestRunner: started: useAppContext_34(com.example.ishiiaya.leaktest.ExampleInstrumentedTest)
+06-07 01:07:19.239 12993-12993/com.example.ishiiaya.leaktest I/MonitoringInstrumentation: Activities that are still in CREATED to STOPPED: 0
+06-07 01:07:19.239 12993-13009/com.example.ishiiaya.leaktest D/testInt: 1
+06-07 01:07:19.239 12993-13009/com.example.ishiiaya.leaktest D/testInt: 2
+06-07 01:07:19.241 12993-12993/com.example.ishiiaya.leaktest D/testInt: started
+06-07 01:07:19.242 12993-13009/com.example.ishiiaya.leaktest I/TestRunner: finished: useAppContext_34(com.example.ishiiaya.leaktest.ExampleInstrumentedTest)
+06-07 01:07:19.243 12993-12993/com.example.ishiiaya.leaktest D/testInt: destroyed
+06-07 01:07:19.243 12993-12993/com.example.ishiiaya.leaktest I/MonitoringInstrumentation: Activities that are still in CREATED to STOPPED: 0
+06-07 01:07:19.244 12993-13009/com.example.ishiiaya.leaktest I/TestRunner: run finished: 6 tests, 0 failed, 0 ignored
+06-07 01:07:19.250 12993-12993/com.example.ishiiaya.leaktest I/MonitoringInstrumentation: Activities that are still in CREATED to STOPPED: 0
+06-07 01:07:19.250 12993-13009/com.example.ishiiaya.leaktest I/MonitoringInstrumentation: waitForActivitiesToComplete() took: 0ms
+06-07 01:07:19.469 1545-1705/system_process I/ActivityManager: Force stopping com.example.ishiiaya.leaktest appid=10062 user=0: finished inst
+06-07 01:07:19.469 1545-1705/system_process I/ActivityManager: Killing 12993:com.example.ishiiaya.leaktest/u0a62 (adj 0): stop com.example.ishiiaya.leaktest
+06-07 01:07:19.734 1545-2756/system_process I/ActivityManager: Force stopping com.example.ishiiaya.leaktest appid=10062 user=0: from pid 13024
