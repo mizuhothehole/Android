@@ -1,0 +1,38 @@
+Check leakcanary in junit test
+
+1）. keywords to search junit cases：
+1.instrumentation starts！
+2.96 cases received，0 cases runned
+3.testrunner： start test-xxxxxx
+4.testrunner： end   test-xxxxxx
+.
+.
+.
+keep running 3 and 4 until 96 cases passed
+.
+.
+.
+5.instrumentation ended
+
+2）. keywords to search leak
+
+using “leakcanary：” to search leak，the log will be like
+
+leakcanary：xxxxxxx
+leakcanary：refetences xxxxxx
+leakcanary：leaks xxxxxx
+leakcanary：time used xxxxx 300ms xxx468ms analysis 35000ms
+
+leakcanary： details：
+leakcanary： -xxxx
+leakcanary： -xxxx
+leakcanary： -xxxx
+leakcanary： -xxxcx
+....
+....
+....
+（a long analysis will show all the leaked objects）
+
+compare the timestamp of 1）and 2）to get where is leaked. do not forget using time used in leakcanary log
+
+and this will show you where is leaked in your test-code
