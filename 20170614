@@ -1,0 +1,4 @@
+About the not sync problem of sharedpreferences between different processes
+
+1.The first way is to make the sharedpreferences mode to multiprocess.
+2.The second way is always use commit to change the shared prefetence because it is much harder.
