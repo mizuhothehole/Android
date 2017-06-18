@@ -1,0 +1,14 @@
+Android Root Note
+
+fastboot flash recovery ～～.img
+
+fastboot reboot recovery
+
+adb reboot bootloader
+
+C:\Users\user\AppData\Local\Android\sdk\platform-tools
+
+输入adb shell后，命令行后缀是“#”代表已root，“$”代表没有root。 
+输入“su”使用超级管理员用户 
+
+data/system XXXX.key 删除之后，全部的解锁都不在需要。
