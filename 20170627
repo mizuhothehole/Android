@@ -1,0 +1,26 @@
+Something about the investigation about android airplane mode control
+
+When we want to open or close the air plane mode, we need to use these two things:
+
+1.the system database
+2.a intent
+3.a cotentobserver
+
+So when the airplane mode in on, if we want to make the mode into off, we should do it like this. First use to make the system 
+database of system into off, then send a intent to the android system, telling the system we want to make system airplane mode 
+into off.
+
+Second if we want to make the airplane mode into off, we firstly need to make the system database status into off, and then send
+a intent telling the system that now we want to make the airplane mode into off.
+
+In the newest versions, we ofen need to use these to change the system database.
+
+1.change the system database status.
+Settings.Global.putInt(getContentResolverSettings.System.AIRPLANE_MODE_ON,value);
+Settings.Global.getInt(getContentResolverSettings.System.AIRPLANE_MODE_ON,value);
+Settings.Glonal.putString(getContentResolverSettings.XXX,value);
+Settings.Global.getString(getContentResolverSettings.XXX,value);
+
+2.use the change action intent to change the airplane status.
+And the intent is Intent.ACTION_AIRPLANE_MODE_CHANGED;
+
