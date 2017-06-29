@@ -1,0 +1,21 @@
+The asynctask class to control work thread
+
+We can use the light class asynctask to make a new thread and  do work back ground
+
+1.prossbackground ： the code here will excute in the background thread. We can make 
+our code running here and move the object to here when we want to do something in 
+the other thread.
+
+2.execute （params... ）
+we may execute this method when we want to start doing something in the background.
+But if we want to make sure the other code will go on running after this， we must
+make sure that we also call the get（）method， so as to make sure the thread to wait
+until the work thread finished running.
+
+3.get（）
+as a method of ensuring the calling back of the work thread，we should call the put
+method to ensure the maib thread will wait until the work thread finished the work.
+To make a maximum value limit of the waiting time， we should also call a parameter
+atrached timemax value like put（timemax）or something. This will make sure we can
+call whin the maximun waiting time.If we passed the biggest time we should catch a 
+timeout exception anaway.
