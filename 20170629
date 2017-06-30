@@ -28,3 +28,11 @@ and then transfer the context into what we want to create，like activity or som
 So as we did this，we would make the field value as the activity or something else 
 we definitly needed. So we get the yinyong of the object and in any times we could
 use this to do some operation to the object in ui.
+
+5.what if we want to operate the sharedpreferences？ The first is to make sharedpreferences
+operations into the doinbackground，the key point is to make the process in the back.
+And the second thing is ensuring that we can get the sharedpreference object. This time
+we could make the sharedpreferences as a field of the asynctask. 
+
+So all these we see is that in any cases we could use the asynctask as a simple solution，
+right？
