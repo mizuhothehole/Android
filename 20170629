@@ -19,3 +19,12 @@ To make a maximum value limit of the waiting time， we should also call a param
 atrached timemax value like put（timemax）or something. This will make sure we can
 call whin the maximun waiting time.If we passed the biggest time we should catch a 
 timeout exception anaway.
+
+4.How to transport the main ui objects into the process of the background .
+What the answer I see is to use a constructor. 
+When making the instance of the asynctask we can use the context to add the whole
+environment into the instance. And then transfer the context into a real instance
+and then transfer the context into what we want to create，like activity or something.
+So as we did this，we would make the field value as the activity or something else 
+we definitly needed. So we get the yinyong of the object and in any times we could
+use this to do some operation to the object in ui.
