@@ -1,0 +1,15 @@
+Something about jobscheduler and jobservice
+
+1.jobservice is a service， but having the onservicestart and on servicestop for developers
+to overwrite.
+
+2.we should use the background process methods（like handler or asynctask） to run in the onservicestart method. So we could 
+let the processes run in background.
+
+3.we should use build mode to build a job ，define the jobinfo and then use jobscheduler to add the job into the queue.
+
+4.the link between jobscheduler and the jobservice is done by the uid and the componentname
+
+5.we can define the limits or waiting duration of when could the job start when we try to build the jobinfo.
+
+Here is the basic conceptions of this new function
