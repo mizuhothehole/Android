@@ -13,3 +13,11 @@ let the processes run in background.
 5.we can define the limits or waiting duration of when could the job start when we try to build the jobinfo.
 
 Here is the basic conceptions of this new function
+
+
+@onjobstart：default return false（change the value to true， and when we need to finish the job，using jobFinished（）to let
+the system know the job is finished。False tells the system now there is not any kinds of job that will run，so the onjobstop
+will be ignored）
+
+@onjobstop：default return false。When the system thinks the jobs are already all finished，and will not be called.
+
