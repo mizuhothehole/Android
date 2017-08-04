@@ -1,0 +1,46 @@
+Android Jobscheduler
+
+  Now I am learning something about android studio jobscheduler, but not the Macrosoft VBA and VB6.0. In this year month of 6 and
+7, I have did a lot learning about VBA and VB6.0, so now I am back to java-android. This is what I am intending to do these few
+days in month 8.
+
+   So basically, the jobscheduler is just like what we think the BATCH in windows, or the shell job in linux/unix graphic OS.
+In fact it is just let android do something like this:
+   1.when to do(Or in what condition do it)
+   2.do what
+   The main classes are like below:
+   1.JobInfo
+   2.JobInfo.Builder
+   3.JobInfo.TriggerContentUri
+   4.JobParameters
+   5.JobScheduler
+   6.JobService
+   7.JobServiceEngine
+   8.JobWorkItem
+   
+   What is there relationship?
+   
+   1.What I can see is, we need to build a JobInfo instance using jobInfo.Builder, to set "when to do".
+   2.using the JobScheduler to schedule a JobInfo, with JobParameters, which contains "what to do".
+     To think it more clearly, JobParameters contains the basic transaction datas and also have a queue of JobWorkItem, which
+     is just like the work nodes in linux shell, right?
+     So here is the main reason of why we need to use the jobscheduler. First it is less power-costing, secondly it is also 
+     can let us control "when to do". Anyway, it still keep our basic transactions. It is just doing the we we do the things.
+   4.Now let us talk about the JobService. It is just a normal service, in the lower level of android it is using the AIDL to
+     process the communicating between processes. Anyway we need to call it by binding service, so we neet some permission.
+          <service android:name="MyJobService"
+              android:permission="android.permission.BIND_JOB_SERVICE" >
+     When we schedule a job, the Jobservice may be called when the condition what we defined happened.
+     Just as normal services work as it is extending service, but it will call the "onStartJob" and "onStopJob" after job is 
+     excuted.
+     In onStartJob we can do just like toast some log, or do some thing very cost time, like File IO or network operations.
+     So, in this time it is just called, right?
+     After we finished the job, we should call the jobFinished() to tell FW that the job is finished.
+   5.JobParameters is the parameter we scheduled when we call the schedule in JobScheduler. And in onStartJob and onStopJob
+     it will become the parameter of the method. It is important because it contains the transaction data, which means "what to
+     do" in out mind.
+   6.A important thing we need to know is that the onStartJob is just processing some instant operations. Which means if we
+     need to do something very costing time we need to do some other things like the AsyncTask or IntentService.
+
+  So the left is the JobServiceEngine, it is just a high-level API pretended for FW development.The TriggerContentUri is just
+telling a Uri that a Job is about to be triggered on.
