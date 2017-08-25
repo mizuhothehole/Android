@@ -12,3 +12,15 @@ Android 笔记之 BatteryManager 和 HardwareManager
 
 当我们需要做一些很正常的事情,比如说想知道电池的电量,想知道电池的状态,想知道机体的各种各样的温度,我们可以使用上面的这两个类了。
 我们下面用实体机子测试一下吧。
+
+我现在用华为P10来测试这个软件,用来测试Android各种强大的功能.然而我没有Android Studio. 所以呵呵呵.
+
+BatteryManager主要用于以下的用途
+1.电池在不在charge状态等. 是不是在charge以及用什么方式charge等.比如说用交流电还是在用USB充电.
+2.电池的电量等.比如说是低电量和电量的百分比等. 
+3.电压,电流,健康状态等电池参数.
+
+HardwarePropertiesManager主要用于以下用途
+1.机体的各种温度
+2.CPU的利用率等
+3.风扇转速
