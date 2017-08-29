@@ -1,0 +1,24 @@
+android.support.annotation memo
+
+@CallSuper
+
+Donates that any overriding methods should invoke this method well.
+
+This means if you wrote a API for other people to use, when it is overrided, the other people should use super.callYourApi() in his method.
+Otherwise the IDE will give a warning to you.
+
+@AnyThread
+
+Donates that you believe the method in this class you wrote can be used in any thread by any object.
+
+@MainThread
+
+Donates that only the main thread can call your method.
+
+@NonNull
+
+Donated that a method parameter, a method return value or a field should not be null at anytime.
+
+@Nullable
+
+Donated that a method parameter, a method return value or a field can be null.
