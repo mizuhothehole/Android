@@ -1,0 +1,27 @@
+android.os.HardwarePropertiesManager, BatteryManager and Environment
+
+--------By Android Developers official
+
+-----------HardwarePropertiesManager--------
+HardwarePropertiesManager could get the CpuUsageInfo, the fan info, like round per minute, and device temperatures(300K or something).
+And using the CpuUsageInfo, we could get the getTotal() method to show the CPU enabled time since it last booted.
+!This is got by using getSystemService(String str) or getSystemService(Context ct, Class cls)
+
+-----------BatteryManager---------------
+The BatteryManager could show us the battery infomations, just like the battery temperature, the health status, in charge or not.
+!This is got by using getSystemService(String str) or getSystemService(Context ct, Class cls)
+
+------------Environment-------------
+!This class can be used directly, just like the Build class in android.os package
+
+And the Environment shows us many infomations of android Env.
+We can use:
+Environment.FOLDER_MEDIA
+Environment.FOLDER_DOWMLOADS
+Environment.FOLDER_DCIM
+Environment.FOLDER_PICTURES
+Environment.FOLDER_SHARED
+Environment.FOLDER_ROOT
+
+and many other folders like these to get the important system folders directly.
+And as a method, we can also use getXXXXFolder() or something like these to get the inportant folder infomations as we wish.
