@@ -24,3 +24,11 @@ Build.TYPE.length()%10 +
 Build.USER.length()%10 ; //13 digits
 
 And Mac infomations of the machine
+
+Mainly the wlan Mac address and the bluetooth address may be used to do this.
+
+Here there is a point to be focused on.
+
+The Build.DISPLAY is infect a number like 10.10.A.10.10 or something else.
+It is just the build info to show to users.
+
