@@ -32,3 +32,6 @@ Here there is a point to be focused on.
 The Build.DISPLAY is infect a number like 10.10.A.10.10 or something else.
 It is just the build info to show to users.
 
+And it can also show us the ARM cpu kinds that it supported.
+Also can be devided into 64bit cpu or 32bit cpu.
+!It is in the Build class that showing the Android system supporting cpu as the base is a linux.
