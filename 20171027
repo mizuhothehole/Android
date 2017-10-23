@@ -1,0 +1,65 @@
+leakcanary Refwatcher instance by leakcanary.install（application）
+
+package com.example.ishiiaya.leakcanary;
+
+import android.app.Application;
+import android.content.Context;
+import android.util.Log;
+
+import com.squareup.leakcanary.LeakCanary;
+import com.squareup.leakcanary.RefWatcher;
+
+/**
+ * Created by ishiiaya on 2017/10/23.
+ */
+
+public class App extends Application {
+    private RefWatcher mRefWatcher;
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        mRefWatcher = LeakCanary.install(this);
+    }
+
+    public static RefWatcher getRefwatcher(Context context) {
+        App app = (App) context.getApplicationContext();
+        return app.mRefWatcher;
+    }
+}
+
+package com.example.ishiiaya.leakcanary;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+import com.squareup.leakcanary.LeakCanary;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (LeakCanary.isInAnalyzerProcess(this)) {
+
+// This process is dedicated to LeakCanary for heap analysis.
+
+// You should not init your app in this process.
+
+            return;
+
+        }
+        setContentView(R.layout.activity_main);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
+        App.getRefwatcher(this).watch(this);
+    }
+}
