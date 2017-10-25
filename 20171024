@@ -1,4 +1,4 @@
-What is changed when using JobScheduler and AlarmManager
+What is changed when using JobScheduler and AlarmManager for migration from N to O
 
 As we know there is a problem that the AlarmManager is using UTC time.
 This is a wall time and it always change.
