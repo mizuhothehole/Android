@@ -1,0 +1,40 @@
+Android WifiManager sample
+package com.example.ishiiaya.wifimanagersample;
+
+import android.net.wifi.ScanResult;
+import android.net.wifi.WifiManager;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+
+import java.util.List;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        WifiManager wifiManager = (WifiManager) getSystemService(WIFI_SERVICE);
+        // the access points around
+        List<ScanResult> results = wifiManager.getScanResults();
+        
+        // the saved configured wifi networks
+        wifiManager.getConfiguredNetworks().get(0).isPasspoint();
+        wifiManager.getConfiguredNetworks().get(0).getHttpProxy();
+        wifiManager.getPasspointConfigurations().get(0).getCredential();
+        
+        // the current wifi infomation as current connected
+        wifiManager.getConnectionInfo().getBSSID();
+        
+        Log.d("Qin", "" + results.size());
+        for (ScanResult scanResult : results) {
+            Log.d("Qin", scanResult.BSSID);
+
+        }
+    }
+}
+
+Unforunately, the wifi sensor can not be simulated on virtual devices. So as a result we should use a real device to test ths function.
+In case, the pass point tech is a kind of standard that made by the wifi-institution. But there is even no service provider want to open
+this to us. Pass point tech is letting us using wifi through the whole world.
