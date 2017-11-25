@@ -1,0 +1,58 @@
+CheckedTextView is what?
+
+package com.example.ishiiaya.mvp;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.CheckedTextView;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        final CheckedTextView checkedTextView1 = (CheckedTextView) findViewById(R.id.main_ctv1);
+        final CheckedTextView checkedTextView2 = (CheckedTextView) findViewById(R.id.main_ctv2);
+        checkedTextView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkedTextView1.toggle();
+                Toast.makeText(getApplicationContext(), "" + checkedTextView1.isChecked(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        checkedTextView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkedTextView2.toggle();
+                Toast.makeText(getApplicationContext(), "" + checkedTextView2.isChecked(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+}
+
+    <CheckedTextView
+        android:id="@+id/main_ctv1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:gravity="center_horizontal"
+        android:text="CheckedTextView1"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/main_ctv2" />
+
+    <CheckedTextView
+        android:id="@+id/main_ctv2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:gravity="center_horizontal"
+        android:text="CheckedTextView2"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp" />
