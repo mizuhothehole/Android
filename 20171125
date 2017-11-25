@@ -1,0 +1,103 @@
+安卓里面的toggle button的使用
+
+这个按钮有on和off两个状态。选中和没有被选中两个状态。具体显示什么要在layout里面设置textOn和textOff两个属性。
+
+JAVA 文件如下。
+
+package com.example.ishiiaya.myapplication;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
+import android.widget.ToggleButton;
+
+public class MainActivity extends AppCompatActivity {
+    private int a = 1;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        final ToggleButton toggleButton = (ToggleButton) findViewById(R.id.toggleButton);
+//        toggleButton.setText("hi, toggle");
+        toggleButton.toggle();
+//        try {
+//            Thread.sleep(1000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//        toggleButton.toggle();
+//        try {
+//            Thread.sleep(1000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//        toggleButton.toggle();
+//        try {
+//            Thread.sleep(1000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+        toggleButton.addOnAttachStateChangeListener(new View.OnAttachStateChangeListener() {
+            @Override
+            public void onViewAttachedToWindow(View v) {
+                Toast.makeText(getApplicationContext(), "what is this on view attached", Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onViewDetachedFromWindow(View v) {
+                Toast.makeText(getApplicationContext(), "what is this on view detached", Toast.LENGTH_LONG).show();
+
+            }
+        });
+        toggleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 这里用的是isChecked来判断是不是被选中。
+                // 还有就是文本的具体内容，是根据在layout属性里面直接设置的。
+                if (toggleButton.isChecked()) {
+                    Toast.makeText(getApplicationContext(), "aaaaa", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), "bbbbb", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+}
+
+Layout的XML文件如下。
+
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ishiiaya.myapplication.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ToggleButton"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textOn="nihao"
+        android:textOff="nibuhao"/>
+
+</android.support.constraint.ConstraintLayout>
+
