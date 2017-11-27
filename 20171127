@@ -1,0 +1,88 @@
+Try to use chronometer in Android
+
+This is a counter in android. I used it like this:
+
+activity_main.xml
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1">
+
+    <Button android:id="@+id/button_startTimer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Timer" />
+    <Button android:id="@+id/button_endTimer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="End Timer" />
+
+    <Chronometer
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chronometer"
+        android:layout_weight="0.27" />
+
+</LinearLayout>
+
+MainActivity.java
+import android.app.Activity;
+import android.os.Bundle;
+import android.os.SystemClock;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Chronometer;
+
+public class MainActivity extends Activity {
+    private long pinTimeStart;
+    private long pinTimeStop;
+    private long TimeDurationBetweenStart;
+    private long TimeDurationBetweenStop;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Button button_startTimer = (Button) findViewById(R.id.button_startTimer);
+        button_startTimer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startTimer();
+            }
+        });
+
+        Button button_endTimer = (Button) findViewById(R.id.button_endTimer);
+        button_endTimer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                endTimer();
+            }
+        });
+    }
+
+    private void startTimer() {
+        pinTimeStart = SystemClock.elapsedRealtime();
+        TimeDurationBetweenStop =
+                (SystemClock.elapsedRealtime() - pinTimeStop) + TimeDurationBetweenStop;
+
+        Chronometer chronometer = (Chronometer) findViewById(R.id.chronometer);
+        chronometer.setBase(SystemClock.elapsedRealtime() - TimeDurationBetweenStart);
+        chronometer.start();
+    }
+
+    private void endTimer() {
+        pinTimeStop = SystemClock.elapsedRealtime();
+        TimeDurationBetweenStart =
+                (SystemClock.elapsedRealtime() - pinTimeStart) + TimeDurationBetweenStart;
+
+        Chronometer chronometer = (Chronometer) findViewById(R.id.chronometer);
+        chronometer.stop();
+    }
+}
+
+The behavior is like:
+After clicking "START TIMER" button, the counter will start counting.
+After click "END TIMER" button, the counter will end counting temporary.
+After clicking "START TIMER" button again, the counter will start counting again.
