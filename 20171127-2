@@ -1,0 +1,25 @@
+SQLiteOpenHelper onUpgrade()/onDowngrad()
+
+I have met a frequent crash happening during our development.
+This exception is thrown on the following conditions:
+
+It is like :
+
+android.database.sqlite.SQLiteException: Can't downgrade database from version 2 to 1
+06-05 10:03:35.683: E/AndroidRuntime(9010):     at android.database.sqlite.SQLiteOpenHelper.onDowngrade(SQLiteOpenHelper.java:361)
+
+1.The device that you're running the code on has a database file of version
+2.The code is requesting version 1 of the database (with a param to SQLiteOpenHelper constructor)
+3.onDowngrade() is not overridden in your code.
+
+So as to avoid this issue we need to add implementation as @override in onDowngrade() method.
+
+The most important thing is when is the onUpgrade and onDowngrade are called in our programs.
+
+It is always happening during trying to make a new instances of databasehelper in Java coding while the old
+Db file is having the versions that is much newer.
+
+If we want to handle the exception in the onDbDowngrade methods, we need to first clear data and sharedprefs and then to
+Call onCreate manually again?
+
+If we just do the clearly,will system call the oncreate for us?
