@@ -108,3 +108,5 @@ The behavior is like:
 After clicking "START TIMER" button, the counter will start counting.
 After click "END TIMER" button, the counter will end counting temporary.
 After clicking "START TIMER" button again, the counter will start counting again.
+
+Seems it is much butter for us using setEnable() than using setClickable().
