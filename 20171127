@@ -27,7 +27,9 @@ activity_main.xml
 </LinearLayout>
 
 MainActivity.java
+
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.View;
@@ -60,6 +62,12 @@ public class MainActivity extends Activity {
                 endTimer();
             }
         });
+
+        button_startTimer.setClickable(true);
+        button_startTimer.setBackgroundColor(Color.BLUE);
+
+        button_endTimer.setClickable(false);
+        button_endTimer.setBackgroundColor(Color.BLACK);
     }
 
     private void startTimer() {
@@ -70,6 +78,13 @@ public class MainActivity extends Activity {
         Chronometer chronometer = (Chronometer) findViewById(R.id.chronometer);
         chronometer.setBase(SystemClock.elapsedRealtime() - TimeDurationBetweenStart);
         chronometer.start();
+
+        Button button_startTimer = (Button) findViewById(R.id.button_startTimer);
+        button_startTimer.setClickable(false);
+        button_startTimer.setBackgroundColor(Color.BLACK);
+        Button button_endTimer = (Button) findViewById(R.id.button_endTimer);
+        button_endTimer.setClickable(true);
+        button_endTimer.setBackgroundColor(Color.BLUE);
     }
 
     private void endTimer() {
@@ -79,6 +94,13 @@ public class MainActivity extends Activity {
 
         Chronometer chronometer = (Chronometer) findViewById(R.id.chronometer);
         chronometer.stop();
+
+        Button button_startTimer = (Button) findViewById(R.id.button_startTimer);
+        button_startTimer.setClickable(true);
+        button_startTimer.setBackgroundColor(Color.BLUE);
+        Button button_endTimer = (Button) findViewById(R.id.button_endTimer);
+        button_endTimer.setClickable(false);
+        button_endTimer.setBackgroundColor(Color.BLACK);
     }
 }
 
