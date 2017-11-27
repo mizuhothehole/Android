@@ -23,3 +23,7 @@ If we want to handle the exception in the onDbDowngrade methods, we need to firs
 Call onCreate manually again?
 
 If we just do the clearly,will system call the oncreate for us?
+
+经过调查，我认为对于onUpgrade和onDowngrade，两者的对应应该是类似的。其实对于onDowngrade这个很简单，就是直接的把之前的DB删除，然后再调用一次onCreate
+就行了。至于为什么这样，因为在逻辑上，它和onUpgrade的实装是类似的。只不过onUpgrade的话，我们需要作的事情是1 to 2， 1 to 3， 2 to 3的对应。
+对于down的，直接就全删了然后再调用一次onCreate就好了。
