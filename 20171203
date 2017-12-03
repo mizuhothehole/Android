@@ -1,0 +1,127 @@
+关于安卓的Broadcasreceiver跑在哪儿的问题
+
+我用了这三个文件在N上跑的
+
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ishiiaya.myapplication">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity"
+            android:process=":ser"> 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver android:name="MyReceiver"
+            android:process=":ser">
+
+            <intent-filter>
+                <action android:name="cn.programmer.CUSTOM_INTENT">
+                </action>
+            </intent-filter>
+
+        </receiver>
+    </application>
+
+</manifest>
+
+上面这个Manifest文件里面，我设置或者是不设置所谓的process属性。结果我发现的问题是，我们这个process属性会导致了Broadcastreceiver是不是在主进程里面跑。
+
+这里的主进程的意思就是，那个在Android Monitor里面和pkgName一样的名字的进程。所以说，这个是主进程。
+
+其次就是所谓的打log，输出log了。
+
+下面是java代码。
+package com.example.xx.myapplication;
+
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Intent intent = new Intent();
+        intent.setAction("cn.programmer.CUSTOM_INTENT");
+        sendBroadcast(intent);
+        Log.d("Qin","create");
+    }
+
+
+    // 广播自定义意图
+    public void broadcastIntent(View view){
+        Intent intent = new Intent();
+        intent.setAction("cn.programmer.CUSTOM_INTENT");
+        sendBroadcast(intent);
+    }
+}
+
+package com.example.xx.myapplication;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
+import android.widget.Toast;
+
+/**
+ * Created by xx on 2017/12/03.
+ */
+
+public class MyReceiver extends BroadcastReceiver {
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        Toast.makeText(context, "检测到意图。", Toast.LENGTH_LONG).show();
+        Log.d("Qin","on received");
+    }
+}
+
+这是在N上面出的log
+
+12-03 14:07:32.149 4812-4812/com.example.xx.myapplication D/Qin: on received
+                                                                       
+                                                                       [ 12-03 14:07:32.209  4812: 4849 D/         ]
+                                                                       HostConnection::get() New Host Connection established 0xa3be7540, tid 4849
+                                                                       
+                                                                       
+                                                                       [ 12-03 14:07:32.280  4812: 4849 W/         ]
+                                                                       Unrecognized GLES max version string in extensions: ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_dma_v1 
+12-03 14:08:21.490 5476-5476/com.example.xx.myapplication D/Qin: create
+12-03 14:08:21.587 5476-5476/com.example.xx.myapplication D/Qin: on received
+                                                                       
+                                                                       [ 12-03 14:08:21.621  5476: 5504 D/         ]
+                                                                       HostConnection::get() New Host Connection established 0xa3be7540, tid 5504
+                                                                       
+                                                                       
+                                                                       [ 12-03 14:08:21.689  5476: 5504 W/         ]
+                                                                       Unrecognized GLES max version string in extensions: ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_dma_v1 
+12-03 14:09:01.124 5986-5986/? D/Qin: create
+12-03 14:09:01.511 6001-6001/? D/Qin: on received
+12-03 14:09:52.882 6689-6689/com.example.xx.myapplication:ser D/Qin: create
+12-03 14:09:52.999 6689-6689/com.example.xx.myapplication:ser D/Qin: on received
+                                                                           
+                                                                           [ 12-03 14:09:53.024  6689: 6705 D/         ]
+                                                                           HostConnection::get() New Host Connection established 0xa3af6500, tid 6705
+                                                                           
+                                                                           
+                                                                           [ 12-03 14:09:53.107  6689: 6705 W/         ]
+                                                                           Unrecognized GLES max version string in extensions: ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_dma_v1 
+
+可是在O上面跑一样的代码的话呢。
+
+安卓O会有什么反应啊。
+
