@@ -124,4 +124,8 @@ public class MyReceiver extends BroadcastReceiver {
 可是在O上面跑一样的代码的话呢。
 
 安卓O会有什么反应啊。
+我用了相同的代码，最后发现的是如下的信息
+12-03 14:25:03.851 1472-1486/? W/BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.QIN flg=0x10 } to com.example.ishiiaya.myapplication/.My
+
+也就是说，这个O版本的安卓上面是有后台执行限制的，接受到了也不允许执行什么，人家和你说清楚了，这是后台限制，不能随便接受的。。
 
