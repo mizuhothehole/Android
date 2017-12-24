@@ -1,0 +1,22 @@
+关于adb logcat的相关命令
+
+adb logcat -v 这个是用来进行输出特定的信息的方法。
+adb logcat -c　这个命令可以清空一次log。
+
+实际进行log输出的时候，
+1.一般用adb log -c 清空一次log
+2.然后再用adb log 正常输出。
+3.进行某个操作
+4.Ctrl c 停止log输出
+5.check刚刚导出的log里面的具体内容
+
+使用 −v 的时候，可以使用下面几个参数的例子
+-v time
+-v process
+_v thread
+基本上可以认为是把头部那些信息进行一个filter然后进行显示。也就是不
+显示多余的头信息。
+
+-s 这个是用来指定标签。也就是进程名。
+比如
+-s system.out
