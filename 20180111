@@ -1,0 +1,12 @@
+How to know the touch events?
+
+1.use adb to get screen size:
+$adb shell
+$wm size
+
+2.developer options-> Pointer location
+This will show us the position we touched
+
+3. We can get the prcentage of the screen occupied of the X and Y coordinate.
+
+4. We can make sure that we just touch the point.
