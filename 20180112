@@ -1,0 +1,1704 @@
+Try to root IS12SH real device
+
+I bought this device through internet.
+And I used windows OS and ADB to link the linux system of IS12SH.
+
+Here is the contents of the linux system.
+02-15 10:57:40.066 309-481/? I/ActivityManager: No longer want com.morpho.app.golfsupport (pid 1249): hidden #16
+02-15 10:59:50.493 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:00:27.199 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:00:28.530 104-186/? D/Vold: USB disconnected
+02-15 11:00:29.171 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:00:29.171 104-186/? D/Vold: USB attach detached
+02-15 11:00:29.171 104-186/? W/Vold: Ignoring unknown switch 'ac'
+02-15 11:00:30.752 104-186/? D/Vold: USB attach attached
+02-15 11:00:30.752 104-186/? W/Vold: Ignoring unknown switch 'ac'
+02-15 11:00:31.974 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:00:31.974 104-186/? D/Vold: USB connected
+02-15 11:00:32.004 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:00:32.584 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:00:40.112 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:00:40.372 104-186/? D/Vold: USB disconnected
+02-15 11:00:40.952 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:00:40.952 104-186/? D/Vold: USB attach detached
+02-15 11:00:40.952 104-186/? W/Vold: Ignoring unknown switch 'ac'
+02-15 11:00:42.184 104-186/? D/Vold: USB attach attached
+02-15 11:00:42.184 104-186/? W/Vold: Ignoring unknown switch 'ac'
+02-15 11:00:43.365 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:00:43.375 104-186/? D/Vold: USB connected
+02-15 11:00:43.415 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:00:43.985 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:00:52.794 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:00:53.314 104-186/? D/Vold: USB disconnected
+02-15 11:00:53.405 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:00:53.405 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:00:53.405 104-186/? D/Vold: USB connected
+02-15 11:00:53.445 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:00:54.015 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:01:08.399 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:01:09.140 104-186/? D/Vold: USB disconnected
+02-15 11:01:15.016 309-335/? I/WindowManager: Setting rotation to 1, animFlags=0
+02-15 11:01:15.136 309-469/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cmp=com.android.settings/.deviceinfo.Status } from pid 1017
+02-15 11:01:16.447 309-335/? I/WindowManager: Setting rotation to 3, animFlags=0
+02-15 11:02:20.980 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:03:31.168 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:04:21.307 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:05:01.427 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:05:51.565 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:06:31.675 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:06:33.947 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:06:34.127 309-335/? I/WindowManager: Setting rotation to 0, animFlags=0
+02-15 11:06:34.127 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=1 layout=268435490 uiMode=17 seq=22}
+02-15 11:06:34.377 104-186/? D/Vold: USB attach detached
+02-15 11:06:34.377 104-186/? W/Vold: Ignoring unknown switch 'ac'
+02-15 11:06:35.398 104-186/? D/Vold: USB attach attached
+02-15 11:06:35.398 104-186/? W/Vold: Ignoring unknown switch 'ac'
+02-15 11:06:44.507 104-186/? D/Vold: USB attach detached
+02-15 11:06:44.507 104-186/? W/Vold: Ignoring unknown switch 'ac'
+02-15 11:06:45.678 104-186/? D/Vold: USB attach attached
+02-15 11:06:45.678 104-186/? W/Vold: Ignoring unknown switch 'ac'
+02-15 11:06:49.272 309-335/? I/WindowManager: Setting rotation to 3, animFlags=0
+02-15 11:06:49.302 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=2 layout=268435490 uiMode=17 seq=23}
+02-15 11:06:53.306 309-469/? I/WindowManager: Setting rotation to 0, animFlags=1
+02-15 11:06:53.316 309-469/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=1 layout=268435490 uiMode=17 seq=24}
+02-15 11:06:54.927 309-518/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.android.settings/.Settings bnds=[209,629][330,792] } from pid 447
+02-15 11:06:56.759 309-335/? I/WindowManager: Setting rotation to 3, animFlags=0
+02-15 11:06:56.779 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=2 layout=268435490 uiMode=17 seq=25}
+02-15 11:07:05.397 309-469/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cmp=com.android.settings/.DeviceInfoSettings } from pid 1017
+02-15 11:07:16.578 309-469/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cmp=jp.co.sharp.android.usbcharge/.UsbCharge } from pid 1017
+02-15 11:07:27.449 309-501/? I/WindowManager: Setting rotation to 0, animFlags=1
+02-15 11:07:27.459 309-501/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=1 layout=268435490 uiMode=17 seq=26}
+02-15 11:07:28.860 309-518/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.android.settings/.Settings bnds=[209,629][330,792] } from pid 447
+02-15 11:07:30.612 309-335/? I/WindowManager: Setting rotation to 3, animFlags=0
+02-15 11:07:30.622 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=2 layout=268435490 uiMode=17 seq=27}
+02-15 11:07:31.843 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:07:33.795 309-501/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cmp=jp.co.sharp.android.usbcharge/.UsbCharge } from pid 1017
+02-15 11:07:34.896 309-517/? I/ActivityManager: Starting: Intent { flg=0x10000000 cmp=jp.co.sharp.android.usbmode/.UsbMode } from pid 1321
+02-15 11:07:36.848 309-501/? W/InputManagerService: Starting input on non-focused client com.android.internal.view.IInputMethodClient$Stub$Proxy@40695990 (uid=10051 pid=1330)
+02-15 11:07:36.848 309-481/? W/InputManagerService: Client not active, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@408f5d58
+02-15 11:07:36.898 309-501/? W/InputManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@40940ca0
+02-15 11:07:40.492 309-456/? W/InputManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@40577018
+02-15 11:07:46.377 309-315/? I/ActivityManager: Starting: Intent { cmp=com.android.providers.subscribedfeeds/com.android.settings.ManageAccountsSettings } from pid 1017
+02-15 11:07:48.540 309-335/? I/ActivityManager: Starting: Intent { act=android.settings.ADD_ACCOUNT_SETTINGS cmp=com.android.providers.subscribedfeeds/com.android.settings.AddAccountSettings (has extras) } from pid 309
+02-15 11:07:50.101 309-315/? I/ActivityManager: Starting: Intent { cmp=com.google.android.gsf/.loginservice.LoginActivity (has extras) } from pid 309
+02-15 11:07:50.131 309-455/? I/ActivityManager: Starting: Intent { cmp=com.google.android.gsf/.loginservice.RunSetupWizardActivity (has extras) } from pid 544
+02-15 11:07:50.201 309-456/? I/ActivityManager: Starting: Intent { flg=0x80000 cmp=com.google.android.gsf/.login.AccountIntroActivity (has extras) } from pid 544
+02-15 11:07:53.574 309-456/? W/ActivityManager: Duplicate finish request for HistoryRecord{40b3c918 com.google.android.gsf/.loginservice.RunSetupWizardActivity}
+02-15 11:07:55.276 309-485/? I/WindowManager: Setting rotation to 0, animFlags=1
+02-15 11:07:55.296 309-469/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=1 layout=268435490 uiMode=17 seq=28}
+02-15 11:07:56.678 309-501/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.android.settings/.Settings bnds=[209,629][330,792] } from pid 447
+02-15 11:07:58.119 309-335/? I/WindowManager: Setting rotation to 3, animFlags=0
+02-15 11:07:58.129 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=2 layout=268435490 uiMode=17 seq=29}
+02-15 11:08:04.785 309-502/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cmp=com.android.settings/.PrivacySettings } from pid 1017
+02-15 11:08:12.683 309-314/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cmp=jp.co.sharp.android.usbcharge/.UsbCharge } from pid 1017
+02-15 11:08:15.486 309-315/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cmp=com.android.settings/.ApplicationSettings } from pid 1017
+02-15 11:08:20.311 309-456/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cmp=com.android.settings/.DevelopmentSettings } from pid 1017
+02-15 11:08:23.914 309-485/? W/InputManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@4083f3b0
+02-15 11:08:28.539 309-349/? I/PowerManagerService: Start Power.setScreenState(on), on value is false
+02-15 11:08:28.539 309-349/? I/PowerManagerService: End Power.setScreenState(on), err value is 0
+02-15 11:08:28.809 309-354/? I/WindowManager: Setting rotation to 0, animFlags=1
+02-15 11:08:28.829 309-354/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=1 layout=268435490 uiMode=17 seq=30}
+02-15 11:08:29.860 309-354/? I/PowerManagerService: Start Power.setScreenState(on), on value is true
+02-15 11:08:29.860 309-354/? I/PowerManagerService: End Power.setScreenState(on), err value is 0
+02-15 11:08:32.412 309-485/? W/InputManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@4094a268
+02-15 11:08:54.154 104-186/? D/Vold: USB attach detached
+02-15 11:08:54.154 104-186/? W/Vold: Ignoring unknown switch 'ac'
+02-15 11:08:55.785 104-186/? D/Vold: USB attach attached
+02-15 11:08:55.785 104-186/? W/Vold: Ignoring unknown switch 'ac'
+02-15 11:08:56.446 309-335/? I/WindowManager: Setting rotation to 3, animFlags=0
+02-15 11:08:56.456 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=2 layout=268435490 uiMode=17 seq=31}
+02-15 11:09:00.049 309-480/? W/InputManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@407a02e8
+02-15 11:09:24.453 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:09:24.453 104-186/? D/Vold: USB connected
+02-15 11:09:24.493 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:09:25.064 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:09:32.901 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:09:33.182 104-186/? D/Vold: USB disconnected
+02-15 11:09:33.782 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:09:33.782 104-186/? D/Vold: USB attach detached
+02-15 11:09:33.782 104-186/? W/Vold: Ignoring unknown switch 'ac'
+02-15 11:09:35.724 104-186/? D/Vold: USB attach attached
+02-15 11:09:35.724 104-186/? W/Vold: Ignoring unknown switch 'ac'
+02-15 11:09:36.895 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:09:36.905 104-186/? D/Vold: USB connected
+02-15 11:09:36.945 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:09:37.516 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:09:43.702 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:09:44.212 104-186/? D/Vold: USB disconnected
+02-15 11:09:44.303 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:09:44.303 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:09:44.303 104-186/? D/Vold: USB connected
+02-15 11:09:44.343 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:09:44.923 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:09:56.564 309-501/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cmp=com.android.settings/.applications.StorageUse } from pid 1017
+02-15 11:09:59.307 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:10:00.048 104-186/? D/Vold: USB disconnected
+02-15 11:10:05.253 309-480/? I/WindowManager: Setting rotation to 0, animFlags=1
+02-15 11:10:05.273 309-480/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=1 layout=268435490 uiMode=17 seq=32}
+02-15 11:10:23.301 309-469/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=jp.co.sharp.android.addressbook.app/.ContactsListActivity bnds=[68,77][189,240] } from pid 447
+02-15 11:10:23.441 309-480/? I/ActivityManager: Start proc jp.co.sharp.android.addressbook.app for activity jp.co.sharp.android.addressbook.app/.ContactsListActivity: pid=1714 uid=10053 gids={3003, 1015, 3002, 3001}
+02-15 11:10:25.833 309-314/? W/InputManagerService: Starting input on non-focused client com.android.internal.view.IInputMethodClient$Stub$Proxy@405d92b8 (uid=10053 pid=1714)
+02-15 11:10:25.973 309-478/? I/ActivityManager: No longer want jp.co.sharp.android.camelot.homeswitcher (pid 1257): hidden #16
+02-15 11:10:27.565 309-480/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.google.android.youtube/.HomeActivity bnds=[209,77][330,240] } from pid 447
+02-15 11:10:27.725 309-501/? I/ActivityManager: Start proc com.google.android.youtube for activity com.google.android.youtube/.HomeActivity: pid=1722 uid=10029 gids={3003}
+02-15 11:10:29.957 309-456/? W/InputManagerService: Starting input on non-focused client com.android.internal.view.IInputMethodClient$Stub$Proxy@40a8cd40 (uid=10029 pid=1722)
+02-15 11:10:30.187 309-335/? I/ActivityManager: No longer want com.google.android.googlequicksearchbox (pid 1008): hidden #16
+02-15 11:10:30.728 309-309/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=jp.co.sharp.android.youtube3d/.YouTube3DActivity bnds=[350,77][471,240] } from pid 447
+02-15 11:10:30.888 309-517/? I/ActivityManager: Start proc jp.co.sharp.android.youtube3d for activity jp.co.sharp.android.youtube3d/.YouTube3DActivity: pid=1742 uid=10047 gids={}
+02-15 11:10:32.369 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:10:33.320 309-335/? I/ActivityManager: No longer want jp.co.sharp.android.home (pid 1281): hidden #16
+02-15 11:10:34.522 309-518/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=jp.co.fsi.fs1seg/.app.Main bnds=[209,261][330,424] } from pid 447
+02-15 11:10:34.802 309-518/? I/ActivityManager: Starting: Intent { cmp=jp.co.fsi.fs1seg/.app.tvapplication.mainmenu.MainMenu } from pid 483
+02-15 11:10:36.984 309-481/? W/InputManagerService: Starting input on non-focused client com.android.internal.view.IInputMethodClient$Stub$Proxy@40aa0a28 (uid=10113 pid=483)
+02-15 11:10:37.935 309-478/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=jp.co.fsi.fs1seg/.app.Main bnds=[209,261][330,424] } from pid 447
+02-15 11:10:38.115 309-502/? I/ActivityManager: Starting: Intent { cmp=jp.co.fsi.fs1seg/.app.tvapplication.mainmenu.MainMenu } from pid 483
+02-15 11:10:39.356 309-335/? I/WindowManager: Setting rotation to 3, animFlags=0
+02-15 11:10:39.356 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=2 layout=268435490 uiMode=17 seq=33}
+02-15 11:10:44.021 309-485/? I/ActivityManager: Starting: Intent { cmp=jp.co.fsi.fs1seg/.app.tvapplication.digitaltv.DigitalTV } from pid 483
+02-15 11:11:32.548 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:12:33.297 309-336/? I/ActivityManager: Start proc jp.co.sharp.android.messaging for broadcast jp.co.sharp.android.messaging/.common.MessagingReceiver: pid=3290 uid=4001 gids={3003, 1015}
+02-15 11:12:33.878 309-336/? I/ActivityManager: Start proc jp.co.sharp.android.soundmemo for broadcast jp.co.sharp.android.soundmemo/.SoundMemoReceiver: pid=3307 uid=10053 gids={3003, 1015, 3002, 3001}
+02-15 11:12:34.098 309-518/? I/ActivityManager: Start proc com.kddi.android.providers.mailprovidata for content provider com.kddi.android.providers.mailprovidata/.MailProviDataProvider: pid=3311 uid=5043 gids={}
+02-15 11:12:34.489 309-485/? I/ActivityManager: No longer want com.android.browser (pid 1290): hidden #16
+02-15 11:12:34.509 309-480/? I/ActivityManager: No longer want jp.co.sharp.android.camera.videocamera (pid 1272): hidden #16
+02-15 11:12:34.509 309-480/? I/ActivityManager: No longer want com.android.providers.calendar (pid 1302): hidden #17
+02-15 11:12:42.757 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:12:50.504 309-481/? I/ActivityManager: No longer want jp.co.sharp.android.capability (pid 1339): hidden #16
+02-15 11:12:59.983 309-336/? I/ActivityManager: No longer want jp.co.sharp.android.sdmountlistener (pid 1438): hidden #16
+02-15 11:13:00.074 309-517/? W/ActivityManager: Scheduling restart of crashed service jp.co.sharp.android.sdmountlistener/.SDMountListenerService in 5000ms
+02-15 11:13:05.108 309-336/? I/ActivityManager: Start proc jp.co.sharp.android.sdmountlistener for service jp.co.sharp.android.sdmountlistener/.SDMountListenerService: pid=3729 uid=10060 gids={}
+02-15 11:13:13.166 309-455/? I/WindowManager: Setting rotation to 0, animFlags=1
+02-15 11:13:13.186 309-478/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=1 layout=268435490 uiMode=17 seq=34}
+02-15 11:13:42.225 309-456/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=jp.co.sharp.android.messaging/.box.activity.Launcher bnds=[213,836][330,959] } from pid 447
+02-15 11:13:42.335 309-478/? I/ActivityManager: Starting: Intent { cmp=jp.co.sharp.android.messaging/.box.activity.Inbox } from pid 3290
+02-15 11:13:42.355 309-485/? I/WindowManager: Setting rotation to 3, animFlags=1
+02-15 11:13:42.375 309-485/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=2 layout=268435490 uiMode=17 seq=35}
+02-15 11:13:42.715 309-335/? I/WindowManager: Setting rotation to 0, animFlags=0
+02-15 11:13:42.715 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=1 layout=268435490 uiMode=17 seq=36}
+02-15 11:13:43.846 309-456/? W/InputManagerService: Starting input on non-focused client com.android.internal.view.IInputMethodClient$Stub$Proxy@4063f2d0 (uid=4001 pid=3290)
+02-15 11:14:02.615 309-456/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.google.android.apps.maps/com.google.android.maps.MapsActivity bnds=[68,261][189,424] } from pid 447
+02-15 11:14:10.472 309-335/? I/WindowManager: Setting rotation to 3, animFlags=0
+02-15 11:14:10.472 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=2 layout=268435490 uiMode=17 seq=37}
+02-15 11:14:13.005 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:14:22.534 309-315/? I/WindowManager: Setting rotation to 0, animFlags=1
+02-15 11:14:22.544 309-315/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=1 layout=268435490 uiMode=17 seq=38}
+02-15 11:14:22.904 309-502/? W/InputManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@40659328
+02-15 11:14:24.166 309-455/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=jp.co.fsi.fs1seg/.app.Main bnds=[209,261][330,424] } from pid 447
+02-15 11:14:24.336 309-469/? I/ActivityManager: Starting: Intent { cmp=jp.co.fsi.fs1seg/.app.tvapplication.mainmenu.MainMenu } from pid 483
+02-15 11:14:24.516 309-456/? I/WindowManager: Setting rotation to 3, animFlags=1
+02-15 11:14:24.516 309-456/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=2 layout=268435490 uiMode=17 seq=39}
+02-15 11:14:25.557 309-455/? I/ActivityManager: Starting: Intent { cmp=jp.co.fsi.fs1seg/.app.tvapplication.recfilelist.RecFileList } from pid 483
+02-15 11:14:26.898 309-502/? W/InputManagerService: Starting input on non-focused client com.android.internal.view.IInputMethodClient$Stub$Proxy@40aa0a28 (uid=10113 pid=483)
+02-15 11:14:30.752 309-315/? I/WindowManager: Setting rotation to 0, animFlags=1
+02-15 11:14:30.762 309-315/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=1 layout=268435490 uiMode=17 seq=40}
+02-15 11:14:32.163 309-518/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=jp.co.sharp.android.obex/.ObexIrMenuActivity bnds=[350,261][471,424] } from pid 447
+02-15 11:14:32.344 309-502/? I/ActivityManager: Start proc jp.co.sharp.android.obex for activity jp.co.sharp.android.obex/.ObexIrMenuActivity: pid=3852 uid=6038 gids={3002, 3001, 1015}
+02-15 11:14:32.544 309-456/? I/WindowManager: Setting rotation to 3, animFlags=1
+02-15 11:14:32.554 309-456/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=2 layout=268435490 uiMode=17 seq=41}
+02-15 11:14:34.285 309-501/? I/WindowManager: Setting rotation to 0, animFlags=1
+02-15 11:14:34.295 309-501/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=1 layout=268435490 uiMode=17 seq=42}
+02-15 11:14:34.416 309-335/? I/ActivityManager: No longer want jp.co.sharp.android.dun (pid 1462): hidden #16
+02-15 11:14:35.186 309-485/? W/ActivityManager: Scheduling restart of crashed service jp.co.sharp.android.dun/.DunService in 5000ms
+02-15 11:14:36.247 309-501/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.kddi.market/.activity.ActivityMain bnds=[68,445][189,608] } from pid 447
+02-15 11:14:36.528 309-480/? I/ActivityManager: Start proc com.kddi.market for activity com.kddi.market/.activity.ActivityMain: pid=3859 uid=10028 gids={3003, 1015}
+02-15 11:14:36.548 309-309/? I/WindowManager: Setting rotation to 3, animFlags=1
+02-15 11:14:36.568 309-309/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=2 layout=268435490 uiMode=17 seq=43}
+02-15 11:14:37.308 309-502/? I/ActivityManager: Start proc com.kddi.android.packageinstaller for service com.kddi.android.packageinstaller/.KddiPackageInstallerService: pid=3870 uid=5046 gids={}
+02-15 11:14:38.920 309-480/? I/ActivityManager: Start proc com.kddi.android.providers.securitydata for content provider com.kddi.android.providers.securitydata/.SecurityDataProvider: pid=3879 uid=5044 gids={}
+02-15 11:14:39.901 309-336/? I/ActivityManager: Start proc jp.co.sharp.android.WISPr for broadcast jp.co.sharp.android.WISPr/.WisprWifiReceiver: pid=3888 uid=6060 gids={3003}
+02-15 11:14:40.031 309-518/? I/ActivityManager: No longer want com.kddi.android.auoneidsetting (pid 1502): hidden #16
+02-15 11:14:40.221 309-336/? I/ActivityManager: Start proc jp.co.sharp.android.dun for service jp.co.sharp.android.dun/.DunService: pid=3897 uid=1000 gids={3003, 3002, 3001}
+02-15 11:14:41.042 309-456/? W/InputManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@406da338
+02-15 11:14:41.222 309-502/? W/ActivityManager: Duplicate finish request for HistoryRecord{40a0e3d0 com.kddi.market/.activity.ActivityMain}
+02-15 11:14:41.222 309-518/? I/WindowManager: Setting rotation to 0, animFlags=1
+02-15 11:14:41.232 309-517/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=1 layout=268435490 uiMode=17 seq=44}
+02-15 11:14:42.794 309-485/? I/ActivityManager: Start proc jp.co.sharp.android.dlna.dms for broadcast jp.co.sharp.android.dlna.dms/.DmsReceiver: pid=3929 uid=10015 gids={3003, 1015}
+02-15 11:14:42.874 309-517/? I/ActivityManager: Start proc com.skype.android.kddi for broadcast com.skype.android.kddi/.receiver.ConnectivityReceiver: pid=3936 uid=10020 gids={3003, 1015}
+02-15 11:14:42.874 309-517/? I/ActivityManager: No longer want jp.co.sharp.android.usbmode (pid 1330): hidden #16
+02-15 11:14:43.014 309-478/? I/ActivityManager: No longer want com.google.android.youtube (pid 1722): hidden #16
+02-15 11:14:43.014 309-478/? I/ActivityManager: No longer want jp.co.sharp.android.majorupdate (pid 1172): hidden #17
+02-15 11:14:43.014 309-478/? I/ActivityManager: No longer want jp.co.sharp.android.usbcharge (pid 1321): hidden #18
+02-15 11:14:43.514 309-309/? I/ActivityManager: Start proc jibe.android.activity for broadcast jibe.android.activity/jibe.android.util.JibeNetworkBroadcastReceiver: pid=3946 uid=10021 gids={3003, 1015}
+02-15 11:14:43.514 309-309/? I/ActivityManager: No longer want jp.co.sharp.android.youtube3d (pid 1742): hidden #16
+02-15 11:14:44.706 309-314/? I/ActivityManager: Process jibe.android.activity (pid 3946) has died.
+02-15 11:14:44.736 309-336/? I/ActivityManager: Start proc com.google.android.apps.uploader for broadcast com.google.android.apps.uploader/.ConnectivityBroadcastReceiver: pid=3962 uid=10037 gids={3003}
+02-15 11:14:44.876 309-314/? I/ActivityManager: No longer want com.kddi.android.providers.mailprovidata (pid 3311): hidden #16
+02-15 11:14:44.956 309-314/? I/ActivityManager: Start proc com.google.android.gm for broadcast com.google.android.gm/.downloadprovider.DownloadReceiver: pid=3972 uid=10042 gids={3003, 1015}
+02-15 11:14:45.667 309-481/? I/ActivityManager: Start proc android.process.media for broadcast com.android.providers.downloads/.DownloadReceiver: pid=3984 uid=10057 gids={1015, 1006, 3002, 3001, 2001, 3003}
+02-15 11:14:45.667 309-481/? I/ActivityManager: No longer want jp.co.sharp.android.soundmemo (pid 3307): hidden #16
+02-15 11:14:46.007 309-315/? I/ActivityManager: No longer want jp.co.sharp.android.addressbook.app (pid 1714): hidden #16
+02-15 11:14:57.858 309-502/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.skype.android.kddi/.SkypeActivity bnds=[68,77][189,240] } from pid 447
+02-15 11:14:58.029 309-502/? I/WindowManager: Setting rotation to 3, animFlags=1
+02-15 11:14:58.049 309-502/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=2 layout=268435490 uiMode=17 seq=45}
+02-15 11:15:02.363 309-456/? I/WindowManager: Setting rotation to 0, animFlags=1
+02-15 11:15:02.363 309-314/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=1 layout=268435490 uiMode=17 seq=46}
+02-15 11:15:24.965 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:15:25.465 104-186/? D/Vold: USB attach detached
+02-15 11:15:25.465 104-186/? W/Vold: Ignoring unknown switch 'ac'
+02-15 11:15:31.271 104-186/? D/Vold: USB attach attached
+02-15 11:15:31.271 104-186/? W/Vold: Ignoring unknown switch 'ac'
+02-15 11:15:46.876 309-455/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.android.settings/.Settings bnds=[209,629][330,792] } from pid 447
+02-15 11:15:47.807 309-335/? I/WindowManager: Setting rotation to 3, animFlags=0
+02-15 11:15:47.807 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=2 layout=268435490 uiMode=17 seq=47}
+02-15 11:15:51.341 309-480/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cmp=jp.co.sharp.android.usbcharge/.UsbCharge } from pid 1017
+02-15 11:15:51.391 309-518/? I/ActivityManager: Start proc jp.co.sharp.android.usbcharge for activity jp.co.sharp.android.usbcharge/.UsbCharge: pid=4004 uid=10052 gids={}
+02-15 11:15:52.792 309-501/? I/ActivityManager: Starting: Intent { flg=0x10000000 cmp=jp.co.sharp.android.usbmode/.UsbMode } from pid 4004
+02-15 11:15:53.002 309-315/? I/ActivityManager: Start proc jp.co.sharp.android.usbmode for activity jp.co.sharp.android.usbmode/.UsbMode: pid=4012 uid=10051 gids={}
+02-15 11:15:53.293 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:15:54.724 104-186/? D/Vold: usb_mass_storage function enabled
+02-15 11:15:54.864 309-502/? W/InputManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@4066f548
+02-15 11:15:54.884 309-3944/? I/ActivityManager: No longer want android.process.acore (pid 849): hidden #16
+02-15 11:15:55.064 104-186/? W/Vold: Ignoring unknown switch 'usb_mass_storage'
+02-15 11:15:55.064 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:15:55.074 104-186/? D/Vold: USB connected
+02-15 11:15:55.074 104-186/? D/Vold: Share method ums now available
+02-15 11:15:55.084 405-555/? I/StorageNotification: UMS connection changed to true (media state removed)
+02-15 11:15:55.114 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:15:55.124 309-336/? I/ActivityManager: Start proc jp.co.sharp.android.capability for broadcast jp.co.sharp.android.capability/.CapabilityService$CapabilityReceiver: pid=4021 uid=10099 gids={1015}
+02-15 11:15:55.234 309-309/? I/ActivityManager: No longer want jp.co.sharp.android.messaging (pid 3290): hidden #16
+02-15 11:15:55.685 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:15:57.627 309-469/? W/InputManagerService: Starting input on non-focused client com.android.internal.view.IInputMethodClient$Stub$Proxy@40704088 (uid=10052 pid=4004)
+02-15 11:15:57.737 309-335/? I/ActivityManager: No longer want com.google.android.apps.maps (pid 1521): hidden #16
+02-15 11:15:59.549 309-502/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cmp=com.android.settings/.ApplicationSettings } from pid 1017
+02-15 11:16:02.121 309-485/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cmp=com.android.settings/.DevelopmentSettings } from pid 1017
+02-15 11:16:10.389 309-501/? W/InputManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@406675d0
+02-15 11:16:10.409 104-186/? W/Vold: Ignoring unknown switch 'usb_mass_storage'
+02-15 11:16:10.409 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:16:10.409 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:16:10.499 309-336/? I/ActivityManager: Start proc jp.co.sharp.android.majorupdate for broadcast jp.co.sharp.android.majorupdate/.MajorUpdateBroadcastReceiver: pid=4045 uid=6029 gids={1015, 3003}
+02-15 11:16:10.509 104-186/? D/Vold: USB disconnected
+02-15 11:16:10.599 309-518/? I/ActivityManager: No longer want jp.co.sharp.android.hdmi (pid 842): hidden #16
+02-15 11:16:10.599 309-481/? W/ActivityManager: Scheduling restart of crashed service jp.co.sharp.android.hdmi/.service.HDMIService in 5000ms
+02-15 11:16:10.720 104-186/? W/Vold: Ignoring unknown switch 'usb_mass_storage'
+02-15 11:16:10.720 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:16:10.720 104-186/? D/Vold: USB connected
+02-15 11:16:10.760 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:16:11.330 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:16:13.332 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:16:15.634 309-336/? I/ActivityManager: Start proc jp.co.sharp.android.hdmi for service jp.co.sharp.android.hdmi/.service.HDMIService: pid=4064 uid=10081 gids={}
+02-15 11:16:15.764 309-335/? I/WindowManager: Setting rotation to 0, animFlags=0
+02-15 11:16:15.764 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=1 layout=268435490 uiMode=17 seq=48}
+02-15 11:16:17.056 309-335/? I/WindowManager: Setting rotation to 1, animFlags=0
+02-15 11:16:17.076 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=2 layout=268435490 uiMode=17 seq=49}
+02-15 11:16:20.009 309-335/? I/WindowManager: Setting rotation to 0, animFlags=0
+02-15 11:16:20.029 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=1 layout=268435490 uiMode=17 seq=50}
+02-15 11:17:48.375 309-335/? I/WindowManager: Setting rotation to 3, animFlags=0
+02-15 11:17:48.395 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=2 layout=268435490 uiMode=17 seq=51}
+02-15 11:17:57.213 309-335/? I/WindowManager: Setting rotation to 0, animFlags=0
+02-15 11:17:57.213 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=1 layout=268435490 uiMode=17 seq=52}
+02-15 11:18:06.763 104-186/? W/Vold: Ignoring unknown switch 'usb_mass_storage'
+02-15 11:18:06.763 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:18:07.824 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:18:07.824 104-186/? D/Vold: USB disconnected
+02-15 11:18:07.834 104-186/? D/Vold: USB attach detached
+02-15 11:18:07.834 104-186/? D/Vold: Share method ums now unavailable
+02-15 11:18:07.834 104-186/? W/Vold: Ignoring unknown switch 'ac'
+02-15 11:18:07.834 405-555/? I/StorageNotification: UMS connection changed to false (media state removed)
+02-15 11:18:09.375 104-186/? D/Vold: USB attach attached
+02-15 11:18:09.375 104-186/? W/Vold: Ignoring unknown switch 'ac'
+02-15 11:18:09.425 104-186/? D/Vold: usb_mass_storage function disabled
+02-15 11:18:11.217 309-335/? I/WindowManager: Setting rotation to 3, animFlags=0
+02-15 11:18:11.237 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=2 layout=268435490 uiMode=17 seq=53}
+02-15 11:18:16.783 309-315/? W/InputManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@40947ab0
+02-15 11:18:41.126 309-456/? I/ActivityManager: Starting: Intent { cmp=jp.co.sharp.android.usbmode/.UsbMode bnds=[0,277][960,376] } from pid -1
+02-15 11:18:41.126 309-456/? W/ActivityManager: startActivity called from non-Activity context; forcing Intent.FLAG_ACTIVITY_NEW_TASK for: Intent { cmp=jp.co.sharp.android.usbmode/.UsbMode bnds=[0,277][960,376] }
+02-15 11:18:44.129 104-186/? D/Vold: usb_mass_storage function enabled
+02-15 11:18:44.229 309-502/? W/InputManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@4064a610
+02-15 11:18:44.460 104-186/? W/Vold: Ignoring unknown switch 'usb_mass_storage'
+02-15 11:18:44.460 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:18:44.460 104-186/? D/Vold: USB connected
+02-15 11:18:44.460 104-186/? D/Vold: Share method ums now available
+02-15 11:18:44.460 405-555/? I/StorageNotification: UMS connection changed to true (media state removed)
+02-15 11:18:44.500 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:18:45.070 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:18:58.073 309-481/? I/ActivityManager: Starting: Intent { act=android.settings.APPLICATION_DEVELOPMENT_SETTINGS flg=0x10200000 cmp=com.android.settings/.DevelopmentSettings bnds=[0,378][960,477] } from pid -1
+02-15 11:19:03.708 309-335/? I/WindowManager: Setting rotation to 0, animFlags=0
+02-15 11:19:03.728 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=1 layout=268435490 uiMode=17 seq=54}
+02-15 11:19:52.486 309-335/? I/WindowManager: Setting rotation to 3, animFlags=0
+02-15 11:19:52.506 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=2 layout=268435490 uiMode=17 seq=55}
+02-15 11:19:54.458 309-309/? I/ActivityManager: Starting: Intent { act=android.settings.APPLICATION_DEVELOPMENT_SETTINGS flg=0x10200000 cmp=com.android.settings/.DevelopmentSettings bnds=[0,378][960,477] } from pid -1
+02-15 11:19:54.748 309-517/? W/InputManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@40a19bc8
+02-15 11:20:06.860 309-335/? I/WindowManager: Setting rotation to 0, animFlags=0
+02-15 11:20:06.880 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=1 layout=268435490 uiMode=17 seq=56}
+02-15 11:20:34.056 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:21:53.814 309-335/? I/WindowManager: Setting rotation to 3, animFlags=0
+02-15 11:21:53.834 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=2 layout=268435490 uiMode=17 seq=57}
+02-15 11:22:12.833 104-186/? W/Vold: Ignoring unknown switch 'usb_mass_storage'
+02-15 11:22:12.833 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:22:13.273 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:22:13.273 104-186/? D/Vold: USB disconnected
+02-15 11:22:13.283 104-186/? D/Vold: USB attach detached
+02-15 11:22:13.283 104-186/? D/Vold: Share method ums now unavailable
+02-15 11:22:13.283 104-186/? W/Vold: Ignoring unknown switch 'ac'
+02-15 11:22:13.303 405-555/? I/StorageNotification: UMS connection changed to false (media state removed)
+02-15 11:22:17.517 104-186/? D/Vold: USB attach attached
+02-15 11:22:17.517 104-186/? W/Vold: Ignoring unknown switch 'ac'
+02-15 11:22:17.577 104-186/? D/Vold: usb_mass_storage function disabled
+02-15 11:22:24.084 309-480/? W/InputManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@407dd218
+02-15 11:22:27.697 309-315/? I/ActivityManager: Starting: Intent { cmp=jp.co.sharp.android.usbmode/.UsbMode bnds=[0,277][960,376] } from pid -1
+02-15 11:22:27.697 309-315/? W/ActivityManager: startActivity called from non-Activity context; forcing Intent.FLAG_ACTIVITY_NEW_TASK for: Intent { cmp=jp.co.sharp.android.usbmode/.UsbMode bnds=[0,277][960,376] }
+02-15 11:22:28.918 104-186/? D/Vold: usb_mass_storage function enabled
+02-15 11:22:29.009 309-456/? W/InputManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@405de190
+02-15 11:22:29.259 104-186/? W/Vold: Ignoring unknown switch 'usb_mass_storage'
+02-15 11:22:29.259 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:22:29.259 104-186/? D/Vold: USB connected
+02-15 11:22:29.259 104-186/? D/Vold: Share method ums now available
+02-15 11:22:29.269 405-555/? I/StorageNotification: UMS connection changed to true (media state removed)
+02-15 11:22:29.279 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:22:29.849 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:23:54.542 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:26:44.918 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:27:29.752 309-352/? I/ActivityManager: Start proc com.google.android.apps.maps for service com.google.android.apps.maps/com.google.googlenav.prefetch.android.PrefetcherService: pid=4141 uid=10036 gids={3003, 1015}
+02-15 11:27:40.012 309-3944/? I/ActivityManager: No longer want jp.co.sharp.android.obex (pid 3852): hidden #16
+02-15 11:28:02.814 309-335/? I/WindowManager: Setting rotation to 0, animFlags=0
+02-15 11:28:02.834 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=1 layout=268435490 uiMode=17 seq=58}
+02-15 11:28:31.252 309-335/? I/WindowManager: Setting rotation to 3, animFlags=0
+02-15 11:28:31.252 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=2 layout=268435490 uiMode=17 seq=59}
+02-15 11:28:33.965 309-456/? I/ActivityManager: Starting: Intent { flg=0x10000000 cmp=com.mgyun.shua.protector/.service.DaemonActivity } from pid 4207
+02-15 11:28:34.815 309-339/? I/ActivityManager: Start proc com.android.defcontainer for service com.android.defcontainer/.DefaultContainerService: pid=4250 uid=10098 gids={1015, 2001}
+02-15 11:28:34.886 309-339/? W/ActivityManager: No content provider found for: 
+02-15 11:28:34.956 309-339/? W/ActivityManager: No content provider found for: 
+02-15 11:28:34.966 309-455/? I/ActivityManager: No longer want jp.co.sharp.android.dlna.dms (pid 3929): hidden #16
+02-15 11:28:35.066 309-339/? I/PackageManager: Unpacking native libraries for /data/app/com.mgyun.shua.protector-1.apk
+02-15 11:28:35.556 309-336/? I/ActivityManager: Force stopping package com.mgyun.shua.protector uid=10116
+02-15 11:28:36.107 309-339/? W/PackageManager: Unknown permission android.permission.READ_EXTERNAL_STORAGE in package com.mgyun.shua.protector
+02-15 11:28:36.107 309-339/? W/PackageManager: Not granting permission android.permission.WRITE_SECURE_SETTINGS to package com.mgyun.shua.protector (protectionLevel=3 flags=0x8be44)
+02-15 11:28:36.107 309-339/? W/PackageManager: Unknown permission android.permission.READ_OWNER_DATA in package com.mgyun.shua.protector
+02-15 11:28:36.107 309-339/? W/PackageManager: Unknown permission android.permission.WRITE_OWNER_DATA in package com.mgyun.shua.protector
+02-15 11:28:36.107 309-339/? W/PackageManager: Not granting permission android.permission.DELETE_CACHE_FILES to package com.mgyun.shua.protector (protectionLevel=3 flags=0x8be44)
+02-15 11:28:36.107 309-339/? W/PackageManager: Not granting permission android.permission.ACCESS_CACHE_FILESYSTEM to package com.mgyun.shua.protector (protectionLevel=3 flags=0x8be44)
+02-15 11:28:36.107 309-339/? W/PackageManager: Not granting permission android.permission.DELETE_PACKAGES to package com.mgyun.shua.protector (protectionLevel=3 flags=0x8be44)
+02-15 11:28:36.107 309-339/? W/PackageManager: Unknown permission android.permission.PACKAGE_USEAGE_STATS in package com.mgyun.shua.protector
+02-15 11:28:36.117 309-339/? W/PackageManager: Not granting permission android.permission.FORCE_STOP_PACKAGES to package com.mgyun.shua.protector (protectionLevel=2 flags=0x8be44)
+02-15 11:28:36.117 309-339/? W/PackageManager: Unknown permission android.permission.READ_CALL_LOG in package com.mgyun.shua.protector
+02-15 11:28:36.117 309-339/? W/PackageManager: Unknown permission android.permission.WRITE_CALL_LOG in package com.mgyun.shua.protector
+02-15 11:28:36.667 309-481/? I/ActivityManager: Start proc com.android.vending for broadcast com.android.vending/.PackageMonitorReceiver: pid=4259 uid=10031 gids={1015, 3003}
+02-15 11:28:37.198 309-469/? I/ActivityManager: Start proc com.google.android.partnersetup for broadcast com.google.android.partnersetup/.AppInstalledReceiver: pid=4275 uid=10040 gids={}
+02-15 11:28:37.508 309-480/? I/ActivityManager: No longer want com.kddi.android.packageinstaller (pid 3870): hidden #16
+02-15 11:28:37.618 309-309/? I/ActivityManager: Start proc jp.co.sharp.android.home for broadcast jp.co.sharp.android.home/.InstallReceiver: pid=4288 uid=10076 gids={}
+02-15 11:28:37.618 309-309/? I/ActivityManager: No longer want com.google.android.apps.uploader (pid 3962): hidden #16
+02-15 11:28:37.768 309-518/? I/ActivityManager: No longer want com.google.android.gm (pid 3972): hidden #16
+02-15 11:28:37.788 309-518/? I/ActivityManager: Start proc com.svox.pico for broadcast com.svox.pico/.VoiceDataInstallerReceiver: pid=4300 uid=10114 gids={}
+02-15 11:28:37.868 309-517/? I/ActivityManager: Start proc com.google.android.googlequicksearchbox for broadcast com.google.android.googlequicksearchbox/.CorporaUpdateReceiver: pid=4308 uid=10039 gids={3003}
+02-15 11:28:37.878 309-517/? I/ActivityManager: No longer want jp.co.sharp.android.WISPr (pid 3888): hidden #16
+02-15 11:28:38.089 309-309/? I/ActivityManager: Start proc jp.co.sharp.android.camera.videocamera for content provider jp.co.sharp.android.camera.videocamera/jp.co.sharp.android.recommend.provider.RecommendProvider: pid=4317 uid=10057 gids={1015, 1006, 3002, 3001, 2001, 3003}
+02-15 11:28:38.149 309-485/? I/ActivityManager: No longer want android.process.media (pid 3984): hidden #16
+02-15 11:28:38.819 309-335/? I/WindowManager: Setting rotation to 0, animFlags=0
+02-15 11:28:38.819 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=1 layout=268435490 uiMode=17 seq=60}
+02-15 11:28:39.680 309-501/? I/ActivityManager: Start proc com.android.browser for content provider com.android.browser/.BrowserProvider: pid=4345 uid=10094 gids={3003, 1015}
+02-15 11:28:40.421 309-309/? I/ActivityManager: Start proc com.android.providers.calendar for content provider com.android.providers.calendar/.CalendarProvider2: pid=4355 uid=10112 gids={3003}
+02-15 11:28:40.611 309-502/? I/ActivityManager: Start proc android.process.acore for content provider jp.co.sharp.android.providers.soundmemo/.SoundMemoProvider: pid=4364 uid=10053 gids={3003, 1015, 3002, 3001}
+02-15 11:28:41.102 309-335/? I/WindowManager: Setting rotation to 3, animFlags=0
+02-15 11:28:41.122 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=2 layout=268435490 uiMode=17 seq=61}
+02-15 11:28:41.562 309-478/? I/ActivityManager: No longer want com.skype.android.kddi (pid 3936): hidden #16
+02-15 11:28:41.572 309-518/? I/ActivityManager: No longer want jp.co.sharp.android.usbcharge (pid 4004): hidden #16
+02-15 11:28:41.592 309-314/? I/ActivityManager: No longer want jp.co.sharp.android.usbmode (pid 4012): hidden #16
+02-15 11:28:45.366 309-339/? W/ActivityManager: No content provider found for: 
+02-15 11:28:51.582 309-339/? W/ActivityManager: No content provider found for: 
+02-15 11:28:52.262 309-315/? I/ActivityManager: Starting: Intent { flg=0x10000000 cmp=com.mgyun.shua.protector/.service.DaemonActivity } from pid 4395
+02-15 11:28:52.333 309-485/? I/ActivityManager: Start proc com.mgyun.shua.protector for activity com.mgyun.shua.protector/.service.DaemonActivity: pid=4404 uid=10116 gids={3003, 1007, 1015}
+02-15 11:28:52.613 309-309/? I/ActivityManager: Starting: Intent { flg=0x10000000 cmp=com.mgyapp.android/.ui.DaemonActivityNew } from pid 4409
+02-15 11:28:52.653 309-455/? W/InputManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@40633070
+02-15 11:28:56.176 309-339/? W/ActivityManager: No content provider found for: 
+02-15 11:28:59.580 309-339/? W/ActivityManager: No content provider found for: 
+02-15 11:29:01.752 309-339/? I/PackageManager: Unpacking native libraries for /data/app/com.mgyapp.android-1.apk
+02-15 11:29:07.637 309-336/? I/ActivityManager: Force stopping package com.mgyapp.android uid=10117
+02-15 11:29:07.918 309-339/? W/PackageManager: Not granting permission android.permission.INSTALL_PACKAGES to package com.mgyapp.android (protectionLevel=3 flags=0x8be44)
+02-15 11:29:07.918 309-339/? W/PackageManager: Not granting permission android.permission.DELETE_PACKAGES to package com.mgyapp.android (protectionLevel=3 flags=0x8be44)
+02-15 11:29:07.918 309-339/? W/PackageManager: Not granting permission android.permission.FORCE_STOP_PACKAGES to package com.mgyapp.android (protectionLevel=2 flags=0x8be44)
+02-15 11:29:07.918 309-339/? W/PackageManager: Not granting permission android.permission.DELETE_CACHE_FILES to package com.mgyapp.android (protectionLevel=3 flags=0x8be44)
+02-15 11:29:07.918 309-339/? W/PackageManager: Unknown permission android.permission.READ_EXTERNAL_STORAGE in package com.mgyapp.android
+02-15 11:29:07.918 309-339/? W/PackageManager: Not granting permission android.permission.WRITE_SECURE_SETTINGS to package com.mgyapp.android (protectionLevel=3 flags=0x8be44)
+02-15 11:29:07.918 309-339/? W/PackageManager: Unknown permission android.permission.READ_OWNER_DATA in package com.mgyapp.android
+02-15 11:29:07.918 309-339/? W/PackageManager: Unknown permission android.permission.WRITE_OWNER_DATA in package com.mgyapp.android
+02-15 11:29:07.918 309-339/? W/PackageManager: Not granting permission android.permission.ACCESS_CACHE_FILESYSTEM to package com.mgyapp.android (protectionLevel=3 flags=0x8be44)
+02-15 11:29:07.918 309-339/? W/PackageManager: Unknown permission android.permission.READ_CALL_LOG in package com.mgyapp.android
+02-15 11:29:07.918 309-339/? W/PackageManager: Unknown permission android.permission.WRITE_CALL_LOG in package com.mgyapp.android
+02-15 11:29:07.918 309-339/? W/PackageManager: Unknown permission android.permission.BIND_ACCESSIBILITY_SERVICE in package com.mgyapp.android
+02-15 11:29:07.918 309-339/? W/PackageManager: Unknown permission android.permission.BROADCAST_PACKAGE_ADDED in package com.mgyapp.android
+02-15 11:29:07.918 309-339/? W/PackageManager: Unknown permission android.permission.BROADCAST_PACKAGE_CHANGED in package com.mgyapp.android
+02-15 11:29:07.918 309-339/? W/PackageManager: Unknown permission android.permission.BROADCAST_PACKAGE_INSTALL in package com.mgyapp.android
+02-15 11:29:07.918 309-339/? W/PackageManager: Unknown permission android.permission.BROADCAST_PACKAGE_REPLACED in package com.mgyapp.android
+02-15 11:29:08.999 309-480/? I/ActivityManager: Starting: Intent { flg=0x10000000 cmp=com.mgyapp.android/.ui.DaemonActivityNew } from pid 4469
+02-15 11:29:09.119 309-3944/? I/ActivityManager: Start proc com.mgyapp.android for activity com.mgyapp.android/.ui.DaemonActivityNew: pid=4479 uid=10117 gids={3003, 1007, 1015, 1006, 3002, 3001}
+02-15 11:29:09.139 309-518/? I/WindowManager: Setting rotation to 0, animFlags=1
+02-15 11:29:09.169 309-518/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=1 layout=268435490 uiMode=17 seq=62}
+02-15 11:29:10.300 309-517/? W/BackupManagerService: dataChanged but no participant pkg='com.android.providers.settings' uid=10117
+02-15 11:29:11.051 309-309/? I/ActivityManager: Starting: Intent { cmp=com.mgyapp.android/.ui.CommonActivity (has extras) } from pid 4479
+02-15 11:29:11.211 309-315/? I/WindowManager: Setting rotation to 3, animFlags=1
+02-15 11:29:11.231 309-315/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=2 layout=268435490 uiMode=17 seq=63}
+02-15 11:29:11.311 309-481/? I/WindowManager: Setting rotation to 0, animFlags=1
+02-15 11:29:11.331 309-353/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=1 layout=268435490 uiMode=17 seq=64}
+02-15 11:29:18.458 309-517/? I/ActivityManager: Start proc android.process.media for content provider com.android.providers.media/.MediaProvider: pid=4622 uid=10057 gids={1015, 1006, 3002, 3001, 2001, 3003}
+02-15 11:29:18.578 309-314/? I/ActivityManager: No longer want jp.co.sharp.android.majorupdate (pid 4045): hidden #16
+02-15 11:29:45.324 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:32:58.062 309-339/? W/PackageManager: Package named 'com.mgyun.vroot.tools_13091815' doesn't exist.
+02-15 11:32:58.543 309-339/? W/ActivityManager: No content provider found for: 
+02-15 11:32:58.563 309-339/? W/ActivityManager: No content provider found for: 
+02-15 11:32:58.603 309-339/? I/PackageManager: Unpacking native libraries for /data/app/com.mgyun.vroot.tools_13091815-1.apk
+02-15 11:32:58.613 309-336/? I/ActivityManager: Force stopping package com.mgyun.vroot.tools_13091815 uid=1000
+02-15 11:32:59.924 309-518/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN flg=0x10000000 cmp=com.mgyun.vroot.tools_13091815/android.app.Activity } from pid 5527
+02-15 11:33:00.034 309-456/? I/ActivityManager: Start proc com.mgyun.vroot.tools_13091815 for activity com.mgyun.vroot.tools_13091815/android.app.Activity: pid=5536 uid=1000 gids={3003, 3002, 3001, 1015}
+02-15 11:33:00.575 309-517/? I/ActivityManager: No longer want jp.co.sharp.android.capability (pid 4021): hidden #16
+02-15 11:33:02.346 309-315/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN flg=0x14000000 cmp=com.mgyun.vroot.tools_13091815/android.app.Activity } from pid 5547
+02-15 11:33:08.102 309-336/? I/ActivityManager: Force stopping package com.mgyun.vroot.tools_13091815 uid=1000
+02-15 11:33:08.112 309-336/? I/ActivityManager:   Force finishing activity HistoryRecord{406d8be8 com.mgyun.vroot.tools_13091815/android.app.Activity}
+02-15 11:33:08.112 309-336/? W/ActivityManager: Duplicate finish request for HistoryRecord{406d8be8 com.mgyun.vroot.tools_13091815/android.app.Activity}
+02-15 11:33:08.142 309-481/? I/WindowManager: WIN DEATH: Window{40954e70 com.mgyun.vroot.tools_13091815/android.app.Activity paused=false}
+02-15 11:33:08.152 309-517/? W/InputManagerService: Got RemoteException sending setActive(false) notification to pid 5536 uid 1000
+02-15 11:33:08.312 309-339/? I/ActivityManager: Force stopping package com.mgyun.vroot.tools_13091815 uid=1000
+02-15 11:33:08.312 309-339/? I/ActivityManager:   Force finishing activity HistoryRecord{406d8be8 com.mgyun.vroot.tools_13091815/android.app.Activity}
+02-15 11:33:08.312 309-339/? W/ActivityManager: Duplicate finish request for HistoryRecord{406d8be8 com.mgyun.vroot.tools_13091815/android.app.Activity}
+02-15 11:33:08.422 309-336/? I/ActivityManager: Start proc jibe.android.activity for broadcast jibe.android.activity/jibe.android.util.UpdateBroadcastReceiver: pid=5651 uid=10021 gids={3003, 1015}
+02-15 11:33:08.683 309-339/? W/PackageManager: Couldn't remove dex file for package:  at location /data/app/com.mgyun.vroot.tools_13091815-1.apk, retcode=-1
+02-15 11:33:09.834 309-315/? I/ActivityManager: Start proc com.mgyapp.android:channel for broadcast com.mgyapp.android/com.taobao.accs.EventReceiver: pid=5715 uid=10117 gids={3003, 1007, 1015, 1006, 3002, 3001}
+02-15 11:33:10.114 309-469/? W/ActivityManager: Unable to start service Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.mgyun.vroot.tools_13091815 flg=0x10000000 cmp=com.mgyapp.android/.TaobaoIntentService (has extras) }: not found
+02-15 11:33:10.154 309-469/? W/BackupManagerService: dataChanged but no participant pkg='com.android.providers.settings' uid=10117
+02-15 11:33:10.204 309-478/? W/ActivityManager: Unable to start service Intent { act=org.rome.android.IPP_CALL pkg=com.eg.android.AlipayGphone cmp=com.eg.android.AlipayGphone/org.rome.android.ipp.binder.IppService (has extras) }: not found
+02-15 11:33:17.471 309-335/? W/ActivityManager: Activity destroy timeout for HistoryRecord{406d8be8 com.mgyun.vroot.tools_13091815/android.app.Activity}
+02-15 11:34:05.918 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:34:40.472 309-501/? I/ActivityManager: Starting: Intent { cmp=com.mgyapp.android/.ui.MainCoolActivity (has extras) } from pid 4479
+02-15 11:34:40.652 309-480/? W/ActivityManager: Unable to start service Intent { cmp=com.mgyapp.android/com.mgyun.baseui.framework.service.MgyunService (has extras) }: not found
+02-15 11:34:49.511 309-501/? I/ActivityManager: Starting: Intent { cmp=com.mgyapp.android/.ui.MainCoolActivity (has extras) } from pid 4479
+02-15 11:34:49.641 309-485/? W/ActivityManager: Unable to start service Intent { cmp=com.mgyapp.android/com.mgyun.baseui.framework.service.MgyunService (has extras) }: not found
+02-15 11:34:52.304 309-518/? I/ActivityManager: Starting: Intent { cmp=com.mgyapp.android/.ui.MainCoolActivity (has extras) } from pid 4479
+02-15 11:34:52.504 309-469/? W/ActivityManager: Unable to start service Intent { cmp=com.mgyapp.android/com.mgyun.baseui.framework.service.MgyunService (has extras) }: not found
+02-15 11:34:52.794 309-478/? W/InputManagerService: Starting input on non-focused client com.android.internal.view.IInputMethodClient$Stub$Proxy@40854a40 (uid=10117 pid=4479)
+02-15 11:34:53.305 309-518/? I/ActivityManager: Starting: Intent { cmp=com.mgyapp.android/.ui.MainCoolActivity (has extras) } from pid 4479
+02-15 11:34:53.455 309-480/? W/ActivityManager: Unable to start service Intent { cmp=com.mgyapp.android/com.mgyun.baseui.framework.service.MgyunService (has extras) }: not found
+02-15 11:34:56.378 309-355/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10200000 cmp=com.android.launcher2/.Launcher } from pid 309
+02-15 11:34:57.779 309-355/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10200000 cmp=com.android.launcher2/.Launcher } from pid 309
+02-15 11:34:59.170 309-355/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10200000 cmp=com.android.launcher2/.Launcher } from pid 309
+02-15 11:36:33.693 104-186/? W/Vold: Ignoring unknown switch 'usb_mass_storage'
+02-15 11:36:33.703 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:36:33.803 309-502/? I/ActivityManager: Start proc jp.co.sharp.android.majorupdate for broadcast jp.co.sharp.android.majorupdate/.MajorUpdateBroadcastReceiver: pid=6421 uid=6029 gids={1015, 3003}
+02-15 11:36:34.113 309-314/? I/ActivityManager: No longer want com.google.android.apps.maps (pid 4141): hidden #16
+02-15 11:36:37.356 104-186/? D/Vold: USB disconnected
+02-15 11:36:37.456 104-186/? W/Vold: Ignoring unknown switch 'usb_mass_storage'
+02-15 11:36:37.466 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:36:37.486 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:36:37.496 104-186/? D/Vold: USB connected
+02-15 11:36:37.526 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:36:38.087 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:36:47.656 104-186/? W/Vold: Ignoring unknown switch 'usb_mass_storage'
+02-15 11:36:47.666 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:36:47.937 104-186/? D/Vold: USB disconnected
+02-15 11:36:48.497 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:36:48.527 104-186/? D/Vold: USB attach detached
+02-15 11:36:48.527 104-186/? D/Vold: Share method ums now unavailable
+02-15 11:36:48.557 104-186/? W/Vold: Ignoring unknown switch 'ac'
+02-15 11:36:48.567 405-555/? I/StorageNotification: UMS connection changed to false (media state removed)
+02-15 11:36:48.637 309-336/? W/ProcessStats: Skipping unknown process pid 6737
+02-15 11:36:48.637 309-336/? W/ProcessStats: Skipping unknown process pid 6740
+02-15 11:36:56.455 104-186/? D/Vold: USB attach attached
+02-15 11:36:56.465 104-186/? W/Vold: Ignoring unknown switch 'ac'
+02-15 11:36:56.555 309-336/? W/ProcessStats: Skipping unknown process pid 6812
+02-15 11:36:56.555 309-336/? W/ProcessStats: Skipping unknown process pid 6813
+02-15 11:36:56.555 309-336/? W/ProcessStats: Skipping unknown process pid 6815
+02-15 11:36:56.565 104-186/? D/Vold: usb_mass_storage function disabled
+02-15 11:36:57.646 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:36:57.656 104-186/? D/Vold: USB connected
+02-15 11:36:57.716 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:36:58.247 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:37:00.909 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:37:01.730 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:37:01.730 104-186/? D/Vold: USB disconnected
+02-15 11:37:01.780 104-186/? D/Vold: USB attach detached
+02-15 11:37:01.780 104-186/? W/Vold: Ignoring unknown switch 'ac'
+02-15 11:37:16.985 104-186/? D/Vold: USB attach attached
+02-15 11:37:16.985 104-186/? W/Vold: Ignoring unknown switch 'ac'
+02-15 11:37:17.075 309-336/? W/ProcessStats: Skipping unknown process pid 7184
+02-15 11:37:17.085 309-336/? W/ProcessStats: Skipping unknown process pid 7185
+02-15 11:37:18.126 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:37:18.136 104-186/? D/Vold: USB connected
+02-15 11:37:18.176 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:37:18.737 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:37:25.673 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:37:25.944 104-186/? D/Vold: USB disconnected
+02-15 11:37:26.494 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+                                     
+                                     --------- beginning of /dev/log/main
+02-15 11:37:26.534 133-208/? I/MWMAINTE: mw_mainte_spec_bin_proc_thread(1568): dis-connected.
+02-15 11:37:26.534 309-368/? V/BgRingerService: bgRingerCancel call pkg:android id:17040651
+02-15 11:37:26.534 104-186/? D/Vold: USB attach detached
+02-15 11:37:26.534 104-186/? W/Vold: Ignoring unknown switch 'ac'
+02-15 11:37:26.584 309-395/? D/OBEXMnger: handleMsgRecvUsbDisable:8 :USB
+02-15 11:37:26.584 126-142/? E/obmgmain: all end st:0x0
+02-15 11:37:26.584 309-7209/? I/OBEXMngerUSB: onRecvDisconnectComplete() in
+02-15 11:37:26.584 309-7209/? I/OBEXMngerUSB: disconnectResult :9
+02-15 11:37:26.584 309-7209/? I/OBEXMngerUSB: onRecvDisconnectComplete() out
+02-15 11:37:26.584 309-7209/? I/OBEXMngerUSB: setAirplaneMode() for USB:1
+02-15 11:37:26.584 309-7209/? E/OBEXMngerUSB: m_deviceType : null
+02-15 11:37:26.584 309-7209/? V/OBEXMnger: restoreAddrSyncState() in
+02-15 11:37:26.584 309-7209/? V/OBEXMnger: address sync not stopped
+02-15 11:37:26.584 309-7209/? V/OBEXMnger: restoreAddrSyncState() out
+02-15 11:37:26.584 309-7209/? D/OBEXMnger: Thread run() out
+02-15 11:37:26.584 126-142/? E/obmgmain: session end. wait next accept
+02-15 11:37:26.965 309-364/? D/Tethering: InitialState.processMessage what=4
+02-15 11:37:26.965 309-364/? D/Tethering: sendTetherStateChangedBroadcast 0, 0, 0
+02-15 11:37:26.995 129-129/? E/dun_service: Error cancelling thread 57696, error = 3 (No such process)
+02-15 11:37:26.995 129-129/? I/dun_service: Joined port monitor thread 
+02-15 11:37:26.995 129-129/? I/dun_service: Joined the port read thread 
+02-15 11:37:26.995 129-129/? I/dun_service: Joined the port read thread 
+02-15 11:37:26.995 129-129/? I/dun_service: Moved to state(DUN_STATE_USB_UNPLUG)
+02-15 11:37:27.475 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:37:27.485 133-208/? I/MWMAINTE: mw_mainte_spec_bin_proc_thread(1564): connected.
+02-15 11:37:27.485 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:37:27.485 104-186/? D/Vold: USB attach attached
+02-15 11:37:27.495 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:37:27.495 104-186/? W/Vold: Ignoring unknown switch 'ac'
+02-15 11:37:27.555 309-368/? V/BgRingerService: bgRingerStartEx call
+02-15 11:37:27.555 309-368/? D/BgRingerService: defaults:0 flags:2
+02-15 11:37:27.555 309-368/? D/BgRingerService: categorized options:0 Pattern:0 Color:0
+02-15 11:37:27.555 309-368/? D/BgRingerService: SetData soundUri:null,category:5,sttype:5,time:5
+02-15 11:37:27.585 309-336/? W/ProcessStats: Skipping unknown process pid 7513
+02-15 11:37:27.585 309-336/? W/ProcessStats: Skipping unknown process pid 7514
+02-15 11:37:27.595 932-7516/? E/AppMainteLockNoAuthService: java.net.BindException: Address already in use
+02-15 11:37:27.605 126-142/? E/obmgmain: accept OK:5
+02-15 11:37:27.625 309-395/? I/OBEXMngerUSB: onRecvUsbCableConnected() in
+02-15 11:37:27.625 309-7523/? D/OBEXMnger: Thread run() in
+02-15 11:37:27.635 309-395/? I/OBEXMngerUSB: onRecvUsbCableConnected() out
+02-15 11:37:27.635 126-142/? E/obmgevnt: OBMG_SC_RECV_REQCSN : 0x6
+02-15 11:37:28.686 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:37:28.686 129-140/? I/dun_service: got usb online event 
+02-15 11:37:28.686 129-140/? I/dun_service:  ustate is DUN_USBSTATE_PLUG
+02-15 11:37:28.686 129-140/? I/dun_service: Post event 2
+02-15 11:37:28.686 129-140/? I/dun_service: /dev/dun_data close2
+02-15 11:37:28.686 129-129/? I/dun_service: received event: DUN_EVENT_USB_PLUG 
+02-15 11:37:28.686 129-129/? I/dun_service: received event(DUN_EVENT_USB_PLUG) in state(DUN_STATE_USB_UNPLUG)
+02-15 11:37:28.686 129-129/? I/dun_service: Successfully opened SMD port: e, ext port: 14
+02-15 11:37:28.686 129-129/? I/dun_service: Configured external host port in RAW mode
+02-15 11:37:28.686 129-129/? I/dun_service: Moved to state(DUN_STATE_IDLE)
+02-15 11:37:28.686 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:37:28.696 133-197/? I/MWMAINTE: main|is_connected|connected.
+02-15 11:37:28.696 133-197/? I/MWMAINTE: main|is_connected|connected.
+02-15 11:37:28.696 133-197/? I/MWMAINTE: main|open_tty|open /dev/ttyGS1
+02-15 11:37:28.696 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:37:28.696 104-186/? D/Vold: USB connected
+02-15 11:37:28.736 309-335/? V/BgRingerService: bgRingerStartEx call
+02-15 11:37:28.736 309-335/? D/BgRingerService: defaults:0 flags:2
+02-15 11:37:28.736 309-335/? D/BgRingerService: categorized options:0 Pattern:0 Color:0
+02-15 11:37:28.736 309-335/? D/BgRingerService: SetData soundUri:null,category:5,sttype:5,time:5
+02-15 11:37:28.746 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:37:28.746 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:37:28.746 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:37:28.776 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:37:28.876 309-361/? D/Tethering: sendTetherStateChangedBroadcast 1, 0, 0
+02-15 11:37:28.876 309-361/? D/Tethering: interfaceAdded :usb0
+02-15 11:37:28.917 129-7548/? I/dun_service: modem_bits0, prev_mdm_bits 0, init = 1,
+02-15 11:37:28.917 129-7548/? I/dun_service: smdtoextctrl: ext port bits 256, smdoldstatus 0, init = 1
+02-15 11:37:28.917 129-7548/? I/dun_service: portbridge: Turning ON external port bits 100
+02-15 11:37:29.007 4479-6192/? W/System.err: java.net.UnknownHostException: api.mgyun.com
+02-15 11:37:29.007 4479-6192/? W/System.err:     at java.net.InetAddress.lookupHostByName(InetAddress.java:506)
+02-15 11:37:29.007 4479-6192/? W/System.err:     at java.net.InetAddress.getAllByNameImpl(InetAddress.java:294)
+02-15 11:37:29.007 4479-6192/? W/System.err:     at java.net.InetAddress.getAllByName(InetAddress.java:256)
+02-15 11:37:29.007 4479-6192/? W/System.err:     at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:136)
+02-15 11:37:29.007 4479-6192/? W/System.err:     at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:164)
+02-15 11:37:29.007 4479-6192/? W/System.err:     at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:119)
+02-15 11:37:29.007 4479-6192/? W/System.err:     at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:359)
+02-15 11:37:29.007 4479-7571/? W/System.err: java.net.UnknownHostException: api.mgyun.com
+02-15 11:37:29.007 4479-7571/? W/System.err:     at java.net.InetAddress.lookupHostByName(InetAddress.java:497)
+02-15 11:37:29.007 4479-7571/? W/System.err:     at java.net.InetAddress.getAllByNameImpl(InetAddress.java:294)
+02-15 11:37:29.007 4479-7571/? W/System.err:     at java.net.InetAddress.getAllByName(InetAddress.java:256)
+02-15 11:37:29.007 4479-7571/? W/System.err:     at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:136)
+02-15 11:37:29.007 4479-7571/? W/System.err:     at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:164)
+02-15 11:37:29.007 4479-7571/? W/System.err:     at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:119)
+02-15 11:37:29.007 4479-7571/? W/System.err:     at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:359)
+02-15 11:37:29.007 4479-7571/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:555)
+02-15 11:37:29.007 4479-7571/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:487)
+02-15 11:37:29.007 4479-7571/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:465)
+02-15 11:37:29.007 4479-7571/? W/System.err:     at com.mgyun.shua.e.c.c(Sre.java:101)
+02-15 11:37:29.007 4479-7571/? W/System.err:     at com.mgyun.shua.e.c$1.run(Sre.java:71)
+02-15 11:37:29.007 4479-7571/? W/System.err:     at java.lang.Thread.run(Thread.java:1019)
+02-15 11:37:29.007 4479-6192/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:555)
+02-15 11:37:29.007 4479-6192/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:487)
+02-15 11:37:29.007 4479-6192/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:465)
+02-15 11:37:29.007 4479-6192/? W/System.err:     at z.hol.net.http.HttpDataFetch.httpGet(HttpDataFetch.java:293)
+02-15 11:37:29.007 4479-6192/? W/System.err:     at z.hol.net.http.HttpDataFetch.httpGet(HttpDataFetch.java:308)
+02-15 11:37:29.007 4479-6192/? W/System.err:     at com.mgyun.general.c.a$b.a(AsyncConfGetter.java:123)
+02-15 11:37:29.007 4479-6192/? W/System.err:     at com.mgyun.general.c.a$b.doInBackground(AsyncConfGetter.java:105)
+02-15 11:37:29.007 4479-6192/? W/System.err:     at android.os.AsyncTask$2.call(AsyncTask.java:185)
+02-15 11:37:29.007 4479-6192/? W/System.err:     at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:306)
+02-15 11:37:29.007 4479-6192/? W/System.err:     at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+02-15 11:37:29.007 4479-6192/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1088)
+02-15 11:37:29.007 4479-6192/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:581)
+02-15 11:37:29.007 4479-6192/? W/System.err:     at java.lang.Thread.run(Thread.java:1019)
+02-15 11:37:29.307 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:37:29.307 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:37:29.307 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:37:35.533 129-7548/? E/dun_service: TIOCMGET for external port failed - I/O error 
+02-15 11:37:35.533 129-7548/? E/dun_service: Error in dun_monitor_ports 
+02-15 11:37:35.533 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:37:35.543 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:37:35.543 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:37:35.573 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:37:35.903 4479-7685/? W/System.err: java.net.UnknownHostException: api.mgyun.com
+02-15 11:37:35.903 4479-7685/? W/System.err:     at java.net.InetAddress.lookupHostByName(InetAddress.java:497)
+02-15 11:37:35.903 4479-7685/? W/System.err:     at java.net.InetAddress.getAllByNameImpl(InetAddress.java:294)
+02-15 11:37:35.903 4479-7685/? W/System.err:     at java.net.InetAddress.getAllByName(InetAddress.java:256)
+02-15 11:37:35.903 4479-7685/? W/System.err:     at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:136)
+02-15 11:37:35.903 4479-7685/? W/System.err:     at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:164)
+02-15 11:37:35.903 4479-7685/? W/System.err:     at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:119)
+02-15 11:37:35.903 4479-7685/? W/System.err:     at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:359)
+02-15 11:37:35.903 4479-7685/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:555)
+02-15 11:37:35.903 4479-7685/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:487)
+02-15 11:37:35.903 4479-7685/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:465)
+02-15 11:37:35.903 4479-7685/? W/System.err:     at com.mgyun.shua.e.c.c(Sre.java:101)
+02-15 11:37:35.903 4479-7685/? W/System.err:     at com.mgyun.shua.e.c$1.run(Sre.java:71)
+02-15 11:37:35.903 4479-7685/? W/System.err:     at java.lang.Thread.run(Thread.java:1019)
+02-15 11:37:36.023 4479-6201/? W/System.err: java.net.UnknownHostException: api.mgyun.com
+02-15 11:37:36.023 4479-6201/? W/System.err:     at java.net.InetAddress.lookupHostByName(InetAddress.java:497)
+02-15 11:37:36.023 4479-6201/? W/System.err:     at java.net.InetAddress.getAllByNameImpl(InetAddress.java:294)
+02-15 11:37:36.023 4479-6201/? W/System.err:     at java.net.InetAddress.getAllByName(InetAddress.java:256)
+02-15 11:37:36.023 4479-6201/? W/System.err:     at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:136)
+02-15 11:37:36.023 4479-6201/? W/System.err:     at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:164)
+02-15 11:37:36.023 4479-6201/? W/System.err:     at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:119)
+02-15 11:37:36.023 4479-6201/? W/System.err:     at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:359)
+02-15 11:37:36.023 4479-6201/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:555)
+02-15 11:37:36.023 4479-6201/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:487)
+02-15 11:37:36.023 4479-6201/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:465)
+02-15 11:37:36.023 4479-6201/? W/System.err:     at z.hol.net.http.HttpDataFetch.httpGet(HttpDataFetch.java:293)
+02-15 11:37:36.023 4479-6201/? W/System.err:     at z.hol.net.http.HttpDataFetch.httpGet(HttpDataFetch.java:308)
+02-15 11:37:36.023 4479-6201/? W/System.err:     at com.mgyun.general.c.a$b.a(AsyncConfGetter.java:123)
+02-15 11:37:36.023 4479-6201/? W/System.err:     at com.mgyun.general.c.a$b.doInBackground(AsyncConfGetter.java:105)
+02-15 11:37:36.023 4479-6201/? W/System.err:     at android.os.AsyncTask$2.call(AsyncTask.java:185)
+02-15 11:37:36.023 4479-6201/? W/System.err:     at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:306)
+02-15 11:37:36.023 4479-6201/? W/System.err:     at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+02-15 11:37:36.023 4479-6201/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1088)
+02-15 11:37:36.023 4479-6201/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:581)
+02-15 11:37:36.053 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:37:36.053 309-335/? V/BgRingerService: bgRingerCancel call pkg:android id:17040182
+02-15 11:37:36.053 104-186/? D/Vold: USB disconnected
+02-15 11:37:36.064 133-197/? I/MWMAINTE: main|mainloop|close /dev/ttyGS1(20)
+02-15 11:37:36.094 4479-6201/? W/System.err:     at java.lang.Thread.run(Thread.java:1019)
+02-15 11:37:36.144 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:37:36.144 129-140/? I/dun_service: got usb offline event 
+02-15 11:37:36.144 129-140/? I/dun_service:  ustate is DUN_USBSTATE_UNPLUG
+02-15 11:37:36.144 129-140/? I/dun_service: Post event 1
+02-15 11:37:36.144 129-140/? I/dun_service: /dev/dun_data open case3 dun_data_fd:21
+02-15 11:37:36.144 129-129/? I/dun_service: received event: DUN_EVENT_USB_UNPLUG 
+02-15 11:37:36.144 129-129/? I/dun_service: received event(DUN_EVENT_USB_UNPLUG) in state(DUN_STATE_IDLE)
+02-15 11:37:36.144 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:37:36.154 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:37:36.154 129-140/? I/dun_service: got usb online event 
+02-15 11:37:36.154 129-140/? I/dun_service:  ustate is DUN_USBSTATE_PLUG
+02-15 11:37:36.154 129-140/? I/dun_service: Post event 2
+02-15 11:37:36.154 129-140/? I/dun_service: /dev/dun_data close2
+02-15 11:37:36.154 133-197/? I/MWMAINTE: main|is_connected|connected.
+02-15 11:37:36.154 133-197/? I/MWMAINTE: main|is_connected|connected.
+02-15 11:37:36.154 133-197/? I/MWMAINTE: main|open_tty|open /dev/ttyGS1
+02-15 11:37:36.154 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:37:36.154 309-335/? V/BgRingerService: bgRingerStartEx call
+02-15 11:37:36.154 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:37:36.154 104-186/? D/Vold: USB connected
+02-15 11:37:36.164 309-335/? D/BgRingerService: defaults:0 flags:2
+02-15 11:37:36.164 309-335/? D/BgRingerService: categorized options:0 Pattern:0 Color:0
+02-15 11:37:36.164 309-335/? D/BgRingerService: SetData soundUri:null,category:5,sttype:5,time:5
+02-15 11:37:36.194 309-361/? E/Tethering: active iface (usb0) reported as added, ignoring
+02-15 11:37:36.194 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:37:36.194 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:37:36.204 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:37:36.234 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:37:36.324 4479-7788/? W/System.err: java.net.UnknownHostException: api.mgyun.com
+02-15 11:37:36.324 4479-7788/? W/System.err:     at java.net.InetAddress.lookupHostByName(InetAddress.java:497)
+02-15 11:37:36.324 4479-7788/? W/System.err:     at java.net.InetAddress.getAllByNameImpl(InetAddress.java:294)
+02-15 11:37:36.324 4479-7788/? W/System.err:     at java.net.InetAddress.getAllByName(InetAddress.java:256)
+02-15 11:37:36.324 4479-7788/? W/System.err:     at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:136)
+02-15 11:37:36.324 4479-7788/? W/System.err:     at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:164)
+02-15 11:37:36.324 4479-7788/? W/System.err:     at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:119)
+02-15 11:37:36.324 4479-7788/? W/System.err:     at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:359)
+02-15 11:37:36.324 4479-7788/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:555)
+02-15 11:37:36.324 4479-7788/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:487)
+02-15 11:37:36.324 4479-7788/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:465)
+02-15 11:37:36.324 4479-7788/? W/System.err:     at com.mgyun.shua.e.c.c(Sre.java:101)
+02-15 11:37:36.324 4479-7788/? W/System.err:     at com.mgyun.shua.e.c$1.run(Sre.java:71)
+02-15 11:37:36.324 4479-7788/? W/System.err:     at java.lang.Thread.run(Thread.java:1019)
+02-15 11:37:36.384 4479-6202/? W/System.err: java.net.UnknownHostException: api.mgyun.com
+02-15 11:37:36.384 4479-6202/? W/System.err:     at java.net.InetAddress.lookupHostByName(InetAddress.java:497)
+02-15 11:37:36.384 4479-6202/? W/System.err:     at java.net.InetAddress.getAllByNameImpl(InetAddress.java:294)
+02-15 11:37:36.384 4479-6202/? W/System.err:     at java.net.InetAddress.getAllByName(InetAddress.java:256)
+02-15 11:37:36.384 4479-6202/? W/System.err:     at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:136)
+02-15 11:37:36.384 4479-6202/? W/System.err:     at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:164)
+02-15 11:37:36.384 4479-6202/? W/System.err:     at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:119)
+02-15 11:37:36.384 4479-6202/? W/System.err:     at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:359)
+02-15 11:37:36.384 4479-6202/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:555)
+02-15 11:37:36.384 4479-6202/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:487)
+02-15 11:37:36.384 4479-6202/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:465)
+02-15 11:37:36.384 4479-6202/? W/System.err:     at z.hol.net.http.HttpDataFetch.httpGet(HttpDataFetch.java:293)
+02-15 11:37:36.384 4479-6202/? W/System.err:     at z.hol.net.http.HttpDataFetch.httpGet(HttpDataFetch.java:308)
+02-15 11:37:36.384 4479-6202/? W/System.err:     at com.mgyun.general.c.a$b.a(AsyncConfGetter.java:123)
+02-15 11:37:36.384 4479-6202/? W/System.err:     at com.mgyun.general.c.a$b.doInBackground(AsyncConfGetter.java:105)
+02-15 11:37:36.384 4479-6202/? W/System.err:     at android.os.AsyncTask$2.call(AsyncTask.java:185)
+02-15 11:37:36.384 4479-6202/? W/System.err:     at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:306)
+02-15 11:37:36.384 4479-6202/? W/System.err:     at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+02-15 11:37:36.384 4479-6202/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1088)
+02-15 11:37:36.534 4479-6202/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:581)
+02-15 11:37:36.534 4479-6202/? W/System.err:     at java.lang.Thread.run(Thread.java:1019)
+02-15 11:37:36.644 129-129/? E/dun_service: Error cancelling thread 57696, error = 3 (No such process)
+02-15 11:37:36.644 129-129/? I/dun_service: Joined port monitor thread 
+02-15 11:37:36.644 129-129/? I/dun_service: Joined the port read thread 
+02-15 11:37:36.644 129-129/? I/dun_service: Joined the port read thread 
+02-15 11:37:36.644 129-129/? I/dun_service: Moved to state(DUN_STATE_USB_UNPLUG)
+02-15 11:37:36.644 129-129/? I/dun_service: received event: DUN_EVENT_USB_PLUG 
+02-15 11:37:36.644 129-129/? I/dun_service: received event(DUN_EVENT_USB_PLUG) in state(DUN_STATE_USB_UNPLUG)
+02-15 11:37:36.644 129-129/? I/dun_service: Successfully opened SMD port: e, ext port: 14
+02-15 11:37:36.644 129-129/? I/dun_service: Configured external host port in RAW mode
+02-15 11:37:36.644 129-129/? I/dun_service: Moved to state(DUN_STATE_IDLE)
+02-15 11:37:36.774 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:37:36.774 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:37:36.774 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:37:36.844 129-7843/? I/dun_service: modem_bits0, prev_mdm_bits 0, init = 1,
+02-15 11:37:36.844 129-7843/? I/dun_service: smdtoextctrl: ext port bits 256, smdoldstatus 0, init = 1
+02-15 11:37:36.844 129-7843/? I/dun_service: portbridge: Turning ON external port bits 100
+02-15 11:37:46.444 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:37:46.444 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:37:50.808 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:37:50.808 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:37:50.828 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:37:50.848 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:37:50.858 129-7843/? E/dun_service: TIOCMGET for external port failed - I/O error 
+02-15 11:37:50.858 129-7843/? E/dun_service: Error in dun_monitor_ports 
+02-15 11:37:51.238 4479-7913/? W/System.err: java.net.UnknownHostException: api.mgyun.com
+02-15 11:37:51.238 4479-7913/? W/System.err:     at java.net.InetAddress.lookupHostByName(InetAddress.java:506)
+02-15 11:37:51.238 4479-7913/? W/System.err:     at java.net.InetAddress.getAllByNameImpl(InetAddress.java:294)
+02-15 11:37:51.238 4479-7913/? W/System.err:     at java.net.InetAddress.getAllByName(InetAddress.java:256)
+02-15 11:37:51.238 4479-7913/? W/System.err:     at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:136)
+02-15 11:37:51.238 4479-7913/? W/System.err:     at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:164)
+02-15 11:37:51.238 4479-7913/? W/System.err:     at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:119)
+02-15 11:37:51.238 4479-7913/? W/System.err:     at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:359)
+02-15 11:37:51.238 4479-7913/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:555)
+02-15 11:37:51.238 4479-7913/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:487)
+02-15 11:37:51.238 4479-7913/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:465)
+02-15 11:37:51.238 4479-7913/? W/System.err:     at com.mgyun.shua.e.c.c(Sre.java:101)
+02-15 11:37:51.238 4479-7913/? W/System.err:     at com.mgyun.shua.e.c$1.run(Sre.java:71)
+02-15 11:37:51.238 4479-7913/? W/System.err:     at java.lang.Thread.run(Thread.java:1019)
+02-15 11:37:51.328 4479-6209/? W/System.err: java.net.UnknownHostException: api.mgyun.com
+02-15 11:37:51.328 4479-6209/? W/System.err:     at java.net.InetAddress.lookupHostByName(InetAddress.java:497)
+02-15 11:37:51.328 4479-6209/? W/System.err:     at java.net.InetAddress.getAllByNameImpl(InetAddress.java:294)
+02-15 11:37:51.328 4479-6209/? W/System.err:     at java.net.InetAddress.getAllByName(InetAddress.java:256)
+02-15 11:37:51.328 4479-6209/? W/System.err:     at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:136)
+02-15 11:37:51.328 4479-6209/? W/System.err:     at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:164)
+02-15 11:37:51.328 4479-6209/? W/System.err:     at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:119)
+02-15 11:37:51.328 4479-6209/? W/System.err:     at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:359)
+02-15 11:37:51.328 4479-6209/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:555)
+02-15 11:37:51.328 4479-6209/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:487)
+02-15 11:37:51.328 4479-6209/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:465)
+02-15 11:37:51.328 4479-6209/? W/System.err:     at z.hol.net.http.HttpDataFetch.httpGet(HttpDataFetch.java:293)
+02-15 11:37:51.328 4479-6209/? W/System.err:     at z.hol.net.http.HttpDataFetch.httpGet(HttpDataFetch.java:308)
+02-15 11:37:51.328 4479-6209/? W/System.err:     at com.mgyun.general.c.a$b.a(AsyncConfGetter.java:123)
+02-15 11:37:51.328 4479-6209/? W/System.err:     at com.mgyun.general.c.a$b.doInBackground(AsyncConfGetter.java:105)
+02-15 11:37:51.328 4479-6209/? W/System.err:     at android.os.AsyncTask$2.call(AsyncTask.java:185)
+02-15 11:37:51.328 4479-6209/? W/System.err:     at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:306)
+02-15 11:37:51.328 4479-6209/? W/System.err:     at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+02-15 11:37:51.328 4479-6209/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1088)
+02-15 11:37:51.328 4479-6209/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:581)
+02-15 11:37:51.328 4479-6209/? W/System.err:     at java.lang.Thread.run(Thread.java:1019)
+02-15 11:37:51.589 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:37:51.589 309-335/? V/BgRingerService: bgRingerCancel call pkg:android id:17040182
+02-15 11:37:51.589 104-186/? D/Vold: USB disconnected
+02-15 11:37:51.609 133-197/? I/MWMAINTE: main|mainloop|close /dev/ttyGS1(20)
+02-15 11:37:52.610 309-364/? D/Tethering: InitialState.processMessage what=4
+02-15 11:37:52.610 309-364/? D/Tethering: sendTetherStateChangedBroadcast 0, 0, 0
+02-15 11:37:53.671 4479-5367/? W/System.err: java.io.FileNotFoundException: /mnt/sdcard/mgyapp/.st.dat (Permission denied)
+02-15 11:37:53.751 4479-5367/? W/System.err:     at org.apache.harmony.luni.platform.OSFileSystem.open(Native Method)
+02-15 11:37:53.751 4479-5367/? W/System.err:     at dalvik.system.BlockGuard$WrappedFileSystem.open(BlockGuard.java:232)
+02-15 11:37:53.751 4479-5367/? W/System.err:     at java.io.FileOutputStream.<init>(FileOutputStream.java:94)
+02-15 11:37:53.751 4479-5367/? W/System.err:     at java.io.FileOutputStream.<init>(FileOutputStream.java:66)
+02-15 11:37:53.751 4479-5367/? W/System.err:     at com.mgyapp.android.b.c.a(DefaultStatisbase.java:120)
+02-15 11:37:53.751 4479-5367/? W/System.err:     at com.mgyapp.android.b.c.e(DefaultStatisbase.java:106)
+02-15 11:37:53.751 4479-5367/? W/System.err:     at com.mgyapp.android.controller.h$a.a(StatiseControler.java:163)
+02-15 11:37:53.751 4479-5367/? W/System.err:     at com.mgyapp.android.controller.h$a.doInBackground(StatiseControler.java:155)
+02-15 11:37:53.751 4479-5367/? W/System.err:     at android.os.AsyncTask$2.call(AsyncTask.java:185)
+02-15 11:37:53.751 4479-5367/? W/System.err:     at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:306)
+02-15 11:37:53.751 4479-5367/? W/System.err:     at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+02-15 11:37:53.751 4479-5367/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1088)
+02-15 11:37:53.751 4479-5367/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:581)
+02-15 11:37:53.751 4479-5367/? W/System.err:     at java.lang.Thread.run(Thread.java:1019)
+02-15 11:38:05.642 5715-5734/? I/tnet-jni: 15 -  create new session: accscdn.m.taobao.com:443
+02-15 11:38:05.642 5715-5734/? W/System.err: org.android.spdy.SpdyErrorException: create session error: -1107
+02-15 11:38:05.642 5715-5734/? W/System.err:     at org.android.spdy.SpdyAgent.createSession(SpdyAgent.java:448)
+02-15 11:38:05.642 5715-5734/? W/System.err:     at org.android.spdy.SpdyAgent.createSession(SpdyAgent.java:331)
+02-15 11:38:05.642 5715-5734/? W/System.err:     at com.taobao.accs.net.l.b(Taobao:445)
+02-15 11:38:05.642 5715-5734/? W/System.err:     at com.taobao.accs.net.l.b(Taobao:60)
+02-15 11:38:05.642 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:815)
+02-15 11:38:05.642 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.run(Taobao:881)
+02-15 11:38:10.807 5715-5734/? I/tnet-jni: 15 -  create new session: accscdn.m.taobao.com:443
+02-15 11:38:10.807 5715-5734/? W/System.err: org.android.spdy.SpdyErrorException: create session error: -1107
+02-15 11:38:10.807 5715-5734/? W/System.err:     at org.android.spdy.SpdyAgent.createSession(SpdyAgent.java:448)
+02-15 11:38:10.807 5715-5734/? W/System.err:     at org.android.spdy.SpdyAgent.createSession(SpdyAgent.java:331)
+02-15 11:38:10.807 5715-5734/? W/System.err:     at com.taobao.accs.net.l.b(Taobao:445)
+02-15 11:38:10.807 5715-5734/? W/System.err:     at com.taobao.accs.net.l.b(Taobao:60)
+02-15 11:38:10.807 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:815)
+02-15 11:38:10.807 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:822)
+02-15 11:38:10.807 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.run(Taobao:881)
+02-15 11:38:15.802 5715-5734/? I/tnet-jni: 15 -  create new session: accscdn.m.taobao.com:80
+02-15 11:38:15.802 5715-5734/? W/System.err: org.android.spdy.SpdyErrorException: create session error: -1107
+02-15 11:38:15.802 5715-5734/? W/System.err:     at org.android.spdy.SpdyAgent.createSession(SpdyAgent.java:448)
+02-15 11:38:15.802 5715-5734/? W/System.err:     at org.android.spdy.SpdyAgent.createSession(SpdyAgent.java:331)
+02-15 11:38:15.802 5715-5734/? W/System.err:     at com.taobao.accs.net.l.b(Taobao:445)
+02-15 11:38:15.802 5715-5734/? W/System.err:     at com.taobao.accs.net.l.b(Taobao:60)
+02-15 11:38:15.802 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:815)
+02-15 11:38:15.802 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:822)
+02-15 11:38:15.802 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:822)
+02-15 11:38:15.802 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.run(Taobao:881)
+02-15 11:38:20.837 5715-5734/? I/tnet-jni: 15 -  create new session: accscdn.m.taobao.com:80
+02-15 11:38:20.837 5715-5734/? W/System.err: org.android.spdy.SpdyErrorException: create session error: -1107
+02-15 11:38:20.837 5715-5734/? W/System.err:     at org.android.spdy.SpdyAgent.createSession(SpdyAgent.java:448)
+02-15 11:38:20.837 5715-5734/? W/System.err:     at org.android.spdy.SpdyAgent.createSession(SpdyAgent.java:331)
+02-15 11:38:20.837 5715-5734/? W/System.err:     at com.taobao.accs.net.l.b(Taobao:445)
+02-15 11:38:20.837 5715-5734/? W/System.err:     at com.taobao.accs.net.l.b(Taobao:60)
+02-15 11:38:20.837 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:815)
+02-15 11:38:20.837 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:822)
+02-15 11:38:20.837 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:822)
+02-15 11:38:20.837 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:822)
+02-15 11:38:20.837 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.run(Taobao:881)
+02-15 11:38:36.573 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:38:36.573 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:38:43.329 309-518/? V/BgRingerService: bgRingerCancelAll call
+02-15 11:38:46.853 309-3944/? I/ActivityManager: Starting: Intent { cmp=jp.co.sharp.android.usbmode/.UsbMode bnds=[0,277][540,376] } from pid -1
+02-15 11:38:46.853 309-3944/? W/ActivityManager: startActivity called from non-Activity context; forcing Intent.FLAG_ACTIVITY_NEW_TASK for: Intent { cmp=jp.co.sharp.android.usbmode/.UsbMode bnds=[0,277][540,376] }
+02-15 11:38:47.203 309-501/? I/ActivityManager: Start proc jp.co.sharp.android.usbmode for activity jp.co.sharp.android.usbmode/.UsbMode: pid=7985 uid=10051 gids={}
+02-15 11:38:47.273 309-314/? V/BgRingerService: bgRingerCancelAll call
+02-15 11:38:47.553 309-469/? W/InputManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@408519c0
+02-15 11:38:47.593 7985-7985/? V/ResourceUtils: Enhancing Resources is once.
+02-15 11:38:47.793 587-612/? W/LL_Core: [LifeLogDatabaseInsertSpareParts]Could NOT insert the usage log because the launch date is before year 2000.
+02-15 11:38:48.184 309-353/? I/ActivityManager: Displayed jp.co.sharp.android.usbmode/.UsbMode: +1s14ms
+02-15 11:38:49.145 309-395/? D/OBEXMnger: handleMsgRecvUsbDisable:8 :USB
+02-15 11:38:49.145 126-142/? E/obmgmain: all end st:0x0
+02-15 11:38:49.145 309-7523/? I/OBEXMngerUSB: onRecvDisconnectComplete() in
+02-15 11:38:49.145 309-7523/? I/OBEXMngerUSB: disconnectResult :9
+02-15 11:38:49.145 309-7523/? I/OBEXMngerUSB: onRecvDisconnectComplete() out
+02-15 11:38:49.145 309-7523/? I/OBEXMngerUSB: setAirplaneMode() for USB:1
+02-15 11:38:49.145 309-7523/? E/OBEXMngerUSB: m_deviceType : null
+02-15 11:38:49.145 309-7523/? V/OBEXMnger: restoreAddrSyncState() in
+02-15 11:38:49.145 309-7523/? V/OBEXMnger: address sync not stopped
+02-15 11:38:49.145 309-7523/? V/OBEXMnger: restoreAddrSyncState() out
+02-15 11:38:49.145 309-7523/? D/OBEXMnger: Thread run() out
+02-15 11:38:49.145 126-142/? E/obmgmain: session end. wait next accept
+02-15 11:38:49.185 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:38:49.205 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 2 
+02-15 11:38:49.215 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 1 
+02-15 11:38:49.215 129-140/? I/dun_service: Post event 1
+02-15 11:38:49.215 129-140/? I/dun_service: /dev/dun_data open case3 dun_data_fd:21
+02-15 11:38:49.215 129-129/? I/dun_service: received event: DUN_EVENT_USB_UNPLUG 
+02-15 11:38:49.215 129-129/? I/dun_service: received event(DUN_EVENT_USB_UNPLUG) in state(DUN_STATE_IDLE)
+02-15 11:38:49.235 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 1 
+02-15 11:38:49.235 129-140/? I/dun_service: Post event 1
+02-15 11:38:49.235 104-186/? D/Vold: usb_mass_storage function enabled
+02-15 11:38:49.235 104-186/? D/Vold: Share method ums now available
+02-15 11:38:49.235 405-555/? I/StorageNotification: UMS connection changed to true (media state removed)
+02-15 11:38:49.265 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 1 
+02-15 11:38:49.265 129-140/? I/dun_service: Post event 1
+02-15 11:38:49.265 309-368/? V/BgRingerService: bgRingerStartEx call
+02-15 11:38:49.265 309-368/? D/BgRingerService: defaults:0 flags:2
+02-15 11:38:49.265 309-368/? D/BgRingerService: categorized options:0 Pattern:0 Color:0
+02-15 11:38:49.265 309-368/? D/BgRingerService: SetData soundUri:null,category:5,sttype:5,time:5
+02-15 11:38:49.265 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:38:49.265 309-336/? I/ActivityManager: Start proc jp.co.sharp.android.capability for broadcast jp.co.sharp.android.capability/.CapabilityService$CapabilityReceiver: pid=7999 uid=10099 gids={1015}
+02-15 11:38:49.505 7999-7999/? D/CapabilityReceiver: received action.UMS_CONNECTED
+02-15 11:38:49.515 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 1 
+02-15 11:38:49.515 129-140/? I/dun_service: Post event 1
+02-15 11:38:49.515 104-186/? W/Vold: Ignoring unknown switch 'usb_mass_storage'
+02-15 11:38:49.545 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 1 
+02-15 11:38:49.545 129-140/? I/dun_service: Post event 1
+02-15 11:38:49.545 104-186/? W/Vold: Ignoring unknown switch 'MSM72K_UDC'
+02-15 11:38:49.565 133-197/? I/MWMAINTE: main|is_connected|not connected.
+02-15 11:38:49.565 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 1 
+02-15 11:38:49.565 129-140/? I/dun_service: Post event 1
+02-15 11:38:49.565 104-186/? D/Vold: USB connected
+02-15 11:38:49.575 309-335/? V/BgRingerService: bgRingerStartEx call
+02-15 11:38:49.585 309-335/? D/BgRingerService: defaults:0 flags:2
+02-15 11:38:49.585 309-335/? D/BgRingerService: categorized options:0 Pattern:0 Color:0
+02-15 11:38:49.585 309-335/? D/BgRingerService: SetData soundUri:null,category:5,sttype:5,time:5
+02-15 11:38:49.585 7999-7999/? W/CapabilityBase: IOException
+02-15 11:38:49.585 7999-7999/? W/System.err: jp.co.sharp.android.capability.MakeCapabilityFileException: java.io.IOException: File.mkdirs() failed.
+02-15 11:38:49.615 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 1 
+02-15 11:38:49.615 129-140/? I/dun_service: Post event 1
+02-15 11:38:49.625 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 1 
+02-15 11:38:49.625 129-140/? I/dun_service: Post event 1
+02-15 11:38:49.625 7999-7999/? W/System.err:     at jp.co.sharp.android.capability.CapabilityBase.makeCapabilityFile(CapabilityBase.java:65)
+02-15 11:38:49.625 7999-7999/? W/System.err:     at jp.co.sharp.android.capability.Capability.makeCapability(Capability.java:43)
+02-15 11:38:49.625 7999-7999/? W/System.err:     at jp.co.sharp.android.capability.CapabilityService.onStart(CapabilityService.java:45)
+02-15 11:38:49.625 7999-7999/? W/System.err:     at android.app.Service.onStartCommand(Service.java:428)
+02-15 11:38:49.625 7999-7999/? W/System.err:     at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:2078)
+02-15 11:38:49.625 7999-7999/? W/System.err:     at android.app.ActivityThread.access$2800(ActivityThread.java:117)
+02-15 11:38:49.625 7999-7999/? W/System.err:     at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1012)
+02-15 11:38:49.625 7999-7999/? W/System.err:     at android.os.Handler.dispatchMessage(Handler.java:99)
+02-15 11:38:49.625 7999-7999/? W/System.err:     at android.os.Looper.loop(Looper.java:123)
+02-15 11:38:49.625 7999-7999/? W/System.err:     at android.app.ActivityThread.main(ActivityThread.java:3728)
+02-15 11:38:49.625 7999-7999/? W/System.err:     at java.lang.reflect.Method.invokeNative(Native Method)
+02-15 11:38:49.625 7999-7999/? W/System.err:     at java.lang.reflect.Method.invoke(Method.java:507)
+02-15 11:38:49.625 7999-7999/? W/System.err:     at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:864)
+02-15 11:38:49.625 7999-7999/? W/System.err:     at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:622)
+02-15 11:38:49.625 7999-7999/? W/System.err:     at dalvik.system.NativeStart.main(Native Method)
+02-15 11:38:49.625 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:38:49.645 7999-7999/? W/System.err: Caused by: java.io.IOException: File.mkdirs() failed.
+02-15 11:38:49.645 7999-7999/? W/System.err:     at jp.co.sharp.android.capability.CapabilityBase.mkdir_p(CapabilityBase.java:98)
+02-15 11:38:49.645 7999-7999/? W/System.err:     at jp.co.sharp.android.capability.CapabilityBase.mkdir_p(CapabilityBase.java:86)
+02-15 11:38:49.645 7999-7999/? W/System.err:     at jp.co.sharp.android.capability.CapabilityBase.makeDEVPROFDirectry(CapabilityBase.java:75)
+02-15 11:38:49.645 7999-7999/? W/System.err:     at jp.co.sharp.android.capability.CapabilityBase.makeCapabilityFile(CapabilityBase.java:53)
+02-15 11:38:49.665 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 1 
+02-15 11:38:49.665 129-140/? I/dun_service: Post event 1
+02-15 11:38:49.675 309-361/? D/Tethering: sendTetherStateChangedBroadcast 1, 0, 0
+02-15 11:38:49.675 309-361/? D/Tethering: interfaceAdded :usb0
+02-15 11:38:49.715 129-129/? E/dun_service: Error cancelling thread 57696, error = 3 (No such process)
+02-15 11:38:49.715 129-129/? I/dun_service: Joined port monitor thread 
+02-15 11:38:49.715 129-129/? I/dun_service: Joined the port read thread 
+02-15 11:38:49.715 129-129/? I/dun_service: Joined the port read thread 
+02-15 11:38:49.715 129-129/? I/dun_service: Moved to state(DUN_STATE_USB_UNPLUG)
+02-15 11:38:49.715 129-129/? I/dun_service: received event: DUN_EVENT_USB_UNPLUG 
+02-15 11:38:49.715 129-129/? I/dun_service: received event(DUN_EVENT_USB_UNPLUG) in state(DUN_STATE_USB_UNPLUG)
+02-15 11:38:49.715 129-129/? I/dun_service: Ignoring the event DUN_EVENT_USB_UNPLUG in USB_UNPLUG_STATE
+02-15 11:38:49.715 129-129/? I/dun_service: Moved to state(DUN_STATE_USB_UNPLUG)
+02-15 11:38:49.715 129-129/? I/dun_service: received event: DUN_EVENT_USB_UNPLUG 
+02-15 11:38:49.715 129-129/? I/dun_service: received event(DUN_EVENT_USB_UNPLUG) in state(DUN_STATE_USB_UNPLUG)
+02-15 11:38:49.715 129-129/? I/dun_service: Ignoring the event DUN_EVENT_USB_UNPLUG in USB_UNPLUG_STATE
+02-15 11:38:49.715 129-129/? I/dun_service: Moved to state(DUN_STATE_USB_UNPLUG)
+02-15 11:38:49.715 129-129/? I/dun_service: received event: DUN_EVENT_USB_UNPLUG 
+02-15 11:38:49.715 129-129/? I/dun_service: received event(DUN_EVENT_USB_UNPLUG) in state(DUN_STATE_USB_UNPLUG)
+02-15 11:38:49.715 129-129/? I/dun_service: Ignoring the event DUN_EVENT_USB_UNPLUG in USB_UNPLUG_STATE
+02-15 11:38:49.715 129-129/? I/dun_service: Moved to state(DUN_STATE_USB_UNPLUG)
+02-15 11:38:49.715 129-129/? I/dun_service: received event: DUN_EVENT_USB_UNPLUG 
+02-15 11:38:49.715 129-129/? I/dun_service: received event(DUN_EVENT_USB_UNPLUG) in state(DUN_STATE_USB_UNPLUG)
+02-15 11:38:49.715 129-129/? I/dun_service: Ignoring the event DUN_EVENT_USB_UNPLUG in USB_UNPLUG_STATE
+02-15 11:38:49.715 129-129/? I/dun_service: Moved to state(DUN_STATE_USB_UNPLUG)
+02-15 11:38:49.715 129-129/? I/dun_service: received event: DUN_EVENT_USB_UNPLUG 
+02-15 11:38:49.715 129-129/? I/dun_service: received event(DUN_EVENT_USB_UNPLUG) in state(DUN_STATE_USB_UNPLUG)
+02-15 11:38:49.715 129-129/? I/dun_service: Ignoring the event DUN_EVENT_USB_UNPLUG in USB_UNPLUG_STATE
+02-15 11:38:49.715 129-129/? I/dun_service: Moved to state(DUN_STATE_USB_UNPLUG)
+02-15 11:38:49.715 129-129/? I/dun_service: received event: DUN_EVENT_USB_UNPLUG 
+02-15 11:38:49.715 129-129/? I/dun_service: received event(DUN_EVENT_USB_UNPLUG) in state(DUN_STATE_USB_UNPLUG)
+02-15 11:38:49.715 129-129/? I/dun_service: Ignoring the event DUN_EVENT_USB_UNPLUG in USB_UNPLUG_STATE
+02-15 11:38:49.715 129-129/? I/dun_service: Moved to state(DUN_STATE_USB_UNPLUG)
+02-15 11:38:49.715 129-129/? I/dun_service: received event: DUN_EVENT_USB_UNPLUG 
+02-15 11:38:49.715 129-129/? I/dun_service: received event(DUN_EVENT_USB_UNPLUG) in state(DUN_STATE_USB_UNPLUG)
+02-15 11:38:49.715 129-129/? I/dun_service: Ignoring the event DUN_EVENT_USB_UNPLUG in USB_UNPLUG_STATE
+02-15 11:38:49.715 129-129/? I/dun_service: Moved to state(DUN_STATE_USB_UNPLUG)
+02-15 11:38:49.715 129-129/? I/dun_service: received event: DUN_EVENT_USB_UNPLUG 
+02-15 11:38:49.715 129-129/? I/dun_service: received event(DUN_EVENT_USB_UNPLUG) in state(DUN_STATE_USB_UNPLUG)
+02-15 11:38:49.715 129-129/? I/dun_service: Ignoring the event DUN_EVENT_USB_UNPLUG in USB_UNPLUG_STATE
+02-15 11:38:49.715 129-129/? I/dun_service: Moved to state(DUN_STATE_USB_UNPLUG)
+02-15 11:38:49.725 7999-7999/? W/System.err: 	... 14 more
+02-15 11:38:49.725 309-480/? I/ActivityManager: No longer want com.kddi.android.providers.securitydata (pid 3879): hidden #16
+02-15 11:38:49.765 309-315/? W/InputManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@40ab7338
+02-15 11:38:49.876 587-612/? W/LL_Core: [LifeLogDatabaseInsertSpareParts]Could NOT insert the usage log because the launch date is before year 2000.
+02-15 11:38:49.936 4479-8111/? W/System.err: java.net.UnknownHostException: api.mgyun.com
+02-15 11:38:49.936 4479-8111/? W/System.err:     at java.net.InetAddress.lookupHostByName(InetAddress.java:506)
+02-15 11:38:49.936 4479-8111/? W/System.err:     at java.net.InetAddress.getAllByNameImpl(InetAddress.java:294)
+02-15 11:38:49.936 4479-8111/? W/System.err:     at java.net.InetAddress.getAllByName(InetAddress.java:256)
+02-15 11:38:49.936 4479-8111/? W/System.err:     at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:136)
+02-15 11:38:49.936 4479-8111/? W/System.err:     at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:164)
+02-15 11:38:49.936 4479-8111/? W/System.err:     at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:119)
+02-15 11:38:49.936 4479-8111/? W/System.err:     at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:359)
+02-15 11:38:49.936 4479-8111/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:555)
+02-15 11:38:49.936 4479-8111/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:487)
+02-15 11:38:49.936 4479-8111/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:465)
+02-15 11:38:49.936 4479-8111/? W/System.err:     at com.mgyun.shua.e.c.c(Sre.java:101)
+02-15 11:38:49.936 4479-8111/? W/System.err:     at com.mgyun.shua.e.c$1.run(Sre.java:71)
+02-15 11:38:49.936 4479-8111/? W/System.err:     at java.lang.Thread.run(Thread.java:1019)
+02-15 11:38:49.956 4479-6192/? W/System.err: java.net.UnknownHostException: api.mgyun.com
+02-15 11:38:49.956 4479-6192/? W/System.err:     at java.net.InetAddress.lookupHostByName(InetAddress.java:497)
+02-15 11:38:49.956 4479-6192/? W/System.err:     at java.net.InetAddress.getAllByNameImpl(InetAddress.java:294)
+02-15 11:38:49.956 4479-6192/? W/System.err:     at java.net.InetAddress.getAllByName(InetAddress.java:256)
+02-15 11:38:49.956 4479-6192/? W/System.err:     at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:136)
+02-15 11:38:49.956 4479-6192/? W/System.err:     at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:164)
+02-15 11:38:49.956 4479-6192/? W/System.err:     at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:119)
+02-15 11:38:49.956 4479-6192/? W/System.err:     at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:359)
+02-15 11:38:49.956 4479-6192/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:555)
+02-15 11:38:49.956 4479-6192/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:487)
+02-15 11:38:49.956 4479-6192/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:465)
+02-15 11:38:49.956 4479-6192/? W/System.err:     at z.hol.net.http.HttpDataFetch.httpGet(HttpDataFetch.java:293)
+02-15 11:38:49.956 4479-6192/? W/System.err:     at z.hol.net.http.HttpDataFetch.httpGet(HttpDataFetch.java:308)
+02-15 11:38:49.956 4479-6192/? W/System.err:     at com.mgyun.general.c.a$b.a(AsyncConfGetter.java:123)
+02-15 11:38:49.956 4479-6192/? W/System.err:     at com.mgyun.general.c.a$b.doInBackground(AsyncConfGetter.java:105)
+02-15 11:38:49.956 4479-6192/? W/System.err:     at android.os.AsyncTask$2.call(AsyncTask.java:185)
+02-15 11:38:49.956 4479-6192/? W/System.err:     at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:306)
+02-15 11:38:49.956 4479-6192/? W/System.err:     at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+02-15 11:38:49.956 4479-6192/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1088)
+02-15 11:38:49.956 4479-6192/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:581)
+02-15 11:38:49.956 4479-6192/? W/System.err:     at java.lang.Thread.run(Thread.java:1019)
+02-15 11:38:50.096 447-447/? D/skia: purging 191K from font cache [16 entries]
+02-15 11:38:50.226 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 1 
+02-15 11:38:50.226 129-140/? I/dun_service: Post event 1
+02-15 11:38:50.226 129-129/? I/dun_service: received event: DUN_EVENT_USB_UNPLUG 
+02-15 11:38:50.226 129-129/? I/dun_service: received event(DUN_EVENT_USB_UNPLUG) in state(DUN_STATE_USB_UNPLUG)
+02-15 11:38:50.226 129-129/? I/dun_service: Ignoring the event DUN_EVENT_USB_UNPLUG in USB_UNPLUG_STATE
+02-15 11:38:50.226 129-129/? I/dun_service: Moved to state(DUN_STATE_USB_UNPLUG)
+02-15 11:38:50.226 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 1 
+02-15 11:38:50.226 129-140/? I/dun_service: Post event 1
+02-15 11:38:50.226 129-129/? I/dun_service: received event: DUN_EVENT_USB_UNPLUG 
+02-15 11:38:50.226 129-129/? I/dun_service: received event(DUN_EVENT_USB_UNPLUG) in state(DUN_STATE_USB_UNPLUG)
+02-15 11:38:50.226 129-129/? I/dun_service: Ignoring the event DUN_EVENT_USB_UNPLUG in USB_UNPLUG_STATE
+02-15 11:38:50.226 129-129/? I/dun_service: Moved to state(DUN_STATE_USB_UNPLUG)
+02-15 11:38:50.226 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:38:50.316 309-336/? W/ProcessStats: Skipping unknown process pid 8203
+02-15 11:38:50.316 309-336/? W/ProcessStats: Skipping unknown process pid 8204
+02-15 11:38:52.628 309-480/? I/ActivityManager: No longer want jp.co.sharp.android.camera.videocamera (pid 4317): hidden #16
+02-15 11:39:09.715 309-478/? I/ActivityManager: Starting: Intent { flg=0x10000000 cmp=com.mgyun.shua.protector/.service.DaemonActivity } from pid 8256
+02-15 11:39:09.805 587-612/? W/LL_Core: [LifeLogDatabaseInsertSpareParts]Could NOT insert the usage log because the launch date is before year 2000.
+02-15 11:39:09.845 587-612/? W/LL_Core: [LifeLogDatabaseInsertSpareParts]Could NOT insert the usage log because the launch date is before year 2000.
+02-15 11:39:09.895 309-517/? W/InputManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@408bc570
+02-15 11:39:10.255 309-501/? I/ActivityManager: Starting: Intent { flg=0x10000000 cmp=com.mgyapp.android/.ui.DaemonActivityNew } from pid 8266
+02-15 11:39:10.366 587-612/? W/LL_Core: [LifeLogDatabaseInsertSpareParts]Could NOT insert the usage log because the launch date is before year 2000.
+02-15 11:39:10.376 4479-4479/? E/com.umeng.message.UTrack: RegistrationId is empty
+02-15 11:39:10.376 4479-4479/? E/com.umeng.message.UTrack: RegistrationId is empty
+02-15 11:39:11.547 309-518/? I/ActivityManager: No longer want com.android.browser (pid 4345): hidden #16
+02-15 11:39:17.152 309-339/? W/ActivityManager: No content provider found for: 
+02-15 11:39:22.377 309-339/? D/PackageParser: Scanning package: /data/app/vmdl1450619214.tmp
+02-15 11:39:22.377 309-339/? W/ActivityManager: No content provider found for: 
+02-15 11:39:22.387 309-339/? W/PackageParser: /data/app/vmdl1450619214.tmp (at Binary XML file line #8): Requires newer sdk version #16 (current version is #10)
+02-15 11:39:22.938 309-336/? V/BgRingerService: bgRingerStartEx call
+02-15 11:39:22.938 309-336/? D/BgRingerService: defaults:0 flags:98
+02-15 11:39:22.938 309-336/? D/BgRingerService: categorized options:0 Pattern:0 Color:0
+02-15 11:39:22.938 309-336/? D/BgRingerService: SetData soundUri:null,category:5,sttype:5,time:5
+02-15 11:39:46.771 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 1 
+02-15 11:39:46.771 129-140/? I/dun_service: Post event 1
+02-15 11:39:46.771 129-129/? I/dun_service: received event: DUN_EVENT_USB_UNPLUG 
+02-15 11:39:46.771 129-129/? I/dun_service: received event(DUN_EVENT_USB_UNPLUG) in state(DUN_STATE_USB_UNPLUG)
+02-15 11:39:46.771 129-129/? I/dun_service: Ignoring the event DUN_EVENT_USB_UNPLUG in USB_UNPLUG_STATE
+02-15 11:39:46.771 129-129/? I/dun_service: Moved to state(DUN_STATE_USB_UNPLUG)
+02-15 11:39:46.771 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:40:40.724 309-336/? W/ProcessStats: Skipping unknown process pid 8715
+02-15 11:40:40.734 309-336/? W/ProcessStats: Skipping unknown process pid 8718
+02-15 11:40:53.776 4479-6201/? W/System.err: java.io.FileNotFoundException: /mnt/sdcard/mgyapp/.st.dat (Permission denied)
+02-15 11:40:53.776 4479-6201/? W/System.err:     at org.apache.harmony.luni.platform.OSFileSystem.open(Native Method)
+02-15 11:40:53.776 4479-6201/? W/System.err:     at dalvik.system.BlockGuard$WrappedFileSystem.open(BlockGuard.java:232)
+02-15 11:40:53.786 4479-6201/? W/System.err:     at java.io.FileOutputStream.<init>(FileOutputStream.java:94)
+02-15 11:40:53.786 4479-6201/? W/System.err:     at java.io.FileOutputStream.<init>(FileOutputStream.java:66)
+02-15 11:40:53.786 4479-6201/? W/System.err:     at com.mgyapp.android.b.c.a(DefaultStatisbase.java:120)
+02-15 11:40:53.786 4479-6201/? W/System.err:     at com.mgyapp.android.b.c.e(DefaultStatisbase.java:106)
+02-15 11:40:53.786 4479-6201/? W/System.err:     at com.mgyapp.android.controller.h$a.a(StatiseControler.java:163)
+02-15 11:40:53.786 4479-6201/? W/System.err:     at com.mgyapp.android.controller.h$a.doInBackground(StatiseControler.java:155)
+02-15 11:40:53.786 4479-6201/? W/System.err:     at android.os.AsyncTask$2.call(AsyncTask.java:185)
+02-15 11:40:53.786 4479-6201/? W/System.err:     at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:306)
+02-15 11:40:53.786 4479-6201/? W/System.err:     at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+02-15 11:40:53.786 4479-6201/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1088)
+02-15 11:40:53.786 4479-6201/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:581)
+02-15 11:40:53.786 4479-6201/? W/System.err:     at java.lang.Thread.run(Thread.java:1019)
+02-15 11:42:36.216 544-768/? I/EventLogService: Aggregate from 319461155898 (log), 319461155898 (data)
+02-15 11:42:39.449 309-339/? W/PackageManager: Package named 'com.mgyun.vroot.tools_13091815' doesn't exist.
+02-15 11:42:41.512 309-339/? W/ActivityManager: No content provider found for: 
+02-15 11:42:41.532 309-339/? W/ActivityManager: No content provider found for: 
+02-15 11:42:41.542 309-339/? D/PackageParser: Scanning package: /data/app/vmdl-1244700597.tmp
+02-15 11:42:41.542 309-339/? I/PackageParser: com.mgyun.vroot.tools_13091815: compat added android.permission.WRITE_EXTERNAL_STORAGE android.permission.READ_PHONE_STATE
+02-15 11:42:41.572 309-339/? D/PackageManager: Scanning package com.mgyun.vroot.tools_13091815
+02-15 11:42:41.582 309-339/? D/PackageManager: Shared UserID android.uid.system (uid=1000): packages=[PackageSetting{40789a40 com.kddi.android.mailprovi/1000}, PackageSetting{40786108 com.android.providers.subscribedfeeds/1000}, PackageSetting{40787498 com.pv.wmdrmproxy/1000}, PackageSetting{40785f58 jp.co.sharp.android.bluetooth.avrcp/1000}, PackageSetting{407896b8 com.kddi.android.maintenance.service/1000}, PackageSetting{40785ba0 jp.co.sharp.android.dun/1000}, PackageSetting{40786f88 com.android.server.vpn/1000}, PackageSetting{40783818 com.kddi.android.fota/1000}, PackageSetting{40786a18 com.android.providers.settings/1000}, PackageSetting{407849c0 jp.co.sharp.android.sendcmailservice/1000}, PackageSetting{40785818 com.kddi.android.maintenancemode/1000}, PackageSetting{40784488 com.kddi.android.WebFiltering/1000}, PackageSetting{40787138 com.android.providers.settingsex/1000}, PackageSetting{40784ba8 com.android.settings/1000}, PackageSetting{40783668 com.kddi.android.mainte.AppMainteLockNoAuth/1000}, PackageSetting{40789358 com.android.systemui/1000}, PackageSetting{407823f8 jp.co.sharp.android.media.server/1000}, PackageSetting{407886e8 android/1000}]
+02-15 11:42:41.582 309-339/? I/PackageManager: Unpacking native libraries for /data/app/com.mgyun.vroot.tools_13091815-1.apk
+02-15 11:42:41.592 309-339/? D/PackageManager:   Activities: android.app.Activity
+02-15 11:42:41.592 309-336/? I/ActivityManager: Force stopping package com.mgyun.vroot.tools_13091815 uid=1000
+02-15 11:42:41.712 309-339/? D/PackageManager: New package installed in /data/app/com.mgyun.vroot.tools_13091815-1.apk
+02-15 11:42:41.912 4479-6202/? W/System.err: java.io.FileNotFoundException: /data/data/com.mgyapp.android/files/updatable (No such file or directory)
+02-15 11:42:41.962 4479-6202/? W/System.err:     at org.apache.harmony.luni.platform.OSFileSystem.open(Native Method)
+02-15 11:42:41.962 4479-6202/? W/System.err:     at dalvik.system.BlockGuard$WrappedFileSystem.open(BlockGuard.java:232)
+02-15 11:42:41.972 4479-6202/? W/System.err:     at java.io.FileInputStream.<init>(FileInputStream.java:80)
+02-15 11:42:41.972 4479-6202/? W/System.err:     at android.app.ContextImpl.openFileInput(ContextImpl.java:436)
+02-15 11:42:41.972 4479-6202/? W/System.err:     at android.content.ContextWrapper.openFileInput(ContextWrapper.java:152)
+02-15 11:42:41.972 4479-6202/? W/System.err:     at com.mgyapp.android.e.g.d(UpdatableAppChecker.java:301)
+02-15 11:42:41.972 4479-6202/? W/System.err:     at com.mgyapp.android.e.g.c(UpdatableAppChecker.java:36)
+02-15 11:42:41.972 4479-6202/? W/System.err:     at com.mgyapp.android.e.g$b.a(UpdatableAppChecker.java:199)
+02-15 11:42:41.972 4479-6202/? W/System.err:     at com.mgyapp.android.e.g$b.doInBackground(UpdatableAppChecker.java:159)
+02-15 11:42:41.972 4479-6202/? W/System.err:     at android.os.AsyncTask$2.call(AsyncTask.java:185)
+02-15 11:42:41.972 4479-6202/? W/System.err:     at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:306)
+02-15 11:42:41.972 4479-6202/? W/System.err:     at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+02-15 11:42:41.972 4479-6202/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1088)
+02-15 11:42:41.982 4479-6202/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:581)
+02-15 11:42:41.982 4479-6202/? W/System.err:     at java.lang.Thread.run(Thread.java:1019)
+02-15 11:42:42.072 4288-4288/? D/Launcher.InstallReceiver: InstallReceiver onReceive()
+02-15 11:42:42.072 4288-4288/? D/Launcher.InstallReceiver: InstallReceiver ACTION_PACKAGE_ADDED com.mgyun.vroot.tools_13091815
+02-15 11:42:42.202 587-612/? W/LL_Core: [LifeLogDatabaseInsert]Could NOT insert the log because the log date is before year 2000.
+02-15 11:42:42.222 4259-9332/? D/vending: [18] LocalAssetCache.updateOnePackage(): No local info for com.mgyun.vroot.tools_13091815
+02-15 11:42:42.222 309-315/? I/ActivityManager: Start proc jp.co.sharp.android.camera.videocamera for content provider jp.co.sharp.android.camera.videocamera/jp.co.sharp.android.recommend.provider.RecommendProvider: pid=9335 uid=10057 gids={1015, 1006, 3002, 3001, 2001, 3003}
+02-15 11:42:42.302 9335-9335/? I/ActivityThread: Pub jp.co.sharp.android.recommend.RecommendProvider: jp.co.sharp.android.recommend.provider.RecommendProvider
+02-15 11:42:42.703 309-501/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN flg=0x10000000 cmp=com.mgyun.vroot.tools_13091815/android.app.Activity } from pid 9346
+02-15 11:42:42.833 309-485/? I/ActivityManager: Start proc com.mgyun.vroot.tools_13091815 for activity com.mgyun.vroot.tools_13091815/android.app.Activity: pid=9355 uid=1000 gids={3003, 3002, 3001, 1015}
+02-15 11:42:42.883 587-612/? W/LL_Core: [LifeLogDatabaseInsertSpareParts]Could NOT insert the usage log because the launch date is before year 2000.
+02-15 11:42:42.923 1264-1264/? I/NewHome: ** null (ID=108) **
+02-15 11:42:42.923 1264-1264/? I/NewHome: ** null (ID=156) **
+02-15 11:42:42.953 309-353/? I/ActivityManager: Displayed com.mgyun.vroot.tools_13091815/android.app.Activity: +153ms (total +3m33s174ms)
+02-15 11:42:43.043 309-456/? I/ActivityManager: Start proc com.android.browser for content provider com.android.browser/.BrowserProvider: pid=9363 uid=10094 gids={3003, 1015}
+02-15 11:42:43.083 9363-9363/? I/ActivityThread: Pub browser: com.android.browser.BrowserProvider
+02-15 11:42:43.163 9363-9363/? I/BrowserSettings: Selected search engine: ActivitySearchEngine{android.app.SearchableInfo@4054eb00}
+02-15 11:42:43.403 309-478/? I/ActivityManager: No longer want jibe.android.activity (pid 5651): hidden #16
+02-15 11:42:45.736 309-456/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN flg=0x14000000 cmp=com.mgyun.vroot.tools_13091815/android.app.Activity } from pid 9376
+02-15 11:42:47.708 309-335/? I/WindowManager: Setting rotation to 1, animFlags=0
+02-15 11:42:47.708 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=2 layout=268435490 uiMode=17 seq=65}
+02-15 11:42:47.828 309-336/? W/ProcessStats: Skipping unknown process pid 9401
+02-15 11:42:48.218 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 1 
+02-15 11:42:48.218 129-140/? I/dun_service: Post event 1
+02-15 11:42:48.218 129-129/? I/dun_service: received event: DUN_EVENT_USB_UNPLUG 
+02-15 11:42:48.218 129-129/? I/dun_service: received event(DUN_EVENT_USB_UNPLUG) in state(DUN_STATE_USB_UNPLUG)
+02-15 11:42:48.218 129-129/? I/dun_service: Ignoring the event DUN_EVENT_USB_UNPLUG in USB_UNPLUG_STATE
+02-15 11:42:48.218 129-129/? I/dun_service: Moved to state(DUN_STATE_USB_UNPLUG)
+02-15 11:42:49.740 309-335/? I/WindowManager: Setting rotation to 0, animFlags=0
+02-15 11:42:49.750 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=1 layout=268435490 uiMode=17 seq=66}
+02-15 11:42:51.541 309-339/? I/PackageManager: Removing non-system package:com.mgyun.vroot.tools_13091815
+02-15 11:42:51.541 309-336/? I/ActivityManager: Force stopping package com.mgyun.vroot.tools_13091815 uid=1000
+02-15 11:42:51.551 309-518/? V/BgRingerService: bgRingerCancelAll call
+02-15 11:42:51.561 309-339/? D/PackageManager: Removing package com.mgyun.vroot.tools_13091815
+02-15 11:42:51.561 309-339/? D/PackageManager:   Activities: android.app.Activity
+02-15 11:42:51.561 309-355/? E/InputDispatcher: channel '40947c50 com.mgyun.vroot.tools_13091815/android.app.Activity (server)' ~ Consumer closed input channel or an error occurred.  events=0x8
+02-15 11:42:51.561 309-355/? E/InputDispatcher: channel '40947c50 com.mgyun.vroot.tools_13091815/android.app.Activity (server)' ~ Channel is unrecoverably broken and will be disposed!
+02-15 11:42:51.561 309-336/? I/ActivityManager:   Force finishing activity HistoryRecord{406d8be8 com.mgyun.vroot.tools_13091815/android.app.Activity}
+02-15 11:42:51.561 309-336/? W/ActivityManager: Duplicate finish request for HistoryRecord{406d8be8 com.mgyun.vroot.tools_13091815/android.app.Activity}
+02-15 11:42:51.561 309-355/? I/WindowManager: WINDOW DIED Window{40947c50 com.mgyun.vroot.tools_13091815/android.app.Activity paused=false}
+02-15 11:42:51.601 587-612/? W/LL_Core: [LifeLogDatabaseInsertSpareParts]Could NOT insert the usage log because the launch date is before year 2000.
+02-15 11:42:51.621 309-455/? W/InputManagerService: Got RemoteException sending setActive(false) notification to pid 9355 uid 1000
+02-15 11:42:51.842 309-339/? I/ActivityManager: Force stopping package com.mgyun.vroot.tools_13091815 uid=1000
+02-15 11:42:51.842 309-339/? I/ActivityManager:   Force finishing activity HistoryRecord{406d8be8 com.mgyun.vroot.tools_13091815/android.app.Activity}
+02-15 11:42:51.842 309-339/? W/ActivityManager: Duplicate finish request for HistoryRecord{406d8be8 com.mgyun.vroot.tools_13091815/android.app.Activity}
+02-15 11:42:52.172 309-336/? I/ActivityManager: Start proc jibe.android.activity for broadcast jibe.android.activity/jibe.android.util.UpdateBroadcastReceiver: pid=9481 uid=10021 gids={3003, 1015}
+02-15 11:42:52.722 112-112/? E/installd: Couldn't unlink /data/dalvik-cache/data@app@com.mgyun.vroot.tools_13091815-1.apk@classes.dex: No such file or directory
+02-15 11:42:52.732 9481-9481/? I/ActivityThread: Pub jibe.android.provider.contact.favorite.message: jibe.android.provider.ContactFavoriteMessageProvider
+02-15 11:42:52.732 309-339/? W/PackageManager: Couldn't remove dex file for package:  at location /data/app/com.mgyun.vroot.tools_13091815-1.apk, retcode=-1
+02-15 11:42:52.752 9481-9481/? I/ActivityThread: Pub jibe.android.provider.contact: jibe.android.provider.ContactProvider
+02-15 11:42:53.713 309-314/? I/ActivityManager: No longer want jp.co.sharp.android.majorupdate (pid 6421): hidden #16
+02-15 11:42:53.723 4288-4288/? D/Launcher.InstallReceiver: InstallReceiver onReceive()
+02-15 11:42:53.723 4288-4288/? D/Launcher.InstallReceiver: InstallReceiver ACTION_PACKAGE_REMOVED com.mgyun.vroot.tools_13091815
+02-15 11:42:53.803 587-612/? W/LL_Core: [LifeLogDatabaseInsert]Could NOT insert the log because the log date is before year 2000.
+02-15 11:42:53.834 309-478/? W/ActivityManager: Unable to start service Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.mgyun.vroot.tools_13091815 flg=0x10000000 cmp=com.mgyapp.android/.TaobaoIntentService (has extras) }: not found
+02-15 11:42:54.284 405-405/? W/KeyCharacterMap: Can't open keycharmap file
+02-15 11:42:54.284 405-405/? W/KeyCharacterMap: Error loading keycharmap file '/system/usr/keychars/SH_matrix-keypad.kcm.bin'. SH_matrix-keypad
+02-15 11:42:54.284 405-405/? W/KeyCharacterMap: Using default keymap: /system/usr/keychars/qwerty.kcm.bin
+02-15 11:42:54.845 309-309/? V/BgRingerService: bgRingerCancelAll call
+02-15 11:42:54.855 309-456/? W/InputManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@40600840
+02-15 11:42:55.866 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 1 
+02-15 11:42:55.866 129-140/? I/dun_service: Post event 1
+02-15 11:42:55.866 129-129/? I/dun_service: received event: DUN_EVENT_USB_UNPLUG 
+02-15 11:42:55.866 129-129/? I/dun_service: received event(DUN_EVENT_USB_UNPLUG) in state(DUN_STATE_USB_UNPLUG)
+02-15 11:42:55.866 129-129/? I/dun_service: Ignoring the event DUN_EVENT_USB_UNPLUG in USB_UNPLUG_STATE
+02-15 11:42:55.866 129-129/? I/dun_service: Moved to state(DUN_STATE_USB_UNPLUG)
+02-15 11:42:55.906 5715-5734/? I/tnet-jni: 15 -  create new session: accscdn.m.taobao.com:443
+02-15 11:42:55.906 5715-5734/? W/System.err: org.android.spdy.SpdyErrorException: create session error: -1107
+02-15 11:42:55.906 5715-5734/? W/System.err:     at org.android.spdy.SpdyAgent.createSession(SpdyAgent.java:448)
+02-15 11:42:55.906 5715-5734/? W/System.err:     at org.android.spdy.SpdyAgent.createSession(SpdyAgent.java:331)
+02-15 11:42:55.906 5715-5734/? W/System.err:     at com.taobao.accs.net.l.b(Taobao:445)
+02-15 11:42:55.906 5715-5734/? W/System.err:     at com.taobao.accs.net.l.b(Taobao:60)
+02-15 11:42:55.906 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:815)
+02-15 11:42:55.906 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.run(Taobao:881)
+02-15 11:42:57.817 309-335/? W/ActivityManager: Activity destroy timeout for HistoryRecord{406d8be8 com.mgyun.vroot.tools_13091815/android.app.Activity}
+02-15 11:43:00.920 5715-5734/? I/tnet-jni: 15 -  create new session: accscdn.m.taobao.com:80
+02-15 11:43:00.920 5715-5734/? W/System.err: org.android.spdy.SpdyErrorException: create session error: -1107
+02-15 11:43:00.920 5715-5734/? W/System.err:     at org.android.spdy.SpdyAgent.createSession(SpdyAgent.java:448)
+02-15 11:43:00.920 5715-5734/? W/System.err:     at org.android.spdy.SpdyAgent.createSession(SpdyAgent.java:331)
+02-15 11:43:00.920 5715-5734/? W/System.err:     at com.taobao.accs.net.l.b(Taobao:445)
+02-15 11:43:00.920 5715-5734/? W/System.err:     at com.taobao.accs.net.l.b(Taobao:60)
+02-15 11:43:00.920 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:815)
+02-15 11:43:00.920 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:822)
+02-15 11:43:00.920 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.run(Taobao:881)
+02-15 11:43:05.935 5715-5734/? I/tnet-jni: 15 -  create new session: accscdn.m.taobao.com:443
+02-15 11:43:05.935 5715-5734/? W/System.err: org.android.spdy.SpdyErrorException: create session error: -1107
+02-15 11:43:05.935 5715-5734/? W/System.err:     at org.android.spdy.SpdyAgent.createSession(SpdyAgent.java:448)
+02-15 11:43:05.935 5715-5734/? W/System.err:     at org.android.spdy.SpdyAgent.createSession(SpdyAgent.java:331)
+02-15 11:43:05.935 5715-5734/? W/System.err:     at com.taobao.accs.net.l.b(Taobao:445)
+02-15 11:43:05.935 5715-5734/? W/System.err:     at com.taobao.accs.net.l.b(Taobao:60)
+02-15 11:43:05.935 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:815)
+02-15 11:43:05.935 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:822)
+02-15 11:43:05.935 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:822)
+02-15 11:43:05.935 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.run(Taobao:881)
+02-15 11:43:06.065 309-469/? I/ActivityManager: No longer want jp.co.sharp.android.sdmountlistener (pid 3729): hidden #16
+02-15 11:43:06.085 309-480/? W/ActivityManager: Scheduling restart of crashed service jp.co.sharp.android.sdmountlistener/.SDMountListenerService in 5000ms
+02-15 11:43:10.960 5715-5734/? I/tnet-jni: 15 -  create new session: accscdn.m.taobao.com:443
+02-15 11:43:10.960 5715-5734/? W/System.err: org.android.spdy.SpdyErrorException: create session error: -1107
+02-15 11:43:10.960 5715-5734/? W/System.err:     at org.android.spdy.SpdyAgent.createSession(SpdyAgent.java:448)
+02-15 11:43:10.960 5715-5734/? W/System.err:     at org.android.spdy.SpdyAgent.createSession(SpdyAgent.java:331)
+02-15 11:43:10.960 5715-5734/? W/System.err:     at com.taobao.accs.net.l.b(Taobao:445)
+02-15 11:43:10.960 5715-5734/? W/System.err:     at com.taobao.accs.net.l.b(Taobao:60)
+02-15 11:43:10.960 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:815)
+02-15 11:43:10.960 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:822)
+02-15 11:43:10.960 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:822)
+02-15 11:43:10.960 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:822)
+02-15 11:43:10.960 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.run(Taobao:881)
+02-15 11:43:11.140 309-336/? I/ActivityManager: Start proc jp.co.sharp.android.sdmountlistener for service jp.co.sharp.android.sdmountlistener/.SDMountListenerService: pid=9650 uid=10060 gids={}
+02-15 11:43:11.160 9650-9650/? D/SDMountListenerService: onCreate()
+02-15 11:43:35.204 309-336/? V/BgRingerService: bgRingerCancel call pkg:com.mgyun.shua.protector id:99868
+02-15 11:43:53.782 4479-6209/? W/System.err: java.io.FileNotFoundException: /mnt/sdcard/mgyapp/.st.dat (Permission denied)
+02-15 11:43:53.792 4479-6209/? W/System.err:     at org.apache.harmony.luni.platform.OSFileSystem.open(Native Method)
+02-15 11:43:53.792 4479-6209/? W/System.err:     at dalvik.system.BlockGuard$WrappedFileSystem.open(BlockGuard.java:232)
+02-15 11:43:53.792 4479-6209/? W/System.err:     at java.io.FileOutputStream.<init>(FileOutputStream.java:94)
+02-15 11:43:53.792 4479-6209/? W/System.err:     at java.io.FileOutputStream.<init>(FileOutputStream.java:66)
+02-15 11:43:53.792 4479-6209/? W/System.err:     at com.mgyapp.android.b.c.a(DefaultStatisbase.java:120)
+02-15 11:43:53.792 4479-6209/? W/System.err:     at com.mgyapp.android.b.c.e(DefaultStatisbase.java:106)
+02-15 11:43:53.792 4479-6209/? W/System.err:     at com.mgyapp.android.controller.h$a.a(StatiseControler.java:163)
+02-15 11:43:53.792 4479-6209/? W/System.err:     at com.mgyapp.android.controller.h$a.doInBackground(StatiseControler.java:155)
+02-15 11:43:53.792 4479-6209/? W/System.err:     at android.os.AsyncTask$2.call(AsyncTask.java:185)
+02-15 11:43:53.792 4479-6209/? W/System.err:     at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:306)
+02-15 11:43:53.792 4479-6209/? W/System.err:     at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+02-15 11:43:53.792 4479-6209/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1088)
+02-15 11:43:53.792 4479-6209/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:581)
+02-15 11:43:53.792 4479-6209/? W/System.err:     at java.lang.Thread.run(Thread.java:1019)
+02-15 11:44:07.515 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 1 
+02-15 11:44:07.515 129-140/? I/dun_service: Post event 1
+02-15 11:44:07.515 129-129/? I/dun_service: received event: DUN_EVENT_USB_UNPLUG 
+02-15 11:44:07.515 129-129/? I/dun_service: received event(DUN_EVENT_USB_UNPLUG) in state(DUN_STATE_USB_UNPLUG)
+02-15 11:44:07.515 129-129/? I/dun_service: Ignoring the event DUN_EVENT_USB_UNPLUG in USB_UNPLUG_STATE
+02-15 11:44:07.515 129-129/? I/dun_service: Moved to state(DUN_STATE_USB_UNPLUG)
+02-15 11:44:07.515 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:44:46.413 309-517/? I/ActivityManager: No longer want jp.co.sharp.android.dun (pid 3897): hidden #16
+02-15 11:44:46.433 309-315/? W/ActivityManager: Scheduling restart of crashed service jp.co.sharp.android.dun/.DunService in 5000ms
+02-15 11:44:51.478 309-336/? I/ActivityManager: Start proc jp.co.sharp.android.dun for service jp.co.sharp.android.dun/.DunService: pid=9843 uid=1000 gids={3003, 3002, 3001}
+02-15 11:44:51.498 9843-9843/? I/Dun Service: Dun Service Created Successfully
+02-15 11:44:51.508 9843-9843/? I/Dun Service: Background Service Started Successfully ...
+02-15 11:45:11.518 309-336/? W/ProcessStats: Skipping unknown process pid 9863
+02-15 11:45:11.518 309-336/? W/ProcessStats: Skipping unknown process pid 9864
+02-15 11:45:41.627 309-336/? W/ProcessStats: Skipping unknown process pid 9969
+02-15 11:45:41.637 309-336/? W/ProcessStats: Skipping unknown process pid 9970
+02-15 11:46:16.762 309-485/? I/ActivityManager: No longer want jp.co.sharp.android.hdmi (pid 4064): hidden #16
+02-15 11:46:16.772 309-478/? W/ActivityManager: Scheduling restart of crashed service jp.co.sharp.android.hdmi/.service.HDMIService in 5000ms
+02-15 11:46:21.816 309-336/? I/ActivityManager: Start proc jp.co.sharp.android.hdmi for service jp.co.sharp.android.hdmi/.service.HDMIService: pid=10057 uid=10081 gids={}
+02-15 11:46:21.876 10057-10057/? I/ActivityThread: Pub jp.co.sharp.android.hdmi.HDMIProvider: jp.co.sharp.android.hdmi.service.provider.HDMIProvider
+02-15 11:46:21.907 10057-10057/? W/HDMIAPP: [init]start
+02-15 11:46:22.047 10057-10057/? V/CmpLogSystem: ,CompetitionManager.java(908),CompManager,COMPLOG,PROC,MG,MGRCRE,43194486095872
+02-15 11:46:22.047 10057-10057/? V/CompetitionManager: [GoliathCompetitionManager.getServerName]Start
+02-15 11:46:22.057 10057-10057/? V/CmpLogSystem: ,CompetitionManager.java(210),CompManager,COMPLOG,PROC,MG,MGRCRE,43194486095872,COMPETITION_GOLIATH
+02-15 11:46:22.057 10057-10057/? V/CompetitionManager: [GoliathCompetitionManager.GoliathCompetitionManager]Constractor called
+02-15 11:46:22.067 10057-10057/? V/CmpLogSystem: ,CompetitionManager.java(908),CompManager,COMPLOG,PROC,MG,MGRCRE,43194486095873
+02-15 11:46:22.067 10057-10057/? V/CompetitionManager: [HdmiCompetitionManager.getServerName]Start
+02-15 11:46:22.067 10057-10057/? V/CmpLogSystem: ,CompetitionManager.java(210),CompManager,COMPLOG,PROC,MG,MGRCRE,43194486095873,COMPETITION_HDMI
+02-15 11:46:22.067 10057-10057/? V/CompetitionManager: [HdmiCompetitionManager.HdmiCompetitionManager]Constractor called
+02-15 11:46:22.137 10057-10057/? W/HDMIAPP: [init]end
+02-15 11:46:22.297 10057-10065/? V/CmpLogSystem: ,CompetitionManager.java(406),CompManager,COMPLOG,PROC,MG,APIREQ,start,43194486095872,2,0,COMPETITION_GOLIATH,REASON_HDMI
+02-15 11:46:22.297 309-314/? V/CmpLogSystem: ,CompetitionServer.java(253),GoliathCompetitionServer,COMPLOG,PROC,SV,CMDREQ,requestCommand startlist=[2, 43194486095872, COMPETITION_GOLIATH, REASON_HDMI]
+02-15 11:46:22.307 309-314/? V/CmpLogSystem: ,ServerCommand.java(428),GoliathCompetitionServer,COMPLOG,PROC,SV,CMDEXE,43194486095872,free,REASON_HDMI
+02-15 11:46:22.307 309-314/? V/CmpLogSystem: ,CompetitionServer.java(265),GoliathCompetitionServer,COMPLOG,PROC,SV,CMDFIN,requestCommand endret=[7]
+02-15 11:46:22.317 10057-10065/? V/CmpLogSystem: ,CompetitionManager.java(454),CompManager,COMPLOG,PROC,MG,APIRES,End,43194486095872,7,0
+02-15 11:46:22.317 10057-10065/? V/CmpLogSystem: ,CompetitionManager.java(406),CompManager,COMPLOG,PROC,MG,APIREQ,start,43194486095873,2,0,COMPETITION_HDMI,REASON_HDMI
+02-15 11:46:22.317 309-3944/? V/CmpLogSystem: ,CompetitionServer.java(253),HdmiCompetitionServer,COMPLOG,PROC,SV,CMDREQ,requestCommand startlist=[2, 43194486095873, COMPETITION_HDMI, REASON_HDMI]
+02-15 11:46:22.327 309-3944/? V/CmpLogSystem: ,ServerCommand.java(428),HdmiCompetitionServer,COMPLOG,PROC,SV,CMDEXE,43194486095873,free,REASON_HDMI
+02-15 11:46:22.327 309-3944/? V/CmpLogSystem: ,CompetitionServer.java(265),HdmiCompetitionServer,COMPLOG,PROC,SV,CMDFIN,requestCommand endret=[7]
+02-15 11:46:22.327 10057-10065/? V/CmpLogSystem: ,CompetitionManager.java(454),CompManager,COMPLOG,PROC,MG,APIRES,End,43194486095873,7,0
+02-15 11:46:22.367 309-335/? V/AudioService: HDMI disconnected
+02-15 11:46:22.377 109-302/? W/AudioPolicyManager: setDeviceConnectionState() device not connected: 800
+02-15 11:46:37.932 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 1 
+02-15 11:46:37.932 129-140/? I/dun_service: Post event 1
+02-15 11:46:37.932 129-129/? I/dun_service: received event: DUN_EVENT_USB_UNPLUG 
+02-15 11:46:37.932 129-129/? I/dun_service: received event(DUN_EVENT_USB_UNPLUG) in state(DUN_STATE_USB_UNPLUG)
+02-15 11:46:37.932 129-129/? I/dun_service: Ignoring the event DUN_EVENT_USB_UNPLUG in USB_UNPLUG_STATE
+02-15 11:46:37.932 129-129/? I/dun_service: Moved to state(DUN_STATE_USB_UNPLUG)
+02-15 11:46:37.932 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:46:51.886 309-336/? W/ProcessStats: Skipping unknown process pid 10169
+02-15 11:46:53.878 4479-5367/? W/System.err: java.io.FileNotFoundException: /mnt/sdcard/mgyapp/.st.dat (Permission denied)
+02-15 11:46:53.878 4479-5367/? W/System.err:     at org.apache.harmony.luni.platform.OSFileSystem.open(Native Method)
+02-15 11:46:53.878 4479-5367/? W/System.err:     at dalvik.system.BlockGuard$WrappedFileSystem.open(BlockGuard.java:232)
+02-15 11:46:53.888 4479-5367/? W/System.err:     at java.io.FileOutputStream.<init>(FileOutputStream.java:94)
+02-15 11:46:53.898 4479-5367/? W/System.err:     at java.io.FileOutputStream.<init>(FileOutputStream.java:66)
+02-15 11:46:53.908 4479-5367/? W/System.err:     at com.mgyapp.android.b.c.a(DefaultStatisbase.java:120)
+02-15 11:46:53.908 4479-5367/? W/System.err:     at com.mgyapp.android.b.c.e(DefaultStatisbase.java:106)
+02-15 11:46:53.908 4479-5367/? W/System.err:     at com.mgyapp.android.controller.h$a.a(StatiseControler.java:163)
+02-15 11:46:53.908 4479-5367/? W/System.err:     at com.mgyapp.android.controller.h$a.doInBackground(StatiseControler.java:155)
+02-15 11:46:53.908 4479-5367/? W/System.err:     at android.os.AsyncTask$2.call(AsyncTask.java:185)
+02-15 11:46:53.918 4479-5367/? W/System.err:     at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:306)
+02-15 11:46:53.918 4479-5367/? W/System.err:     at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+02-15 11:46:53.918 4479-5367/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1088)
+02-15 11:46:53.918 4479-5367/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:581)
+02-15 11:46:53.918 4479-5367/? W/System.err:     at java.lang.Thread.run(Thread.java:1019)
+02-15 11:47:11.975 309-336/? W/ProcessStats: Skipping unknown process pid 11193
+02-15 11:47:11.985 309-336/? W/ProcessStats: Skipping unknown process pid 11194
+02-15 11:47:21.995 309-336/? W/ProcessStats: Skipping unknown process pid 11703
+02-15 11:47:22.005 309-336/? W/ProcessStats: Skipping unknown process pid 11704
+02-15 11:47:32.035 309-336/? W/ProcessStats: Skipping unknown process pid 12199
+02-15 11:47:46.089 5715-5734/? I/tnet-jni: 15 -  create new session: accscdn.m.taobao.com:80
+02-15 11:47:46.089 5715-5734/? W/System.err: org.android.spdy.SpdyErrorException: create session error: -1107
+02-15 11:47:46.089 5715-5734/? W/System.err:     at org.android.spdy.SpdyAgent.createSession(SpdyAgent.java:448)
+02-15 11:47:46.089 5715-5734/? W/System.err:     at org.android.spdy.SpdyAgent.createSession(SpdyAgent.java:331)
+02-15 11:47:46.089 5715-5734/? W/System.err:     at com.taobao.accs.net.l.b(Taobao:445)
+02-15 11:47:46.089 5715-5734/? W/System.err:     at com.taobao.accs.net.l.b(Taobao:60)
+02-15 11:47:46.089 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:815)
+02-15 11:47:46.089 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.run(Taobao:881)
+02-15 11:47:51.114 5715-5734/? I/tnet-jni: 15 -  create new session: accscdn.m.taobao.com:443
+02-15 11:47:51.114 5715-5734/? W/System.err: org.android.spdy.SpdyErrorException: create session error: -1107
+02-15 11:47:51.114 5715-5734/? W/System.err:     at org.android.spdy.SpdyAgent.createSession(SpdyAgent.java:448)
+02-15 11:47:51.114 5715-5734/? W/System.err:     at org.android.spdy.SpdyAgent.createSession(SpdyAgent.java:331)
+02-15 11:47:51.114 5715-5734/? W/System.err:     at com.taobao.accs.net.l.b(Taobao:445)
+02-15 11:47:51.124 5715-5734/? W/System.err:     at com.taobao.accs.net.l.b(Taobao:60)
+02-15 11:47:51.124 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:815)
+02-15 11:47:51.124 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:822)
+02-15 11:47:51.124 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.run(Taobao:881)
+02-15 11:47:56.158 5715-5734/? I/tnet-jni: 15 -  create new session: accscdn.m.taobao.com:80
+02-15 11:47:56.158 5715-5734/? W/System.err: org.android.spdy.SpdyErrorException: create session error: -1107
+02-15 11:47:56.158 5715-5734/? W/System.err:     at org.android.spdy.SpdyAgent.createSession(SpdyAgent.java:448)
+02-15 11:47:56.158 5715-5734/? W/System.err:     at org.android.spdy.SpdyAgent.createSession(SpdyAgent.java:331)
+02-15 11:47:56.158 5715-5734/? W/System.err:     at com.taobao.accs.net.l.b(Taobao:445)
+02-15 11:47:56.158 5715-5734/? W/System.err:     at com.taobao.accs.net.l.b(Taobao:60)
+02-15 11:47:56.158 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:815)
+02-15 11:47:56.158 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:822)
+02-15 11:47:56.158 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:822)
+02-15 11:47:56.158 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.run(Taobao:881)
+02-15 11:48:01.193 5715-5734/? I/tnet-jni: 15 -  create new session: accscdn.m.taobao.com:80
+02-15 11:48:01.203 5715-5734/? W/System.err: org.android.spdy.SpdyErrorException: create session error: -1107
+02-15 11:48:01.203 5715-5734/? W/System.err:     at org.android.spdy.SpdyAgent.createSession(SpdyAgent.java:448)
+02-15 11:48:01.203 5715-5734/? W/System.err:     at org.android.spdy.SpdyAgent.createSession(SpdyAgent.java:331)
+02-15 11:48:01.203 5715-5734/? W/System.err:     at com.taobao.accs.net.l.b(Taobao:445)
+02-15 11:48:01.203 5715-5734/? W/System.err:     at com.taobao.accs.net.l.b(Taobao:60)
+02-15 11:48:01.203 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:815)
+02-15 11:48:01.203 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:822)
+02-15 11:48:01.203 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:822)
+02-15 11:48:01.203 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.a(Taobao:822)
+02-15 11:48:01.203 5715-5734/? W/System.err:     at com.taobao.accs.net.l$a.run(Taobao:881)
+02-15 11:48:02.154 309-336/? W/ProcessStats: Skipping unknown process pid 13681
+02-15 11:48:02.154 309-336/? W/ProcessStats: Skipping unknown process pid 13682
+02-15 11:48:12.204 309-336/? W/ProcessStats: Skipping unknown process pid 14179
+02-15 11:48:12.214 309-336/? W/ProcessStats: Skipping unknown process pid 14180
+02-15 11:48:22.224 309-336/? W/ProcessStats: Skipping unknown process pid 14673
+02-15 11:48:22.234 309-336/? W/ProcessStats: Skipping unknown process pid 14674
+02-15 11:49:08.349 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 1 
+02-15 11:49:08.349 129-140/? I/dun_service: Post event 1
+02-15 11:49:08.349 129-129/? I/dun_service: received event: DUN_EVENT_USB_UNPLUG 
+02-15 11:49:08.349 129-129/? I/dun_service: received event(DUN_EVENT_USB_UNPLUG) in state(DUN_STATE_USB_UNPLUG)
+02-15 11:49:08.349 129-129/? I/dun_service: Ignoring the event DUN_EVENT_USB_UNPLUG in USB_UNPLUG_STATE
+02-15 11:49:08.349 129-129/? I/dun_service: Moved to state(DUN_STATE_USB_UNPLUG)
+02-15 11:49:08.349 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:49:53.973 4479-6192/? W/System.err: java.io.FileNotFoundException: /mnt/sdcard/mgyapp/.st.dat (Permission denied)
+02-15 11:49:53.973 4479-6192/? W/System.err:     at org.apache.harmony.luni.platform.OSFileSystem.open(Native Method)
+02-15 11:49:53.973 4479-6192/? W/System.err:     at dalvik.system.BlockGuard$WrappedFileSystem.open(BlockGuard.java:232)
+02-15 11:49:53.973 4479-6192/? W/System.err:     at java.io.FileOutputStream.<init>(FileOutputStream.java:94)
+02-15 11:49:53.973 4479-6192/? W/System.err:     at java.io.FileOutputStream.<init>(FileOutputStream.java:66)
+02-15 11:49:53.973 4479-6192/? W/System.err:     at com.mgyapp.android.b.c.a(DefaultStatisbase.java:120)
+02-15 11:49:53.973 4479-6192/? W/System.err:     at com.mgyapp.android.b.c.e(DefaultStatisbase.java:106)
+02-15 11:49:53.973 4479-6192/? W/System.err:     at com.mgyapp.android.controller.h$a.a(StatiseControler.java:163)
+02-15 11:49:53.973 4479-6192/? W/System.err:     at com.mgyapp.android.controller.h$a.doInBackground(StatiseControler.java:155)
+02-15 11:49:53.973 4479-6192/? W/System.err:     at android.os.AsyncTask$2.call(AsyncTask.java:185)
+02-15 11:49:53.973 4479-6192/? W/System.err:     at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:306)
+02-15 11:49:53.973 4479-6192/? W/System.err:     at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+02-15 11:49:53.973 4479-6192/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1088)
+02-15 11:49:53.973 4479-6192/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:581)
+02-15 11:49:53.983 4479-6192/? W/System.err:     at java.lang.Thread.run(Thread.java:1019)
+02-15 11:51:24.251 4479-4479/? W/KeyCharacterMap: Can't open keycharmap file
+02-15 11:51:24.251 4479-4479/? W/KeyCharacterMap: Error loading keycharmap file '/system/usr/keychars/SH_matrix-keypad.kcm.bin'. SH_matrix-keypad
+02-15 11:51:24.251 4479-4479/? W/KeyCharacterMap: Using default keymap: /system/usr/keychars/qwerty.kcm.bin
+02-15 11:51:24.251 309-456/? I/ActivityManager: Starting: Intent { cmp=com.mgyapp.android/.ui.MainCoolActivity (has extras) } from pid 4479
+02-15 11:51:24.322 4479-4479/? E/com.umeng.message.UTrack: RegistrationId is empty
+02-15 11:51:24.332 4479-4479/? E/com.umeng.message.UTrack: RegistrationId is empty
+02-15 11:51:24.392 309-478/? W/ActivityManager: Unable to start service Intent { cmp=com.mgyapp.android/com.mgyun.baseui.framework.service.MgyunService (has extras) }: not found
+02-15 11:51:24.412 4479-6171/? W/System.err: java.lang.IllegalArgumentException: unexpected url: G/zx8qW7vsLEx5PT1bm9r6K2+7GAic6ylJciWGJsdmRn
+02-15 11:51:24.422 4479-6171/? W/System.err:     at b.z$a.a(Request.java:141)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at com.mgyun.colif.c.a(Colif.java:85)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at com.mgyun.colif.c.a(Colif.java:37)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at com.mgyun.colif.c$2.a(Colif.java:156)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at com.mgyun.colif.c$2.a(Colif.java:140)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at rx.d.a.a(SafeSubscriber.java:134)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at rx.c.a.i$e.a(OperatorMerge.java:395)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at rx.c.a.i$e.a(OperatorMerge.java:355)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at rx.c.a.i$c.a(OperatorMerge.java:846)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at rx.c.b.b.a(SingleDelayedProducer.java:102)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at rx.c.b.b.a(SingleDelayedProducer.java:85)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at rx.c.a.d.a(OnSubscribeFromCallable.java:48)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at rx.c.a.d.a(OnSubscribeFromCallable.java:33)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at rx.c.a(Observable.java:10200)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at rx.c.a.i$e.a(OperatorMerge.java:248)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at rx.c.a.i$e.a(OperatorMerge.java:148)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at rx.c.a.f$a.a(OnSubscribeMap.java:77)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at rx.c.a.l$1$1.a(OperatorSubscribeOn.java:53)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at rx.c.b.b.a(SingleDelayedProducer.java:102)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at rx.c.b.b.a(SingleDelayedProducer.java:85)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at rx.c.a.d.a(OnSubscribeFromCallable.java:48)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at rx.c.a.d.a(OnSubscribeFromCallable.java:33)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at rx.c.a(Observable.java:10200)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at rx.c.a.l$1.a(OperatorSubscribeOn.java:94)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at rx.c.c.b$a$1.a(EventLoopsScheduler.java:172)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at rx.c.c.h.run(ScheduledAction.java:55)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:444)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:306)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:153)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:267)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1088)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:581)
+02-15 11:51:24.422 4479-6171/? W/System.err:     at java.lang.Thread.run(Thread.java:1019)
+02-15 11:51:24.502 4479-4479/? I/MainTab: login false false
+02-15 11:51:24.562 4479-15490/? W/System.err: java.net.UnknownHostException: api.mgyun.com
+02-15 11:51:24.592 4479-15490/? W/System.err:     at java.net.InetAddress.lookupHostByName(InetAddress.java:506)
+02-15 11:51:24.592 4479-15490/? W/System.err:     at java.net.InetAddress.getAllByNameImpl(InetAddress.java:294)
+02-15 11:51:24.592 4479-15490/? W/System.err:     at java.net.InetAddress.getAllByName(InetAddress.java:256)
+02-15 11:51:24.592 4479-15490/? W/System.err:     at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:136)
+02-15 11:51:24.592 4479-15490/? W/System.err:     at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:164)
+02-15 11:51:24.592 4479-15490/? W/System.err:     at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:119)
+02-15 11:51:24.592 4479-15490/? W/System.err:     at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:359)
+02-15 11:51:24.592 4479-15490/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:555)
+02-15 11:51:24.592 4479-15490/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:487)
+02-15 11:51:24.592 4479-15490/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:465)
+02-15 11:51:24.592 4479-15490/? W/System.err:     at com.mgyun.shua.e.c.c(Sre.java:101)
+02-15 11:51:24.592 4479-15490/? W/System.err:     at com.mgyun.shua.e.c$1.run(Sre.java:71)
+02-15 11:51:24.592 4479-15490/? W/System.err:     at java.lang.Thread.run(Thread.java:1019)
+02-15 11:51:24.602 4479-6202/? W/System.err: java.net.UnknownHostException: api.mgyun.com
+02-15 11:51:24.612 4479-6202/? W/System.err:     at java.net.InetAddress.lookupHostByName(InetAddress.java:497)
+02-15 11:51:24.612 4479-6201/? W/System.err: java.net.UnknownHostException: products.mgyun.com
+02-15 11:51:24.622 4479-6202/? W/System.err:     at java.net.InetAddress.getAllByNameImpl(InetAddress.java:294)
+02-15 11:51:24.622 4479-6202/? W/System.err:     at java.net.InetAddress.getAllByName(InetAddress.java:256)
+02-15 11:51:24.622 4479-6202/? W/System.err:     at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:136)
+02-15 11:51:24.622 4479-6202/? W/System.err:     at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:164)
+02-15 11:51:24.622 4479-6202/? W/System.err:     at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:119)
+02-15 11:51:24.632 4479-6202/? W/System.err:     at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:359)
+02-15 11:51:24.632 4479-6201/? W/System.err:     at java.net.InetAddress.lookupHostByName(InetAddress.java:506)
+02-15 11:51:24.632 4479-6201/? W/System.err:     at java.net.InetAddress.getAllByNameImpl(InetAddress.java:294)
+02-15 11:51:24.632 4479-6201/? W/System.err:     at java.net.InetAddress.getAllByName(InetAddress.java:256)
+02-15 11:51:24.642 4479-6202/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:555)
+02-15 11:51:24.642 4479-6201/? W/System.err:     at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:136)
+02-15 11:51:24.642 4479-6202/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:487)
+02-15 11:51:24.642 4479-6202/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:465)
+02-15 11:51:24.642 4479-6202/? W/System.err:     at z.hol.net.http.HttpDataFetch.httpGet(HttpDataFetch.java:293)
+02-15 11:51:24.642 4479-6202/? W/System.err:     at z.hol.net.http.HttpDataFetch.httpGet(HttpDataFetch.java:308)
+02-15 11:51:24.642 4479-6201/? W/System.err:     at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:164)
+02-15 11:51:24.642 4479-6201/? W/System.err:     at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:119)
+02-15 11:51:24.642 4479-6201/? W/System.err:     at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:359)
+02-15 11:51:24.642 4479-6201/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:555)
+02-15 11:51:24.652 4479-6202/? W/System.err:     at com.mgyun.general.c.a$b.a(AsyncConfGetter.java:123)
+02-15 11:51:24.672 4479-6202/? W/System.err:     at com.mgyun.general.c.a$b.doInBackground(AsyncConfGetter.java:105)
+02-15 11:51:24.672 4479-6202/? W/System.err:     at android.os.AsyncTask$2.call(AsyncTask.java:185)
+02-15 11:51:24.672 4479-4479/? W/FragmentManager: moveToState: Fragment state for NewAppFragment{405351e8 #1 id=0x7f0e0096 android:switcher:2131624086:1} not updated inline; expected state 3 found 2
+02-15 11:51:24.672 4479-6202/? W/System.err:     at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:306)
+02-15 11:51:24.672 4479-6201/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:487)
+02-15 11:51:24.682 4479-6201/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:465)
+02-15 11:51:24.682 4479-6201/? W/System.err:     at z.hol.net.http.HttpDataFetch.httpGet(HttpDataFetch.java:293)
+02-15 11:51:24.702 4479-6201/? W/System.err:     at z.hol.net.http.HttpDataFetch.httpGet(HttpDataFetch.java:308)
+02-15 11:51:24.702 4479-6201/? W/System.err:     at com.mgyapp.android.d.a.c.a(HttpHelper.java:254)
+02-15 11:51:24.752 4479-6202/? W/System.err:     at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+02-15 11:51:24.752 4479-6202/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1088)
+02-15 11:51:24.772 4479-6202/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:581)
+02-15 11:51:24.772 4479-6202/? W/System.err:     at java.lang.Thread.run(Thread.java:1019)
+02-15 11:51:24.772 4479-6201/? W/System.err:     at com.mgyapp.android.controller.AutoUpdateControler$a.a(AutoUpdateControler.java:191)
+02-15 11:51:24.772 4479-6201/? W/System.err:     at com.mgyapp.android.controller.AutoUpdateControler$a.doInBackground(AutoUpdateControler.java:170)
+02-15 11:51:24.772 4479-6201/? W/System.err:     at android.os.AsyncTask$2.call(AsyncTask.java:185)
+02-15 11:51:24.812 4479-6201/? W/System.err:     at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:306)
+02-15 11:51:24.812 4479-6201/? W/System.err:     at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+02-15 11:51:24.812 4479-6201/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1088)
+02-15 11:51:24.812 4479-6201/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:581)
+02-15 11:51:24.812 4479-6201/? W/System.err:     at java.lang.Thread.run(Thread.java:1019)
+02-15 11:51:24.822 4479-5367/? W/System.err: java.net.UnknownHostException: api.mgyapp.com
+02-15 11:51:24.822 4479-6192/? W/System.err: java.net.UnknownHostException: api.mgyapp.com
+02-15 11:51:24.822 4479-5367/? W/System.err:     at java.net.InetAddress.lookupHostByName(InetAddress.java:506)
+02-15 11:51:24.832 4479-5367/? W/System.err:     at java.net.InetAddress.getAllByNameImpl(InetAddress.java:294)
+02-15 11:51:24.832 4479-5367/? W/System.err:     at java.net.InetAddress.getAllByName(InetAddress.java:256)
+02-15 11:51:24.832 4479-5367/? W/System.err:     at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:136)
+02-15 11:51:24.832 4479-5367/? W/System.err:     at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:164)
+02-15 11:51:24.832 4479-5367/? W/System.err:     at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:119)
+02-15 11:51:24.832 4479-5367/? W/System.err:     at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:359)
+02-15 11:51:24.832 4479-5367/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:555)
+02-15 11:51:24.832 4479-5367/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:487)
+02-15 11:51:24.832 4479-6192/? W/System.err:     at java.net.InetAddress.lookupHostByName(InetAddress.java:497)
+02-15 11:51:24.832 4479-6192/? W/System.err:     at java.net.InetAddress.getAllByNameImpl(InetAddress.java:294)
+02-15 11:51:24.842 4479-6192/? W/System.err:     at java.net.InetAddress.getAllByName(InetAddress.java:256)
+02-15 11:51:24.842 4479-6192/? W/System.err:     at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:136)
+02-15 11:51:24.842 4479-5367/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:465)
+02-15 11:51:24.842 4479-6192/? W/System.err:     at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:164)
+02-15 11:51:24.842 4479-6192/? W/System.err:     at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:119)
+02-15 11:51:24.842 4479-5367/? W/System.err:     at z.hol.net.http.HttpDataFetch.httpGet(HttpDataFetch.java:293)
+02-15 11:51:24.852 4479-6192/? W/System.err:     at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:359)
+02-15 11:51:24.852 4479-5367/? W/System.err:     at z.hol.net.http.HttpDataFetch.httpGet(HttpDataFetch.java:308)
+02-15 11:51:24.852 4479-5367/? W/System.err:     at com.mgyapp.android.d.a.c.a(HttpHelper.java:1295)
+02-15 11:51:24.852 4479-6192/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:555)
+02-15 11:51:24.852 4479-6192/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:487)
+02-15 11:51:24.852 4479-6192/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:465)
+02-15 11:51:24.852 4479-6192/? W/System.err:     at z.hol.net.http.HttpDataFetch.httpGet(HttpDataFetch.java:293)
+02-15 11:51:24.852 4479-6192/? W/System.err:     at z.hol.net.http.HttpDataFetch.httpGet(HttpDataFetch.java:308)
+02-15 11:51:24.852 4479-6192/? W/System.err:     at com.mgyapp.android.d.a.c.a(HttpHelper.java:1295)
+02-15 11:51:24.852 4479-6192/? W/System.err:     at com.mgyapp.android.d.a.c.a(HttpHelper.java:1244)
+02-15 11:51:24.852 4479-6192/? W/System.err:     at com.mgyapp.android.ui.NewAppItemFragment.b(NewAppItemFragment.java:38)
+02-15 11:51:24.852 4479-6192/? W/System.err:     at com.mgyapp.android.ui.AbsAppListFragment$a.a(AbsAppListFragment.java:281)
+02-15 11:51:24.852 4479-6192/? W/System.err:     at com.mgyapp.android.ui.AbsAppListFragment$a.doInBackground(AbsAppListFragment.java:253)
+02-15 11:51:24.852 4479-6192/? W/System.err:     at android.os.AsyncTask$2.call(AsyncTask.java:185)
+02-15 11:51:24.852 4479-6192/? W/System.err:     at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:306)
+02-15 11:51:24.852 4479-6192/? W/System.err:     at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+02-15 11:51:24.852 4479-6192/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1088)
+02-15 11:51:24.852 4479-6192/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:581)
+02-15 11:51:24.852 4479-6192/? W/System.err:     at java.lang.Thread.run(Thread.java:1019)
+02-15 11:51:24.862 4479-5367/? W/System.err:     at com.mgyapp.android.d.a.c.a(HttpHelper.java:1228)
+02-15 11:51:24.862 4479-5367/? W/System.err:     at com.mgyapp.android.ui.AppMainNewFragment.b(AppMainNewFragment.java:206)
+02-15 11:51:24.862 4479-5367/? W/System.err:     at com.mgyapp.android.ui.CommonAppFragment$b.a(CommonAppFragment.java:241)
+02-15 11:51:24.862 4479-5367/? W/System.err:     at com.mgyapp.android.ui.CommonAppFragment$b.doInBackground(CommonAppFragment.java:212)
+02-15 11:51:24.862 4479-5367/? W/System.err:     at android.os.AsyncTask$2.call(AsyncTask.java:185)
+02-15 11:51:24.862 4479-5367/? W/System.err:     at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:306)
+02-15 11:51:24.862 4479-5367/? W/System.err:     at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+02-15 11:51:24.862 4479-5367/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1088)
+02-15 11:51:24.872 4479-5367/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:581)
+02-15 11:51:24.872 4479-5367/? W/System.err:     at java.lang.Thread.run(Thread.java:1019)
+02-15 11:51:24.882 309-353/? I/ActivityManager: Displayed com.mgyapp.android/.ui.MainCoolActivity: +614ms (total +8m39s131ms)
+02-15 11:51:24.932 4479-6209/? W/System.err: java.net.UnknownHostException: api.mgyapp.com
+02-15 11:51:24.932 4479-6209/? W/System.err:     at java.net.InetAddress.lookupHostByName(InetAddress.java:497)
+02-15 11:51:24.932 4479-6209/? W/System.err:     at java.net.InetAddress.getAllByNameImpl(InetAddress.java:294)
+02-15 11:51:24.932 4479-6209/? W/System.err:     at java.net.InetAddress.getAllByName(InetAddress.java:256)
+02-15 11:51:24.932 4479-6209/? W/System.err:     at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:136)
+02-15 11:51:24.932 4479-6209/? W/System.err:     at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:164)
+02-15 11:51:24.932 4479-6209/? W/System.err:     at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:119)
+02-15 11:51:24.932 4479-6209/? W/System.err:     at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:359)
+02-15 11:51:24.932 4479-6209/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:555)
+02-15 11:51:24.932 4479-6209/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:487)
+02-15 11:51:24.932 4479-6209/? W/System.err:     at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:465)
+02-15 11:51:24.932 4479-6209/? W/System.err:     at com.mgyapp.android.d.a.c.b(HttpHelper.java:1566)
+02-15 11:51:24.932 4479-6209/? W/System.err:     at com.mgyapp.android.e.g.e(UpdatableAppChecker.java:398)
+02-15 11:51:24.932 4479-6209/? W/System.err:     at com.mgyapp.android.e.g.e(UpdatableAppChecker.java:36)
+02-15 11:51:24.932 4479-6209/? W/System.err:     at com.mgyapp.android.e.g$b.a(UpdatableAppChecker.java:224)
+02-15 11:51:24.932 4479-6209/? W/System.err:     at com.mgyapp.android.e.g$b.doInBackground(UpdatableAppChecker.java:159)
+02-15 11:51:24.932 4479-6209/? W/System.err:     at android.os.AsyncTask$2.call(AsyncTask.java:185)
+02-15 11:51:24.932 4479-6209/? W/System.err:     at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:306)
+02-15 11:51:24.932 4479-6209/? W/System.err:     at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+02-15 11:51:24.932 4479-6209/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1088)
+02-15 11:51:24.932 4479-6209/? W/System.err:     at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:581)
+02-15 11:51:24.932 4479-6209/? W/System.err:     at java.lang.Thread.run(Thread.java:1019)
+02-15 11:51:27.505 309-355/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10200000 cmp=com.android.launcher2/.Launcher } from pid 309
+02-15 11:51:27.615 447-447/? D/skia: purging 202K from font cache [17 entries]
+02-15 11:51:27.625 587-612/? W/LL_Core: [LifeLogDatabaseInsertSpareParts]Could NOT insert the usage log because the launch date is before year 2000.
+02-15 11:51:28.235 447-447/? D/skia: purging 206K from font cache [14 entries]
+02-15 11:51:31.118 309-502/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.android.settings/.Settings bnds=[209,629][330,792] } from pid 447
+02-15 11:51:31.298 587-612/? W/LL_Core: [LifeLogDatabaseInsertSpareParts]Could NOT insert the usage log because the launch date is before year 2000.
+02-15 11:51:31.779 309-335/? I/WindowManager: Setting rotation to 3, animFlags=0
+02-15 11:51:31.799 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=2 layout=268435490 uiMode=17 seq=67}
+02-15 11:51:32.620 309-3944/? I/ActivityManager: No longer want com.android.providers.calendar (pid 4355): hidden #16
+02-15 11:51:34.131 309-455/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cmp=com.android.settings/.ApplicationSettings } from pid 1017
+02-15 11:51:34.191 587-612/? W/LL_Core: [LifeLogDatabaseInsert]Could NOT insert the log because the log date is before year 2000.
+02-15 11:51:34.381 309-353/? I/ActivityManager: Displayed com.android.settings/.ApplicationSettings: +227ms
+02-15 11:51:34.942 309-336/? W/ProcessStats: Skipping unknown process pid 15590
+02-15 11:51:34.942 309-336/? W/ProcessStats: Skipping unknown process pid 15591
+02-15 11:51:37.414 309-485/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cmp=com.android.settings/.ManageApplications } from pid 1017
+02-15 11:51:37.645 1017-1017/? D/skia: purging 191K from font cache [17 entries]
+02-15 11:51:37.795 309-353/? I/ActivityManager: Displayed com.android.settings/.ManageApplications: +353ms
+02-15 11:51:38.766 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 1 
+02-15 11:51:38.766 129-140/? I/dun_service: Post event 1
+02-15 11:51:38.766 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:51:38.776 129-129/? I/dun_service: received event: DUN_EVENT_USB_UNPLUG 
+02-15 11:51:38.776 129-129/? I/dun_service: received event(DUN_EVENT_USB_UNPLUG) in state(DUN_STATE_USB_UNPLUG)
+02-15 11:51:38.776 129-129/? I/dun_service: Ignoring the event DUN_EVENT_USB_UNPLUG in USB_UNPLUG_STATE
+02-15 11:51:38.776 129-129/? I/dun_service: Moved to state(DUN_STATE_USB_UNPLUG)
+02-15 11:51:38.786 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 1 
+02-15 11:51:38.786 129-140/? I/dun_service: Post event 1
+02-15 11:51:38.786 129-129/? I/dun_service: received event: DUN_EVENT_USB_UNPLUG 
+02-15 11:51:38.786 129-129/? I/dun_service: received event(DUN_EVENT_USB_UNPLUG) in state(DUN_STATE_USB_UNPLUG)
+02-15 11:51:38.786 129-129/? I/dun_service: Ignoring the event DUN_EVENT_USB_UNPLUG in USB_UNPLUG_STATE
+02-15 11:51:38.786 129-129/? I/dun_service: Moved to state(DUN_STATE_USB_UNPLUG)
+02-15 11:51:42.009 309-469/? I/ActivityManager: Starting: Intent { act=android.settings.APPLICATION_DETAILS_SETTINGS dat=package:com.mgyapp.android cmp=com.android.settings/.applications.InstalledAppDetails } from pid 1017
+02-15 11:51:42.189 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.READ_EXTERNAL_STORAGE
+02-15 11:51:42.189 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.READ_OWNER_DATA
+02-15 11:51:42.189 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.WRITE_OWNER_DATA
+02-15 11:51:42.199 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.READ_CALL_LOG
+02-15 11:51:42.199 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.WRITE_CALL_LOG
+02-15 11:51:42.199 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.BIND_ACCESSIBILITY_SERVICE
+02-15 11:51:42.199 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.BROADCAST_PACKAGE_ADDED
+02-15 11:51:42.199 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.BROADCAST_PACKAGE_CHANGED
+02-15 11:51:42.199 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.BROADCAST_PACKAGE_INSTALL
+02-15 11:51:42.199 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.BROADCAST_PACKAGE_REPLACED
+02-15 11:51:42.599 309-353/? I/ActivityManager: Displayed com.android.settings/.applications.InstalledAppDetails: +568ms
+02-15 11:51:56.253 309-335/? I/WindowManager: Setting rotation to 0, animFlags=0
+02-15 11:51:56.273 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=1 layout=268435490 uiMode=17 seq=68}
+02-15 11:51:56.513 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.READ_EXTERNAL_STORAGE
+02-15 11:51:56.513 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.READ_OWNER_DATA
+02-15 11:51:56.513 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.WRITE_OWNER_DATA
+02-15 11:51:56.513 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.READ_CALL_LOG
+02-15 11:51:56.513 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.WRITE_CALL_LOG
+02-15 11:51:56.513 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.BIND_ACCESSIBILITY_SERVICE
+02-15 11:51:56.523 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.BROADCAST_PACKAGE_ADDED
+02-15 11:51:56.523 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.BROADCAST_PACKAGE_CHANGED
+02-15 11:51:56.523 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.BROADCAST_PACKAGE_INSTALL
+02-15 11:51:56.523 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.BROADCAST_PACKAGE_REPLACED
+02-15 11:51:57.003 309-335/? I/WindowManager: Setting rotation to 1, animFlags=0
+02-15 11:51:57.003 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=2 layout=268435490 uiMode=17 seq=69}
+02-15 11:51:57.164 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.READ_EXTERNAL_STORAGE
+02-15 11:51:57.164 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.READ_OWNER_DATA
+02-15 11:51:57.164 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.WRITE_OWNER_DATA
+02-15 11:51:57.164 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.READ_CALL_LOG
+02-15 11:51:57.164 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.WRITE_CALL_LOG
+02-15 11:51:57.164 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.BIND_ACCESSIBILITY_SERVICE
+02-15 11:51:57.174 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.BROADCAST_PACKAGE_ADDED
+02-15 11:51:57.174 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.BROADCAST_PACKAGE_CHANGED
+02-15 11:51:57.174 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.BROADCAST_PACKAGE_INSTALL
+02-15 11:51:57.174 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.BROADCAST_PACKAGE_REPLACED
+02-15 11:51:58.825 309-481/? I/ActivityManager: Starting: Intent { act=android.intent.action.DELETE dat=package:com.mgyapp.android cmp=com.android.packageinstaller/.UninstallerActivity } from pid 1017
+02-15 11:51:58.915 309-478/? I/ActivityManager: Start proc com.android.packageinstaller for activity com.android.packageinstaller/.UninstallerActivity: pid=15816 uid=10066 gids={}
+02-15 11:51:58.955 587-612/? W/LL_Core: [LifeLogDatabaseInsertSpareParts]Could NOT insert the usage log because the launch date is before year 2000.
+02-15 11:51:59.116 309-353/? I/ActivityManager: Displayed com.android.packageinstaller/.UninstallerActivity: +235ms
+02-15 11:52:00.337 309-335/? I/WindowManager: Setting rotation to 0, animFlags=0
+02-15 11:52:00.357 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=1 layout=268435490 uiMode=17 seq=70}
+02-15 11:52:01.558 309-485/? I/ActivityManager: Starting: Intent { act=android.intent.action.VIEW cmp=com.android.packageinstaller/.UninstallAppProgress (has extras) } from pid 15816
+02-15 11:52:01.658 309-339/? I/PackageManager: Removing non-system package:com.mgyapp.android
+02-15 11:52:01.678 309-336/? I/ActivityManager: Force stopping package com.mgyapp.android uid=10117
+02-15 11:52:01.678 309-336/? W/ActivityManager: Scheduling restart of crashed service com.mgyapp.android/com.taobao.accs.ChannelService$KernelService in 5000ms
+02-15 11:52:01.678 309-336/? W/ActivityManager: Scheduling restart of crashed service com.mgyapp.android/com.taobao.accs.ChannelService in 15000ms
+02-15 11:52:01.678 309-336/? W/ActivityManager: Scheduling restart of crashed service com.mgyapp.android/.service.AppService in 25000ms
+02-15 11:52:01.678 309-336/? I/ActivityManager:   Force finishing activity HistoryRecord{40a3a0b8 com.mgyapp.android/.ui.MainCoolActivity}
+02-15 11:52:01.678 309-336/? I/ActivityManager:   Force finishing activity HistoryRecord{40d96fb8 com.mgyapp.android/.ui.CommonActivity}
+02-15 11:52:01.698 309-336/? I/ActivityManager:   Force stopping service ServiceRecord{40b8b3c0 com.mgyapp.android/.service.AppService}
+02-15 11:52:01.698 309-336/? I/ActivityManager:   Force stopping service ServiceRecord{40b635b0 com.mgyapp.android/com.taobao.accs.ChannelService$KernelService}
+02-15 11:52:01.698 309-336/? I/ActivityManager:   Force stopping service ServiceRecord{40b79e10 com.mgyapp.android/com.taobao.accs.ChannelService}
+02-15 11:52:01.708 309-336/? V/BgRingerService: bgRingerCancel call pkg:com.mgyapp.android id:9371
+02-15 11:52:01.708 309-339/? D/PackageManager: Removing package com.mgyapp.android
+02-15 11:52:01.708 309-339/? D/PackageManager: Unregistered content provider: com.mgyapp.android.umeng.message, className = com.umeng.message.provider.MessageProvider, isSyncable = false
+02-15 11:52:01.738 309-339/? D/PackageManager:   Providers: com.umeng.message.provider.MessageProvider
+02-15 11:52:01.738 309-339/? D/PackageManager:   Services: com.mgyapp.android.rom.RomService com.mgyapp.android.service.AppService com.mgyapp.android.service.MyAccessibilityService com.taobao.accs.ChannelService com.taobao.accs.data.MsgDistributeService com.taobao.accs.ChannelService$KernelService org.android.agoo.accs.AgooService com.umeng.message.UmengIntentService com.umeng.message.UmengMessageCallbackHandlerService com.umeng.message.UmengDownloadResourceService com.umeng.message.UmengMessageIntentReceiverService com.evernote.android.job.v21.PlatformJobService com.evernote.android.job.v14.PlatformAlarmService com.evernote.android.job.gcm.PlatformGcmService com.evernote.android.job.JobRescheduleService
+02-15 11:52:01.778 309-339/? D/PackageManager:   Receivers: com.mgyapp.android.watcher.WifiStateChangeReceiver com.mgyapp.android.controller.AutoUpdateControler com.mgyapp.android.service.NotificationReciver com.mgyapp.android.service.BootReciver com.taobao.accs.EventReceiver com.taobao.accs.ServiceReceiver com.taobao.agoo.AgooCommondReceiver com.umeng.message.NotificationProxyBroadcastReceiver com.evernote.android.job.v14.PlatformAlarmReceiver com.evernote.android.job.JobBootReceiver
+02-15 11:52:01.788 309-339/? D/PackageManager:   Activities: com.mgyun.general.errorcatch.ErrorCatchedActivity com.mgyun.fb.MgFeedbackActivity com.mgyapp.android.ui.SplashActivity com.mgyapp.android.ui.OpenRecActivity com.mgyapp.android.ui.CommonActivity org.egret.egretruntimelauncher.webview.WebViewActivity com.zxing.activity.CaptureActivity cn.sharesdk.tencent.qq.ResultReceiver com.mgyapp.android.ui.MainCoolActivity com.mgyapp.android.ui.WebLoginActivity com.sina.oauth2.SinaLoginActivity com.tencent.oauth2.TencentLoginActivity com.mgyapp.android.ui.FeedbackActivity com.mgyapp.android.ui.base.WebActivity com.mgyapp.android.ui.ScreenDetailActivity com.mgyapp.android.ui.DaemonActivityNew com.mgyapp.android.ui.CabinActivity com.mgyapp.android.ui.ForeignMainActivity com.mgyapp.android.ui.InstallHelpActivity com.mgyapp.android.ui.TipHelpActivity com.mgyun.coolgame.CoolGameActivity com.mgyun.module.share.wxapi.WXEntryActivity com.mob.tools.MobUIShell
+02-15 11:52:01.798 309-309/? I/WindowManager: WIN DEATH: Window{40a317b0 com.mgyapp.android/com.mgyapp.android.ui.CommonActivity paused=true}
+02-15 11:52:01.808 309-456/? I/WindowManager: WIN DEATH: Window{409761d0 com.mgyapp.android/com.mgyapp.android.ui.MainCoolActivity paused=true}
+02-15 11:52:01.848 309-353/? I/ActivityManager: Displayed com.android.packageinstaller/.UninstallAppProgress: +250ms
+02-15 11:52:02.098 309-339/? I/ActivityManager: Force stopping package com.mgyapp.android uid=10117
+02-15 11:52:02.429 4288-4288/? D/Launcher.InstallReceiver: InstallReceiver onReceive()
+02-15 11:52:02.429 4288-4288/? D/Launcher.InstallReceiver: InstallReceiver ACTION_PACKAGE_REMOVED com.mgyapp.android
+02-15 11:52:02.699 587-612/? W/LL_Core: [LifeLogDatabaseInsert]Could NOT insert the log because the log date is before year 2000.
+02-15 11:52:03.630 15816-15816/? I/UninstallAppProgress: Finished uninstalling pkg: com.mgyapp.android
+02-15 11:52:03.700 587-612/? W/LL_Core: [LifeLogDatabaseInsertSpareParts]Could NOT insert the usage log because the launch date is before year 2000.
+02-15 11:52:03.950 309-335/? I/ActivityManager: No longer want jp.co.sharp.android.usbmode (pid 7985): hidden #16
+02-15 11:52:05.892 309-335/? I/WindowManager: Setting rotation to 3, animFlags=0
+02-15 11:52:05.892 309-335/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=2 layout=268435490 uiMode=17 seq=71}
+02-15 11:52:09.856 309-3944/? I/ActivityManager: Starting: Intent { act=android.settings.APPLICATION_DETAILS_SETTINGS dat=package:com.mgyun.shua.protector cmp=com.android.settings/.applications.InstalledAppDetails } from pid 1017
+02-15 11:52:09.986 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.READ_EXTERNAL_STORAGE
+02-15 11:52:09.986 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.READ_OWNER_DATA
+02-15 11:52:09.986 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.WRITE_OWNER_DATA
+02-15 11:52:09.996 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.PACKAGE_USEAGE_STATS
+02-15 11:52:09.996 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.READ_CALL_LOG
+02-15 11:52:09.996 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.WRITE_CALL_LOG
+02-15 11:52:10.236 309-353/? I/ActivityManager: Displayed com.android.settings/.applications.InstalledAppDetails: +352ms
+02-15 11:52:12.408 1017-1017/? W/KeyCharacterMap: Can't open keycharmap file
+02-15 11:52:12.408 1017-1017/? W/KeyCharacterMap: Error loading keycharmap file '/system/usr/keychars/SH_matrix-keypad.kcm.bin'. SH_matrix-keypad
+02-15 11:52:12.408 1017-1017/? W/KeyCharacterMap: Using default keymap: /system/usr/keychars/qwerty.kcm.bin
+02-15 11:52:13.630 309-309/? I/ActivityManager: Starting: Intent { act=android.settings.APPLICATION_DETAILS_SETTINGS dat=package:com.n0n3m4.droidc cmp=com.android.settings/.applications.InstalledAppDetails } from pid 1017
+02-15 11:52:13.770 1017-1017/? I/AppSecurityPermissions: Ignoring unknown permission:android.permission.ACCESS_SUPERUSER
+02-15 11:52:13.980 309-353/? I/ActivityManager: Displayed com.android.settings/.applications.InstalledAppDetails: +322ms
+02-15 11:52:15.712 309-485/? I/ActivityManager: Starting: Intent { act=android.intent.action.DELETE dat=package:com.n0n3m4.droidc cmp=com.android.packageinstaller/.UninstallerActivity } from pid 1017
+02-15 11:52:15.792 587-612/? W/LL_Core: [LifeLogDatabaseInsertSpareParts]Could NOT insert the usage log because the launch date is before year 2000.
+02-15 11:52:15.982 309-353/? I/ActivityManager: Displayed com.android.packageinstaller/.UninstallerActivity: +259ms
+02-15 11:52:16.673 309-480/? I/ActivityManager: Starting: Intent { act=android.intent.action.VIEW cmp=com.android.packageinstaller/.UninstallAppProgress (has extras) } from pid 15816
+02-15 11:52:16.743 309-339/? I/PackageManager: Removing non-system package:com.n0n3m4.droidc
+02-15 11:52:16.753 309-336/? I/ActivityManager: Force stopping package com.n0n3m4.droidc uid=10115
+02-15 11:52:16.783 309-339/? D/PackageManager: Removing package com.n0n3m4.droidc
+02-15 11:52:16.813 309-339/? D/PackageManager:   Activities: com.n0n3m4.droidc.CCompilerMain jackpal.androidterm.Term jackpal.androidterm.TermPreferences com.n0n3m4.droidc.FileDialog com.n0n3m4.droidc.CPreferences com.n0n3m4.droidc.CCompilerOutput com.n0n3m4.droidc.MakeSettings
+02-15 11:52:16.883 309-353/? I/ActivityManager: Displayed com.android.packageinstaller/.UninstallAppProgress: +202ms
+02-15 11:52:18.815 309-339/? I/ActivityManager: Force stopping package com.n0n3m4.droidc uid=10115
+02-15 11:52:19.015 4288-4288/? D/Launcher.InstallReceiver: InstallReceiver onReceive()
+02-15 11:52:19.015 4288-4288/? D/Launcher.InstallReceiver: InstallReceiver ACTION_PACKAGE_REMOVED com.n0n3m4.droidc
+02-15 11:52:19.185 587-612/? W/LL_Core: [LifeLogDatabaseInsert]Could NOT insert the log because the log date is before year 2000.
+02-15 11:52:19.936 15816-15816/? I/UninstallAppProgress: Finished uninstalling pkg: com.n0n3m4.droidc
+02-15 11:52:20.016 587-612/? W/LL_Core: [LifeLogDatabaseInsertSpareParts]Could NOT insert the usage log because the launch date is before year 2000.
+02-15 11:52:21.327 309-355/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10200000 cmp=com.android.launcher2/.Launcher } from pid 309
+02-15 11:52:21.397 309-502/? I/WindowManager: Setting rotation to 0, animFlags=1
+02-15 11:52:21.407 309-502/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=1 layout=268435490 uiMode=17 seq=72}
+02-15 11:52:21.497 587-612/? W/LL_Core: [LifeLogDatabaseInsertSpareParts]Could NOT insert the usage log because the launch date is before year 2000.
+02-15 11:52:21.658 1017-1017/? W/IInputConnectionWrapper: showStatusIcon on inactive InputConnection
+02-15 11:52:25.011 309-336/? W/ProcessStats: Skipping unknown process pid 16026
+02-15 11:52:25.011 309-336/? W/ProcessStats: Skipping unknown process pid 16027
+02-15 11:52:55.881 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 1 
+02-15 11:52:55.881 129-140/? I/dun_service: Post event 1
+02-15 11:52:55.881 129-129/? I/dun_service: received event: DUN_EVENT_USB_UNPLUG 
+02-15 11:52:55.881 129-129/? I/dun_service: received event(DUN_EVENT_USB_UNPLUG) in state(DUN_STATE_USB_UNPLUG)
+02-15 11:52:55.881 129-129/? I/dun_service: Ignoring the event DUN_EVENT_USB_UNPLUG in USB_UNPLUG_STATE
+02-15 11:52:55.881 129-129/? I/dun_service: Moved to state(DUN_STATE_USB_UNPLUG)
+02-15 11:54:23.426 309-336/? W/ProcessStats: Skipping unknown process pid 16753
+02-15 11:54:23.426 309-336/? W/ProcessStats: Skipping unknown process pid 16754
+02-15 11:54:29.252 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 1 
+02-15 11:54:29.252 129-140/? I/dun_service: Post event 1
+02-15 11:54:29.252 129-129/? I/dun_service: received event: DUN_EVENT_USB_UNPLUG 
+02-15 11:54:29.252 129-129/? I/dun_service: received event(DUN_EVENT_USB_UNPLUG) in state(DUN_STATE_USB_UNPLUG)
+02-15 11:54:29.252 129-129/? I/dun_service: Ignoring the event DUN_EVENT_USB_UNPLUG in USB_UNPLUG_STATE
+02-15 11:54:29.252 129-129/? I/dun_service: Moved to state(DUN_STATE_USB_UNPLUG)
+02-15 11:54:29.252 104-186/? W/Vold: Ignoring unknown switch 'battery'
+02-15 11:54:33.466 309-336/? W/ProcessStats: Skipping unknown process pid 17260
+02-15 11:54:33.476 309-336/? W/ProcessStats: Skipping unknown process pid 17261
+02-15 11:54:43.526 309-336/? W/ProcessStats: Skipping unknown process pid 17750
+02-15 11:54:43.526 309-336/? W/ProcessStats: Skipping unknown process pid 17751
+02-15 11:54:53.566 309-336/? W/ProcessStats: Skipping unknown process pid 18238
+02-15 11:54:53.566 309-336/? W/ProcessStats: Skipping unknown process pid 18239
+02-15 11:55:03.646 309-336/? W/ProcessStats: Skipping unknown process pid 18730
+02-15 11:55:13.665 309-336/? W/ProcessStats: Skipping unknown process pid 19226
+02-15 11:55:23.745 309-336/? W/ProcessStats: Skipping unknown process pid 19720
+02-15 11:55:33.805 309-336/? W/ProcessStats: Skipping unknown process pid 20208
+02-15 11:55:33.805 309-336/? W/ProcessStats: Skipping unknown process pid 20209
+02-15 11:55:43.855 309-336/? W/ProcessStats: Skipping unknown process pid 20714
+02-15 11:55:43.855 309-336/? W/ProcessStats: Skipping unknown process pid 20715
+02-15 11:55:53.915 309-336/? W/ProcessStats: Skipping unknown process pid 21218
+a
