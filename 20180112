@@ -1662,3 +1662,11 @@ Here is the contents of the linux system.
 02-15 11:52:16.753 309-336/? I/ActivityManager: Force stopping package com.n0n3m4.droidc uid=10115
 02-15 11:52:16.783 309-339/? D/PackageManager: Removing package com.n0n3m4.droidc
 02-15 11:52:16.813 309-339/? D/PackageManager:   Activities: com.n0n3m4.droidc.CCompilerMain jackpal.androidterm.Term jackpal.androidterm.TermPreferences com.n0n3m4.droidc.FileDialog com.n0n3m4.droidc.CPreferences com.n0n3m4.droidc.CCompilerOutput com.n0n3m4.droidc.
+
+InputManager
+Provides information about input devices and available key layouts.
+
+Instances of this class must be obtained using Context.getSystemService(Class) with the argument InputManager.class or Context.getSystemService(String) with the argument Context.INPUT_SERVICE.
+
+这个是安卓的输入系统的管理类.
+在IS12SH的log上面可以看到.
