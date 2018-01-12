@@ -1,7 +1,11 @@
+
 Try to root IS12SH real device
 
 I bought this device through internet.
 And I used windows OS and ADB to link the linux system of IS12SH.
+
+This is the Android 2.3.3 with API 10.
+I saw the logs of product build under here:
 
 Here is the contents of the linux system.
 02-15 10:57:40.066 309-481/? I/ActivityManager: No longer want com.morpho.app.golfsupport (pid 1249): hidden #16
@@ -1657,48 +1661,4 @@ Here is the contents of the linux system.
 02-15 11:52:16.743 309-339/? I/PackageManager: Removing non-system package:com.n0n3m4.droidc
 02-15 11:52:16.753 309-336/? I/ActivityManager: Force stopping package com.n0n3m4.droidc uid=10115
 02-15 11:52:16.783 309-339/? D/PackageManager: Removing package com.n0n3m4.droidc
-02-15 11:52:16.813 309-339/? D/PackageManager:   Activities: com.n0n3m4.droidc.CCompilerMain jackpal.androidterm.Term jackpal.androidterm.TermPreferences com.n0n3m4.droidc.FileDialog com.n0n3m4.droidc.CPreferences com.n0n3m4.droidc.CCompilerOutput com.n0n3m4.droidc.MakeSettings
-02-15 11:52:16.883 309-353/? I/ActivityManager: Displayed com.android.packageinstaller/.UninstallAppProgress: +202ms
-02-15 11:52:18.815 309-339/? I/ActivityManager: Force stopping package com.n0n3m4.droidc uid=10115
-02-15 11:52:19.015 4288-4288/? D/Launcher.InstallReceiver: InstallReceiver onReceive()
-02-15 11:52:19.015 4288-4288/? D/Launcher.InstallReceiver: InstallReceiver ACTION_PACKAGE_REMOVED com.n0n3m4.droidc
-02-15 11:52:19.185 587-612/? W/LL_Core: [LifeLogDatabaseInsert]Could NOT insert the log because the log date is before year 2000.
-02-15 11:52:19.936 15816-15816/? I/UninstallAppProgress: Finished uninstalling pkg: com.n0n3m4.droidc
-02-15 11:52:20.016 587-612/? W/LL_Core: [LifeLogDatabaseInsertSpareParts]Could NOT insert the usage log because the launch date is before year 2000.
-02-15 11:52:21.327 309-355/? I/ActivityManager: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10200000 cmp=com.android.launcher2/.Launcher } from pid 309
-02-15 11:52:21.397 309-502/? I/WindowManager: Setting rotation to 0, animFlags=1
-02-15 11:52:21.407 309-502/? I/ActivityManager: Config changed: { scale=1.0 imsi=0/0 loc=ja_JP touch=3 keys=1/1/2 nav=1/1 orien=1 layout=268435490 uiMode=17 seq=72}
-02-15 11:52:21.497 587-612/? W/LL_Core: [LifeLogDatabaseInsertSpareParts]Could NOT insert the usage log because the launch date is before year 2000.
-02-15 11:52:21.658 1017-1017/? W/IInputConnectionWrapper: showStatusIcon on inactive InputConnection
-02-15 11:52:25.011 309-336/? W/ProcessStats: Skipping unknown process pid 16026
-02-15 11:52:25.011 309-336/? W/ProcessStats: Skipping unknown process pid 16027
-02-15 11:52:55.881 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 1 
-02-15 11:52:55.881 129-140/? I/dun_service: Post event 1
-02-15 11:52:55.881 129-129/? I/dun_service: received event: DUN_EVENT_USB_UNPLUG 
-02-15 11:52:55.881 129-129/? I/dun_service: received event(DUN_EVENT_USB_UNPLUG) in state(DUN_STATE_USB_UNPLUG)
-02-15 11:52:55.881 129-129/? I/dun_service: Ignoring the event DUN_EVENT_USB_UNPLUG in USB_UNPLUG_STATE
-02-15 11:52:55.881 129-129/? I/dun_service: Moved to state(DUN_STATE_USB_UNPLUG)
-02-15 11:54:23.426 309-336/? W/ProcessStats: Skipping unknown process pid 16753
-02-15 11:54:23.426 309-336/? W/ProcessStats: Skipping unknown process pid 16754
-02-15 11:54:29.252 129-140/? I/dun_service: The value returned from dun_getusbmodemstate_fromsys is 1 
-02-15 11:54:29.252 129-140/? I/dun_service: Post event 1
-02-15 11:54:29.252 129-129/? I/dun_service: received event: DUN_EVENT_USB_UNPLUG 
-02-15 11:54:29.252 129-129/? I/dun_service: received event(DUN_EVENT_USB_UNPLUG) in state(DUN_STATE_USB_UNPLUG)
-02-15 11:54:29.252 129-129/? I/dun_service: Ignoring the event DUN_EVENT_USB_UNPLUG in USB_UNPLUG_STATE
-02-15 11:54:29.252 129-129/? I/dun_service: Moved to state(DUN_STATE_USB_UNPLUG)
-02-15 11:54:29.252 104-186/? W/Vold: Ignoring unknown switch 'battery'
-02-15 11:54:33.466 309-336/? W/ProcessStats: Skipping unknown process pid 17260
-02-15 11:54:33.476 309-336/? W/ProcessStats: Skipping unknown process pid 17261
-02-15 11:54:43.526 309-336/? W/ProcessStats: Skipping unknown process pid 17750
-02-15 11:54:43.526 309-336/? W/ProcessStats: Skipping unknown process pid 17751
-02-15 11:54:53.566 309-336/? W/ProcessStats: Skipping unknown process pid 18238
-02-15 11:54:53.566 309-336/? W/ProcessStats: Skipping unknown process pid 18239
-02-15 11:55:03.646 309-336/? W/ProcessStats: Skipping unknown process pid 18730
-02-15 11:55:13.665 309-336/? W/ProcessStats: Skipping unknown process pid 19226
-02-15 11:55:23.745 309-336/? W/ProcessStats: Skipping unknown process pid 19720
-02-15 11:55:33.805 309-336/? W/ProcessStats: Skipping unknown process pid 20208
-02-15 11:55:33.805 309-336/? W/ProcessStats: Skipping unknown process pid 20209
-02-15 11:55:43.855 309-336/? W/ProcessStats: Skipping unknown process pid 20714
-02-15 11:55:43.855 309-336/? W/ProcessStats: Skipping unknown process pid 20715
-02-15 11:55:53.915 309-336/? W/ProcessStats: Skipping unknown process pid 21218
-a
+02-15 11:52:16.813 309-339/? D/PackageManager:   Activities: com.n0n3m4.droidc.CCompilerMain jackpal.androidterm.Term jackpal.androidterm.TermPreferences com.n0n3m4.droidc.FileDialog com.n0n3m4.droidc.CPreferences com.n0n3m4.droidc.CCompilerOutput com.n0n3m4.droidc.
