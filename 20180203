@@ -1,3 +1,237 @@
 Usage Stats manager of Android
 
 it is used to show the usage of any App。
+
+package com.example.ishiiaya.myapplication;
+
+import android.app.usage.UsageEvents;
+import android.app.usage.UsageStats;
+import android.app.usage.UsageStatsManager;
+import android.content.Context;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+
+public class MainActivity extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        UsageStatsManager statsManager = (UsageStatsManager) getSystemService(Context.USAGE_STATS_SERVICE);
+        Log.d("TEST:", "" + statsManager);
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(new Date());
+        long endTime = calendar.getTimeInMillis();
+        calendar.add(Calendar.MONTH, -1);
+        long startTime = calendar.getTimeInMillis();
+        UsageEvents events = statsManager.queryEvents(startTime, endTime);
+        List<UsageStats> list = statsManager.queryUsageStats(UsageStatsManager.INTERVAL_MONTHLY, startTime, endTime);
+        Log.d("TEST:", "" + list.size());
+        for (UsageStats stats : list) {
+            Log.d("TEST:", stats.getPackageName());
+            Log.d("TEST:", "" + stats.getLastTimeStamp());// Stats里面的结束时间
+            Log.d("TEST:", "" + stats.getLastTimeUsed()); // 最后用户用这个app的时间
+            Log.d("TEST:", "" + stats.getFirstTimeStamp()); // Stats里面的开始时间
+            Log.d("TEST:", "" + stats.getTotalTimeInForeground());// 在前台运行的时间
+        }
+    }
+}
+
+这样就可以获得权限来看上一个月都用了什么app。
+
+02-03 23:10:10.840 12902-12902/com.example.ishiiaya.myapplication D/TEST:: android.app.usage.UsageStatsManager@4492c97
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 37
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.google.android.youtube
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666237090
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 73943555
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 0
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.google.android.ext.services
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666265775
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 73943555
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 0
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.android.providers.telephony
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666240308
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 73943555
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 0
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.google.android.googlequicksearchbox
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666999747
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517651444002
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 74579
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.android.providers.calendar
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666277273
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 73943555
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 0
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.android.providers.media
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666271555
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 73943555
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 0
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.android.providers.downloads
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666271555
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515668297711
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 0
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.google.android.apps.messaging
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666237090
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515668404456
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 3519
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.google.android.configupdater
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666237090
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 73943555
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 0
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.android.defcontainer
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666998222
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 73943555
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 0
+02-03 23:10:10.846 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.android.vending
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666509419
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 73943555
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 0
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: android
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666237090
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515667969600
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 13805
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.example.ishiiaya.myapplication
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517667010377
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517667010377
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 18211058
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.google.android.gm
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666237090
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515668265211
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 32143
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.google.android.music
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666237090
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517648647017
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 7880
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.android.printspooler
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517667002077
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 73943555
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 0
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.google.android.dialer
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666276634
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 73943555
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 0
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.google.android.apps.docs
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666237090
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515667993278
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 5683
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.google.android.apps.maps
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666237090
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 73943555
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 0
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.android.keychain
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666270676
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 73943555
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 0
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.android.chrome
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666237090
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517648629699
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1902342
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.google.android.gms
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666509422
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517648540885
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 87601
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.google.android.gsf
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517667002424
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 73943555
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 0
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.google.android.partnersetup
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666237090
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 73943555
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 0
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.google.android.videos
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666237090
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 73943555
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 0
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.google.android.apps.nexuslauncher
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517667008124
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517667008124
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 17081221
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.android.inputmethod.latin
+02-03 23:10:10.847 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666237090
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 73943555
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 0
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.android.providers.partnerbookmarks
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666237090
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 73943555
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 0
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.android.settings
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666518543
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666518543
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 197875
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.google.android.talk
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666237090
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515668424347
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 103540
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.android.phone
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666240308
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 73943555
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 0
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.android.providers.blockednumber
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666314194
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 73943555
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 0
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.android.providers.userdictionary
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666314194
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 73943555
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 0
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.android.systemui
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517667009992
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517667009992
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 40239
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.example.ishiiaya.leakcanary
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666382926
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666382926
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 7800
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.android.customlocale2
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666237090
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515668035588
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 12966
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: com.android.providers.contacts
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1517666314194
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 73943555
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 1515665419279
+02-03 23:10:10.848 12902-12902/com.example.ishiiaya.myapplication D/TEST:: 0
+
+这里有一个小坑就是如果这个App在security下面的usage app里面没有被开启的话，就有可能调用不了这些个Api。也就是list有可能为空。
+
+02-03 23:02:04.982 6769-6769/? D/TEST:: 1517666314194有个
+02-03 23:02:04.982 6769-6769/? D/TEST:: 1517666314194
