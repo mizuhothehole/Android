@@ -11,6 +11,7 @@ import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -30,13 +31,15 @@ public class MainActivity extends AppCompatActivity {
         long startTime = calendar.getTimeInMillis();
         UsageEvents events = statsManager.queryEvents(startTime, endTime);
         List<UsageStats> list = statsManager.queryUsageStats(UsageStatsManager.INTERVAL_MONTHLY, startTime, endTime);
-        Log.d("TEST:", "" + list.size());
+        Log.i("TEST:", "" + list.size());
         for (UsageStats stats : list) {
-            Log.d("TEST:", stats.getPackageName());
-            Log.d("TEST:", "" + stats.getLastTimeStamp());// Stats里面的结束时间
-            Log.d("TEST:", "" + stats.getLastTimeUsed()); // 最后用户用这个app的时间
-            Log.d("TEST:", "" + stats.getFirstTimeStamp()); // Stats里面的开始时间
-            Log.d("TEST:", "" + stats.getTotalTimeInForeground());// 在前台运行的时间
+            Log.i("TEST:", stats.getPackageName());
+            Log.i("TEST:", "" + stats.getLastTimeStamp());// 数据收集结束的时间
+            Log.i("TEST:", "" + endTime);// 结束时间
+            Log.i("TEST:", "" + stats.getFirstTimeStamp()); // 数据收集开始的时间
+            Log.i("TEST:", "" + startTime); // 开始时间
+            Log.i("TEST:", "" + stats.getLastTimeUsed()); // 最后用户用这个app的时间
+            Log.i("TEST:", "" + stats.getTotalTimeInForeground());// 在前台运行的时间
         }
     }
 }
