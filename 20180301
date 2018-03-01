@@ -1,0 +1,61 @@
+Android looper why must use android.os.HandlerThread?
+
+package com.sonymobile.indeviceintelligence;
+
+import android.content.Context;
+import android.os.Handler;
+import android.os.HandlerThread;
+import android.support.test.InstrumentationRegistry;
+import android.util.Log;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.junit.MockitoJUnitRunner;
+
+
+@RunWith(MockitoJUnitRunner.class)
+public class HandlerTest {
+    private static final String TAG = HandlerTest.class.getSimpleName();
+    Context mTargetContext = null;
+
+    @Before
+    public void setUp() throws Exception {
+        mTargetContext = InstrumentationRegistry.getTargetContext();
+    }
+
+    @Test
+    public void test() {
+        Thread.currentThread().setName("mainThread");
+        Log.d("QIN", "main thread:" + Thread.currentThread().getId());
+        Log.d("QIN", "main thread:" + Thread.currentThread().getName());
+        HandlerThread handlerThread = new HandlerThread("handlerThread1");
+        handlerThread.start();
+        Handler handler = new Handler(handlerThread.getLooper());
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                Log.d("QIN", "handler thread:" + Thread.currentThread().getId());
+                Log.d("QIN", "handler thread:" + Thread.currentThread().getName());
+            }
+        });
+    }
+
+    @Test
+    public void test2() {
+        Thread.currentThread().setName("mainThread");
+        Log.d("QIN", "main thread:" + Thread.currentThread().getId());
+        Log.d("QIN", "main thread:" + Thread.currentThread().getName());
+        Thread handlerThread = new Thread("handlerThread1");
+        handlerThread.start();
+        Handler handler = new Handler(handlerThread.getLooper()); // compile error in getLooper, java thread has no this method
+                                                                  // looper is a design of android
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                Log.d("QIN", "handler thread:" + Thread.currentThread().getId());
+                Log.d("QIN", "handler thread:" + Thread.currentThread().getName());
+            }
+        });
+    }
+}
