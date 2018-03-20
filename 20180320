@@ -1,0 +1,21 @@
+How to use UsageManager of Android
+
+1. It could listen to some app usage, like APP_MOVE_TO foreground. Which means some activities of an application came to 
+foreground by user click.
+
+2. If user changed UTC time to early time, some logs before the time change maybe not affected. Which means, if you change
+time from 12:00 to 11:00, the events between 11:00 and 12:00 maybe still existing in system.
+
+3. If we do want to do some kinds of development using this API, we have better to consider the DB efficiency of the records.
+Because user do produce so many logs of events everyday.
+
+4. Never add any kinds of IF if you are not permitted to do this. Any kinds of IF will be considered as desige change. And if
+you are just a PG, never do this because it will damage the whole design.
+
+5. Never add any kinds of thread if no one told you to do this. This is also design change and need to be discussed.
+
+6. If we want to develop a App depending on this, and implement a provider of this. We can do something like parser by Scanner
+in JAVA. It is like spit in javascript. This allow us to develop some scripts using java. And how we implement this will
+bring out some good idea of how to do it depending on C or C plus plus.
+
+switch is really important in the scripting development.
