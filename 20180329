@@ -15,4 +15,9 @@ mmmma: like mmm, but with dependency.
 
 To use m mm mmm mma mmma, we must first setup using source and lunch.
 
+对于m、mm、mmm、mma、mmma这些命令的实现都是通过make方式来完成的。
+mmm/mm编译的效率很高，而make/mma/mmma编译较缓慢；
+make/mma/mmma编译时会把所有的依赖模块一同编译，但mmm/mm不会;
+建议：首次编译时采用make/mma/mmma编译；当依赖模块已经编译过的情况，则使用mmm/mm编译。
+
 After all these operations, it is sure to build successfully.
