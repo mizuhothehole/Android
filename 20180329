@@ -1,0 +1,18 @@
+How to use m mm mmm mma mmma
+
+First go into root folder, which is our workplace.
+$ cd root folder
+Then set up build env.
+$ source build/envsetup.sh
+Choose the product to set env for specified product.
+$ lunch xxx
+
+m: build the whole Android system.
+mm: build the module in current folder.
+mmm: build the specified folder.
+mma: like mm, but with dependency.
+mmmma: like mmm, but with dependency.
+
+To use m mm mmm mma mmma, we must first setup using source and lunch.
+
+After all these operations, it is sure to build successfully.
