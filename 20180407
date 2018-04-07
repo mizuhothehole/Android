@@ -1,0 +1,66 @@
+JsonObject.put.put is faster than Json.put, Json.put...?
+
+package com.example.ishiiaya.myapplication;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.junit.Test;
+
+import static org.junit.Assert.*;
+
+/**
+ * Example local unit test, which will execute on the development machine (host).
+ *
+ * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
+ */
+public class ExampleUnitTest {
+    @Test
+    public void addition_isCorrect() throws Exception {
+
+
+        for(int i = 1; i < 20;i++){
+            test1();
+        }
+
+        for(int i = 1; i < 20;i++){
+            test2();
+        }
+
+        System.out.printf("JVM is stable, count timestamp from here");
+
+        long starttimetest1 = System.currentTimeMillis();
+        for(int i = 1; i < 20;i++){
+            test1();
+        }
+        System.out.printf("average test1 time usage is" + (System.currentTimeMillis()-starttimetest1)/20);
+
+        long starttimetest2 = System.currentTimeMillis();
+        for(int i = 1; i < 20;i++){
+            test2();
+        }
+        System.out.printf("average test2 time usage is" + (System.currentTimeMillis()-starttimetest2)/20);
+
+    }
+
+    private void test1() throws JSONException {
+        long currentTime = System.currentTimeMillis();
+        JSONObject jb = new JSONObject();
+        jb.put("key1","test");
+        jb.put("key2","test2");
+        jb.put("key3", "test3");
+        jb.put("key4",1000);
+        jb.put("key5",false);
+        System.out.printf("time of test 1"+ (System.currentTimeMillis() - currentTime));
+    }
+
+    private void test2() throws JSONException {
+        long currentTime = System.currentTimeMillis();
+        JSONObject jb = new JSONObject();
+        jb.put("key1","test").
+                put("key2","test2").
+                put("key3", "test3").
+                put("key4",1000).
+                put("key5",false);
+        System.out.printf("time of test 2"+ (System.currentTimeMillis() - currentTime));
+    }
+}
