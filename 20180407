@@ -2,19 +2,27 @@ JsonObject.put.put is faster than Json.put, Json.put...?
 
 package com.example.ishiiaya.myapplication;
 
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.junit.Test;
 
-import static org.junit.Assert.*;
+public class MainActivity extends AppCompatActivity {
 
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
- */
-public class ExampleUnitTest {
-    @Test
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        try {
+            addition_isCorrect();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
     public void addition_isCorrect() throws Exception {
 
 
@@ -26,41 +34,284 @@ public class ExampleUnitTest {
             test2();
         }
 
-        System.out.printf("JVM is stable, count timestamp from here");
+        Log.d("Qin","JVM is stable, count timestamp from here");
 
-        long starttimetest1 = System.currentTimeMillis();
+        long starttimetest1 = System.nanoTime();
         for(int i = 1; i < 20;i++){
             test1();
         }
-        System.out.printf("average test1 time usage is" + (System.currentTimeMillis()-starttimetest1)/20);
+        Log.d("Qin","average test1 time usage is:" + (System.nanoTime()-starttimetest1)/20);
 
-        long starttimetest2 = System.currentTimeMillis();
+        long starttimetest2 = System.nanoTime();
         for(int i = 1; i < 20;i++){
             test2();
         }
-        System.out.printf("average test2 time usage is" + (System.currentTimeMillis()-starttimetest2)/20);
+        Log.d("Qin","average test2 time usage is:" + (System.nanoTime()-starttimetest2)/20);
 
     }
 
     private void test1() throws JSONException {
-        long currentTime = System.currentTimeMillis();
+        long currentTime = System.nanoTime();
         JSONObject jb = new JSONObject();
         jb.put("key1","test");
         jb.put("key2","test2");
         jb.put("key3", "test3");
         jb.put("key4",1000);
         jb.put("key5",false);
-        System.out.printf("time of test 1"+ (System.currentTimeMillis() - currentTime));
+        Log.d("Qin","time of test 1:"+ (System.nanoTime() - currentTime));
     }
 
     private void test2() throws JSONException {
-        long currentTime = System.currentTimeMillis();
+        long currentTime = System.nanoTime();
         JSONObject jb = new JSONObject();
         jb.put("key1","test").
                 put("key2","test2").
                 put("key3", "test3").
                 put("key4",1000).
                 put("key5",false);
-        System.out.printf("time of test 2"+ (System.currentTimeMillis() - currentTime));
+        Log.d("Qin","time of test 2:"+ (System.nanoTime() - currentTime));
     }
 }
+
+
+04-07 12:39:25.962 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:126083
+04-07 12:39:25.962 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:59563
+04-07 12:39:25.963 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:54893
+04-07 12:39:25.963 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:53400
+04-07 12:39:25.963 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:57707
+04-07 12:39:25.963 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:53369
+04-07 12:39:25.963 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:53932
+04-07 12:39:25.963 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:53484
+04-07 12:39:25.963 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:53149
+04-07 12:39:25.963 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:52938
+04-07 12:39:25.963 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:52906
+04-07 12:39:25.963 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:53906
+04-07 12:39:25.963 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:56809
+04-07 12:39:25.963 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:58954
+04-07 12:39:25.963 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:53793
+04-07 12:39:25.964 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:53350
+04-07 12:39:25.964 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:53471
+04-07 12:39:25.964 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:65344
+04-07 12:39:25.964 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:53228
+04-07 12:39:25.964 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:59625
+04-07 12:39:25.964 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:58029
+04-07 12:39:25.983 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:19064661
+04-07 12:39:25.983 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:65600
+04-07 12:39:25.983 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:61899
+04-07 12:39:25.983 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:51533
+04-07 12:39:25.983 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:52269
+04-07 12:39:25.984 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:58732
+04-07 12:39:25.984 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:74918
+04-07 12:39:25.984 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:65472
+04-07 12:39:25.984 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:56455
+04-07 12:39:25.984 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:57906
+04-07 12:39:25.985 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:304466
+04-07 12:39:25.985 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:325691
+04-07 12:39:25.985 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:58851
+04-07 12:39:25.985 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:57363
+04-07 12:39:25.985 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:55472
+04-07 12:39:25.985 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:60803
+04-07 12:39:25.988 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:2417978
+04-07 12:39:25.988 6390-6390/com.example.ishiiaya.myapplication D/Qin: JVM is stable, count timestamp from here
+04-07 12:39:25.988 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:72170
+04-07 12:39:25.988 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:73824
+04-07 12:39:25.988 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:59419
+04-07 12:39:25.988 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:56262
+04-07 12:39:25.988 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:57106
+04-07 12:39:25.988 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:64556
+04-07 12:39:25.989 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:65493
+04-07 12:39:25.989 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:56043
+04-07 12:39:25.989 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:87586
+04-07 12:39:25.989 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:44763
+04-07 12:39:25.989 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:31966
+04-07 12:39:25.989 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:30628
+04-07 12:39:25.989 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:30745
+04-07 12:39:25.989 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:30222
+04-07 12:39:25.989 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:32703
+04-07 12:39:25.989 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:30523
+04-07 12:39:25.989 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:30284
+04-07 12:39:25.989 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:30294
+04-07 12:39:25.989 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 1:30430
+04-07 12:39:25.989 6390-6390/com.example.ishiiaya.myapplication D/Qin: average test1 time usage is:72546
+04-07 12:39:25.989 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:34839
+04-07 12:39:25.989 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:33740
+04-07 12:39:25.990 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:41998
+04-07 12:39:25.990 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:30688
+04-07 12:39:25.990 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:30265
+04-07 12:39:25.990 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:30455
+04-07 12:39:25.990 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:30169
+04-07 12:39:25.990 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:30735
+04-07 12:39:25.990 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:30498
+04-07 12:39:25.990 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:32829
+04-07 12:39:25.990 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:33014
+04-07 12:39:25.990 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:31018
+04-07 12:39:25.990 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:30686
+04-07 12:39:25.990 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:30680
+04-07 12:39:25.990 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:30742
+04-07 12:39:25.990 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:30587
+04-07 12:39:25.990 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:30490
+04-07 12:39:25.990 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:30484
+04-07 12:39:25.990 6390-6390/com.example.ishiiaya.myapplication D/Qin: time of test 2:32050
+04-07 12:39:25.990 6390-6390/com.example.ishiiaya.myapplication D/Qin: average test2 time usage is:41341
+
+
+04-07 12:40:58.435 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:173415
+04-07 12:40:58.435 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:67307
+04-07 12:40:58.435 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:60529
+04-07 12:40:58.435 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:58495
+04-07 12:40:58.436 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:58963
+04-07 12:40:58.436 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:57634
+04-07 12:40:58.436 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:57643
+04-07 12:40:58.436 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:58522
+04-07 12:40:58.436 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:58070
+04-07 12:40:58.436 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:56641
+04-07 12:40:58.436 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:58745
+04-07 12:40:58.436 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:58213
+04-07 12:40:58.436 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:83585
+04-07 12:40:58.443 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:6737906
+04-07 12:40:58.443 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:81099
+04-07 12:40:58.443 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:60784
+04-07 12:40:58.455 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:58579
+04-07 12:40:58.458 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:1689083
+04-07 12:40:58.459 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:579092
+04-07 12:40:58.460 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:136088
+04-07 12:40:58.462 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:662744
+04-07 12:40:58.463 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:458379
+04-07 12:40:58.463 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:63097
+04-07 12:40:58.464 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:71648
+04-07 12:40:58.464 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:53080
+04-07 12:40:58.464 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:55243
+04-07 12:40:58.464 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:54384
+04-07 12:40:58.464 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:49544
+04-07 12:40:58.464 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:50084
+04-07 12:40:58.464 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:56784
+04-07 12:40:58.464 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:106463
+04-07 12:40:58.464 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:55569
+04-07 12:40:58.464 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:53888
+04-07 12:40:58.464 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:53069
+04-07 12:40:58.465 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:624470
+04-07 12:40:58.465 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:55491
+04-07 12:40:58.467 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:119176
+04-07 12:40:58.467 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:61449
+04-07 12:40:58.467 6530-6530/com.example.ishiiaya.myapplication D/Qin: JVM is stable, count timestamp from here
+04-07 12:40:58.467 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:56878
+04-07 12:40:58.467 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:55044
+04-07 12:40:58.467 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:51681
+04-07 12:40:58.467 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:57685
+04-07 12:40:58.469 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:102461
+04-07 12:40:58.470 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:600161
+04-07 12:40:58.470 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:74921
+04-07 12:40:58.470 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:52898
+04-07 12:40:58.470 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:57787
+04-07 12:40:58.470 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:59702
+04-07 12:40:58.471 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:52152
+04-07 12:40:58.471 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:83827
+04-07 12:40:58.471 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:102835
+04-07 12:40:58.471 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:95297
+04-07 12:40:58.472 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:1216211
+04-07 12:40:58.472 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:71874
+04-07 12:40:58.472 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:57644
+04-07 12:40:58.472 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:51837
+04-07 12:40:58.473 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 1:153456
+04-07 12:40:58.474 6530-6530/com.example.ishiiaya.myapplication D/Qin: average test1 time usage is:304333
+04-07 12:40:58.475 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:119601
+04-07 12:40:58.475 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:70026
+04-07 12:40:58.477 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:1439550
+04-07 12:40:58.477 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:60163
+04-07 12:40:58.477 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:56079
+04-07 12:40:58.477 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:56073
+04-07 12:40:58.477 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:51890
+04-07 12:40:58.477 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:55251
+04-07 12:40:58.478 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:55432
+04-07 12:40:58.478 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:66939
+04-07 12:40:58.478 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:63625
+04-07 12:40:58.478 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:53655
+04-07 12:40:58.478 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:52955
+04-07 12:40:58.478 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:52226
+04-07 12:40:58.478 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:50779
+04-07 12:40:58.478 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:72288
+04-07 12:40:58.479 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:83982
+04-07 12:40:58.479 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:58624
+04-07 12:40:58.479 6530-6530/com.example.ishiiaya.myapplication D/Qin: time of test 2:57856
+04-07 12:40:58.479 6530-6530/com.example.ishiiaya.myapplication D/Qin: average test2 time usage is:235796
+
+
+04-07 12:44:05.795 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:221430
+04-07 12:44:05.795 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:75688
+04-07 12:44:05.795 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:59093
+04-07 12:44:05.795 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:59768
+04-07 12:44:05.795 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:69861
+04-07 12:44:05.796 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:58742
+04-07 12:44:05.796 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:58916
+04-07 12:44:05.796 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:58452
+04-07 12:44:05.796 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:73509
+04-07 12:44:05.796 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:58091
+04-07 12:44:05.796 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:59067
+04-07 12:44:05.796 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:57630
+04-07 12:44:05.796 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:57983
+04-07 12:44:05.796 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:57885
+04-07 12:44:05.796 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:58467
+04-07 12:44:05.796 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:57027
+04-07 12:44:05.796 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:74039
+04-07 12:44:05.797 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:76946
+04-07 12:44:05.797 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:57570
+04-07 12:44:05.797 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:69551
+04-07 12:44:05.797 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:59877
+04-07 12:44:05.797 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:58552
+04-07 12:44:05.797 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:57405
+04-07 12:44:05.797 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:64945
+04-07 12:44:05.798 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:134150
+04-07 12:44:05.798 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:70769
+04-07 12:44:05.798 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:56614
+04-07 12:44:05.798 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:52760
+04-07 12:44:05.798 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:53998
+04-07 12:44:05.799 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:391999
+04-07 12:44:05.799 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:63648
+04-07 12:44:05.799 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:66155
+04-07 12:44:05.799 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:69502
+04-07 12:44:05.800 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:70116
+04-07 12:44:05.800 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:57033
+04-07 12:44:05.800 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:55657
+04-07 12:44:05.800 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:56815
+04-07 12:44:05.800 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:55650
+04-07 12:44:05.800 7237-7237/com.example.ishiiaya.myapplication D/Qin: JVM is stable, count timestamp from here
+04-07 12:44:05.801 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:67752
+04-07 12:44:05.801 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:59392
+04-07 12:44:05.801 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:72025
+04-07 12:44:05.801 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:52179
+04-07 12:44:05.801 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:69927
+04-07 12:44:05.801 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:59117
+04-07 12:44:05.802 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:58540
+04-07 12:44:05.802 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:55248
+04-07 12:44:05.802 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:54051
+04-07 12:44:05.802 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:116409
+04-07 12:44:05.802 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:74445
+04-07 12:44:05.803 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:72785
+04-07 12:44:05.805 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:131205
+04-07 12:44:05.805 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:69843
+04-07 12:44:05.805 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:72437
+04-07 12:44:05.806 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:61989
+04-07 12:44:05.806 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:57629
+04-07 12:44:05.806 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:57538
+04-07 12:44:05.806 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 1:68163
+04-07 12:44:05.806 7237-7237/com.example.ishiiaya.myapplication D/Qin: average test1 time usage is:274714
+04-07 12:44:05.806 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:84229
+04-07 12:44:05.807 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:209800
+04-07 12:44:05.807 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:51843
+04-07 12:44:05.807 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:46266
+04-07 12:44:05.807 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:45488
+04-07 12:44:05.807 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:45384
+04-07 12:44:05.807 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:68227
+04-07 12:44:05.807 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:54923
+04-07 12:44:05.807 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:55452
+04-07 12:44:05.807 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:82367
+04-07 12:44:05.807 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:57171
+04-07 12:44:05.808 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:52626
+04-07 12:44:05.808 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:49792
+04-07 12:44:05.808 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:70583
+04-07 12:44:05.808 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:162006
+04-07 12:44:05.808 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:306698
+04-07 12:44:05.808 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:53571
+04-07 12:44:05.809 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:54068
+04-07 12:44:05.809 7237-7237/com.example.ishiiaya.myapplication D/Qin: time of test 2:66691
+04-07 12:44:05.809 7237-7237/com.example.ishiiaya.myapplication D/Qin: average test2 time usage is:131995
