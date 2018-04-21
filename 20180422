@@ -1,0 +1,16 @@
+---------------Uri.EMPTY and ContentProvider.ApplyBatch-----------
+
+这个东西有点意思。
+
+Uri.EMPTY
+
+意思是什么呢，就是说这个资源定位的字符串是个空值。
+
+那么什么时候用呢？一般就是说在字符串是空，或者是说Uri对象就是null的情况下，才会用到这个东西。
+
+ContentProvider.ApplyBatch，这个东西又是干什么呢的？这个东西很明显是用来进行batch的操作的。
+
+它里面有一个参数，叫做ContentProviderOperation。这个东西是挨个进行的。
+
+只要其中有一个失败了，那么下一个就进行不下去来。然后再有一个进行失败了，下下一个也进行不下去。
+
