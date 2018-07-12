@@ -1,0 +1,52 @@
+After leaving from SONY mobile
+
+I left SONY mobile because I do not like the people there. I do not mean all of them, I am meaning a Chinese woman left of me.
+She is having so bad character that I am always abused by her unimaginable words.
+
+Now I am developing tablet rather than android mobile devices. It is good news because I no longer work for SONY. And this time
+I did another very very great thing. It is benefit for the social. However I have to pay attention that the system resourses cost
+is also very severe.
+
+
+shape_with_gradient.xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<gradient android:type="radial" android:gradientRadius="100" android:startColor="@color/colorPrimary"
+    android:endColor="@color/colorAccent">
+</gradient>
+    <size android:width="@android:dimen/thumbnail_width" android:height="@android:dimen/app_icon_size">
+    </size>
+</shape>
+
+package com.example.ishiiaya.myapplication;
+
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
+
+import butterknife.BindColor;
+import butterknife.BindDrawable;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+public class MainActivity extends AppCompatActivity {
+
+    @BindView(R.id.TestViewButterKnife)
+    TextView textView;
+    @BindColor(R.color.colorPrimary)
+    int color;
+    @BindDrawable(R.drawable.shape_with_gradient)
+    Drawable draw;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
+        textView.setText("世界の始まり");
+        textView.setBackgroundColor(color);
+        textView.setBackground(draw);
+    }
+}
