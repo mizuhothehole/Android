@@ -1,0 +1,110 @@
+Using OKHttp3 to do a get request to baidu from Android
+
+package com.example.ishiiaya.myapplication;
+
+import android.Manifest;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.widget.TextView;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+import butterknife.BindColor;
+import butterknife.BindDrawable;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+
+public class MainActivity extends AppCompatActivity {
+
+    @BindView(R.id.TestViewButterKnife)
+    TextView textView;
+    @BindColor(R.color.colorPrimary)
+    int color;
+    @BindDrawable(R.drawable.shape_with_gradient)
+    Drawable draw;
+
+    int a;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
+        textView.setText("世界の始まり");
+        textView.setBackgroundColor(color);
+        textView.setBackground(draw);
+        Process date = null;
+        try {
+            date = Runtime.getRuntime().exec("date");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Log.d("QIN", String.valueOf(date.getInputStream()));
+        try {
+            Process p =Runtime.getRuntime().exec("date");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            // Run the command
+            Process process = Runtime.getRuntime().exec("date");
+            BufferedReader bufferedReader = new BufferedReader(
+                    new InputStreamReader(process.getInputStream()));
+
+            // Grab the results
+            StringBuilder log = new StringBuilder();
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                log.append(line + "\n");
+            }
+
+
+            // Update the view
+            textView.setText(log.toString());
+            log.delete(0,log.length());
+            bufferedReader.close();
+            process.destroy();
+        } catch (IOException e) {
+        }
+        Manifest manifest = new Manifest();
+        Manifest.permission.INTERNET.getBytes();
+        String url = "http://www.baidu.com";
+        OkHttpClient client = new OkHttpClient();
+        final Request request =  new Request.Builder().get().url(url).build();
+        Call call = client.newCall(request);
+
+        call.enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                a = 1;
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                Log.d("qin","success!!");
+                a = 2;
+            }
+        });
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        if(a == 0) {
+            textView.setText("0");
+        }
+        if (a == 2) {
+            textView.setText("success");
+        }
+    }
+}
