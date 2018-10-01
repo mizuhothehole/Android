@@ -1,0 +1,8 @@
+Android AlarmManager investigation
+
+https://qiita.com/upft_rkoshida/items/8149605f751137b4c21c
+
+All the version codes are defined here:
+https://developer.android.com/reference/android/os/Build.VERSION_CODES.html#O_MR1
+
+AndroidManifest.xml で <activity android:noHistory=”true”> オプションを指定して finish() する -> no history in stack of task.
