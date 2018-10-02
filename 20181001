@@ -10,3 +10,19 @@ AndroidManifest.xml で <activity android:noHistory=”true”> オプション�
 https://blog.csdn.net/zhangweiwtmdbf/article/details/71172319
 https://blog.csdn.net/zyjzyj2/article/details/53819964
 The link above shows how to control the Windows Parameters.
+
+        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_main);
+
+        LayoutInflater inflater = LayoutInflater.from(getApplicationContext());
+        //加载需要的XML布局文件
+        View mInView = inflater.inflate(R.layout.activity_main, null, false);
+        WindowManager wm = (WindowManager) getApplicationContext().getSystemService(
+                Context.WINDOW_SERVICE);
+        WindowManager.LayoutParams params = new WindowManager.LayoutParams(
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY,
+                WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN,
+                PixelFormat.TRANSLUCENT);
+        wm.addView(mInView, params);
