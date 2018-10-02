@@ -11,13 +11,15 @@ https://blog.csdn.net/zhangweiwtmdbf/article/details/71172319
 https://blog.csdn.net/zyjzyj2/article/details/53819964
 The link above shows how to control the Windows Parameters.
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_main);
 
         LayoutInflater inflater = LayoutInflater.from(getApplicationContext());
         //加载需要的XML布局文件
-        View mInView = inflater.inflate(R.layout.activity_main, null, false);
-        WindowManager wm = (WindowManager) getApplicationContext().getSystemService(
+        final View mInView = inflater.inflate(R.layout.activity_main, null, false);
+        final WindowManager wm = (WindowManager) getApplicationContext().getSystemService(
                 Context.WINDOW_SERVICE);
         WindowManager.LayoutParams params = new WindowManager.LayoutParams(
                 WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -26,3 +28,36 @@ The link above shows how to control the Windows Parameters.
                 WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN,
                 PixelFormat.TRANSLUCENT);
         wm.addView(mInView, params);
+        Button button = mInView.findViewById(R.id.bt1);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), Activity2.class));
+                Toast.makeText(v.getContext(), "a", Toast.LENGTH_LONG).show();
+                wm.removeView(mInView);
+            }
+        });
+    }
+    
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        LayoutInflater inflater = LayoutInflater.from(getApplicationContext());
+        //加载需要的XML布局文件
+        View mInView = inflater.inflate(R.layout.act2, null, false);
+        WindowManager wm = (WindowManager) getApplicationContext().getSystemService(
+                Context.WINDOW_SERVICE);
+        WindowManager.LayoutParams params = new WindowManager.LayoutParams(
+                WindowManager.LayoutParams.MATCH_PARENT,
+                WindowManager.LayoutParams.MATCH_PARENT,
+                WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY,
+                WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN,
+                PixelFormat.TRANSLUCENT);
+        wm.addView(mInView, params);
+        Button button = mInView.findViewById(R.id.ccc);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(), "a", Toast.LENGTH_LONG).show();
+            }
+        });
