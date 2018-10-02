@@ -8,4 +8,5 @@ https://developer.android.com/reference/android/os/Build.VERSION_CODES.html#O_MR
 AndroidManifest.xml で <activity android:noHistory=”true”> オプションを指定して finish() する -> no history in stack of task.
 
 https://blog.csdn.net/zhangweiwtmdbf/article/details/71172319
+https://blog.csdn.net/zyjzyj2/article/details/53819964
 The link above shows how to control the Windows Parameters.
