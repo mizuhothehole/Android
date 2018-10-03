@@ -40,7 +40,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK;
@@ -49,11 +48,11 @@ import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 public class MainActivity extends AppCompatActivity {
 
     boolean isHomeOrMenu = true;
+    View v;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
 
         LayoutInflater inflater = LayoutInflater.from(getApplicationContext());
         //加载需要的XML布局文件
@@ -67,14 +66,15 @@ public class MainActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN,
                 PixelFormat.TRANSLUCENT);
         wm.addView(mInView, params);
+        v = mInView;
         Button button = mInView.findViewById(R.id.bt1);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(v.getContext(), Activity2.class));
-                isHomeOrMenu = false;
-                Toast.makeText(v.getContext(), "a", Toast.LENGTH_LONG).show();
                 wm.removeView(mInView);
+                isHomeOrMenu = false;
+                startActivity(new Intent(v.getContext(), Activity2.class));
+                Toast.makeText(v.getContext(), "a", Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -89,6 +89,11 @@ public class MainActivity extends AppCompatActivity {
             isHomeOrMenu = true;
             return;
         }
+        LayoutInflater inflatertemp = LayoutInflater.from(getApplicationContext());
+        final WindowManager wm = (WindowManager) getApplicationContext().getSystemService(
+                Context.WINDOW_SERVICE);
+        wm.removeView(this.v);
+
 
         LayoutInflater inflater = LayoutInflater.from(getApplicationContext());
         final View mInView = inflater.inflate(R.layout.dialog, null);
@@ -122,13 +127,12 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 
+
 -------------------------------------------------------------------------------------------------
 
 package com.example.ishiiaya.myapplication;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.PixelFormat;
 import android.os.Bundle;
@@ -148,9 +152,14 @@ import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 
 public class Activity2 extends AppCompatActivity {
     View v;
-    WindowManager wm;
 
     boolean isHomeOrMenu = true;
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Toast.makeText(this, "bk", Toast.LENGTH_LONG).show();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -168,7 +177,6 @@ public class Activity2 extends AppCompatActivity {
                 PixelFormat.TRANSLUCENT);
         wm.addView(mInView, params);
         v = mInView;
-        this.wm = wm;
         Button button = mInView.findViewById(R.id.ccc);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -188,6 +196,11 @@ public class Activity2 extends AppCompatActivity {
             isHomeOrMenu = true;
             return;
         }
+
+        final WindowManager wm = (WindowManager) getApplicationContext().getSystemService(
+                Context.WINDOW_SERVICE);
+        wm.removeView(this.v);
+
         LayoutInflater inflater = LayoutInflater.from(getApplicationContext());
         final View mInView = inflater.inflate(R.layout.dialog, null);
         final WindowManager wmm = (WindowManager) getApplicationContext().getSystemService(
@@ -240,3 +253,4 @@ public class CloseActivity extends Activity {
 }
 
 ----------------------------------------------------------------------------------------------------------------
+
