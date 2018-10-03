@@ -264,4 +264,6 @@ public class CloseActivity extends Activity {
             }
         });
 
-Add isAttachedToWindow to all
+1.Add isAttachedToWindow to all
+
+2.boolean isBackKey = false; こいつの追加も必要だ
