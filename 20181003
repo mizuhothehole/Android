@@ -263,3 +263,5 @@ public class CloseActivity extends Activity {
 
             }
         });
+
+Add isAttachedToWindow to all
