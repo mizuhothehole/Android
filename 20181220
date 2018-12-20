@@ -1,0 +1,5 @@
+Working around android work profile/managed profile/profile owner/multiuser:
+
+there is a ADB command -> adb shell dumpsys user
+
+This will show all infomation of all userInfo for working around above
