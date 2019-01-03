@@ -1,0 +1,852 @@
+Android build system
+
+I got three files after SONY xperia aosp built.
+
+userdata.img
+system.img
+ramdisk.img
+
+also i got the make success infomation in terminal.
+
+Here is the history and the extra commands that must be done:
+Those with "// this is important" is the extra steps that should be done.
+
+    1  fs
+    2  fd
+    3  df
+    4  claer
+    5  clear
+    6  df
+    7  halt
+    8  su
+    9  sudo passwd
+   10  su
+   11  exit
+   12  user
+   13  users
+   14  create user super
+   15  su
+   16  eclipse
+   17  sudo apt-get install eclipse-platform
+   18  apt-get update
+   19  apt-get update root
+   20  apt-get update -open
+   21  apt-get update -open eclipse
+   22  apt-get update -open eclipse-platform
+   23  su
+   24  cd
+   25  ls
+   26  cd ../
+   27  sudo modeprobe -r psmouse
+   28  sudo modprobe -r psmouse
+   29  sudo modprbe -r psmouse
+   30  sudo modprobe -r psmouse
+   31  sudo modprobe -a psmouse
+   32  sudo modprobe -r psmouse
+   33  modprobe -c
+   34  modprobe -l
+   35  modprobe --l
+   36  modprobe -i
+   37  modprobe -h
+   38  modprobe -d
+   39  modprobe -D
+   40  $modprobe -D
+   41  $modprobe -d
+   42  modprobe -h
+   43  modprobe -C
+   44  modprobe -c
+   45  modprobe -h
+   46  modprobe -L
+   47  modprobe -I
+   48  $modprobe -I
+   49  $modprobe -l
+   50  $modprobe -list
+   51  $modprobe -a
+   52  $modprobe -v
+   53  $modprobe -V
+   54  $modprobe -v psmouse
+   55  su
+   56  exit
+   57  ps
+   58  exit
+   59  df
+   60  df -a
+   61  fdisk
+   62  fdisk -l
+   63  su
+   64  modprobe -r psmouse
+   65  probe -r psmouse
+   66  mprobe -r psmouse
+   67  xinput
+   68  xinput set-prop 13 "Device Enabled" 0
+   69  su
+   70  ls
+   71  cd../
+   72  cd ../
+   73  ls
+   74  cd ../
+   75  ls
+   76  cd mnt
+   77  ls
+   78  cd ../
+   79  ls
+   80  vi initrd.img
+   81  cat initrd.img
+   82  ls
+   83  less initrd.img
+   84  more initrd.img
+   85  vi aaa.txt
+   86  ls
+   87  su
+   88  clear
+   89  cd
+   90  ls
+   91  cat Screenshot from 2016-04-23 05-12-49.png Screenshot from 2016-04-23 05-13-09.png > aa.png
+   92  clearScreenshot from 2016-04-23 05-12-49.png Screenshot from 2016-04-23 05-13-09.png > aa.png
+   93  clear
+   94  cat a.png b.png > aa.png
+   95  cat b.png a.png > aa.png
+   96  more a.png
+   97  more a.png@
+   98  more a.png [
+   99  more a.png|grep |                            clear
+  100  less a.png
+  101  su
+  102  exit
+  103  su
+  104  exit
+  105  halt
+  106  su
+  107  ls
+  108  cat Actors.rvdata2
+  109  w
+  110  w
+  111  w
+  112  ls -l
+  113  mknod
+  114  man mknod
+  115  mknod spedev 
+  116  mknod spedev major
+  117  mknod spedev major223
+  118  mknod spedev minor
+  119  env
+  120  echo $path
+  121  echo $Path
+  122  echo $PATH
+  123  echo $?
+  124  echo $
+  125  echo $PATH
+  126  ls
+  127  cd../
+  128  cd ../
+  129  su
+  130  history
+  131  history l
+  132  history $l
+  133  history 107
+  134  ls
+  135  history 
+  136  history 131
+  137  ls
+  138  mkdir a
+  139  su
+  140  shutdpwn
+  141  shutdown
+  142  su
+  143  w
+  144  su
+  145  ls
+  146  cd ../
+  147  ls
+  148  groups
+  149  groups shin
+  150  host baidu.com
+  151  host 
+  152  host 220.181.57.217
+  153  host baidu
+  154  host
+  155  su
+  156  hostname
+  157  id
+  158  groups
+  159  groups shin
+  160  kon
+  161  sudo apt-get install kon2
+  162  kon
+  163  ~
+  164  login
+  165  shin
+  166  exit
+  167  logname
+  168  id
+  169  id -u
+  170  logout
+  171  login
+  172  su
+  173  at 24:00
+  174  sudo apt-get install at
+  175  at 24:00
+  176  atq
+  177  atrm 3
+  178  atq
+  179  atrm 1
+  180  atq
+  181  batch 
+  182  atq
+  183  qtrm
+  184  atrm
+  185  atrm 4
+  186  batch ls 23:26
+  187  batch 23:26
+  188  ls
+  189  batch 23:26
+  190  batch 
+  191  atq
+  192  atrm 5
+  193  atq
+  194  at 23:27
+  195  at 23:28
+  196  atq
+  197  ls
+  198  at
+  199  at 23:25
+  200  atq
+  201  at -c 8
+  202  su
+  203  ps -l
+  204  su
+  205  su uftp
+  206  passwd uftp
+  207  su
+  208  shutdown
+  209  login
+  210  help
+  211  man -login
+  212  man login
+  213  login admin
+  214  man user
+  215  man use
+  216  man re
+  217  shutdown -h now
+  218  login as root
+  219  login as: root
+  220  shutdown -h now
+  221  shuwdown
+  222  shuwdown -h now
+  223  shutdown -h now
+  224  systememctl poweroff -i
+  225  poweroff -i
+  226  poweroff
+  227  ldd <BrowserPluginsLocation>/libflashplayer.so
+  228  ldd /usr/lib64/kcm_adobe_flash_player.so (for 64-bit systems)
+  229  ldd /usr/lib64/kcm_adobe_flash_player.so
+  230  cd ./
+  231  cd download
+  232  cd ./ download
+  233  ls
+  234  ls -a
+  235  cd ダウンロード
+  236  ｌｓ
+  237  my install_flash_player_11_linux.x86_6
+  238  cd install_flash_player_11_linux.x86_64/
+  239  ls
+  240  vi readme.txt 
+  241  ls
+  242  vi readme.txt 
+  243  ls
+  244  shutdown -a now
+  245  Python -tk
+  246  python -tk
+  247  python 
+  248  python /home/shin/デスクトップ/22.py
+  249  process
+  250  ALIAS
+  251  kill
+  252  python /home/shin/デスクトップ/22.py
+  253  pid
+  254  ll
+  255  ps -all
+  256  kill 4595
+  257  ps -all
+  258  kill - pid 4595
+  259  kill -pid 4595
+  260  kill
+  261  kill -s 4595
+  262  kill -n 4595
+  263  kill kill 4595
+  264  kill 4595
+  265  ps
+  266  login
+  267  root
+  268  sudu apt-get install root-system-bin
+  269  sudo apt-get install root-system-bin
+  270  root
+  271  logout
+  272  exit
+  273  python /home/shin/デスクトップ/22.py
+  274  ps -all
+  275  kill 11185
+  276  kill 1000
+  277  kill 11101
+  278  ps -all
+  279  kill 11101
+  280  python /home/shin/デスクトップ/22.py
+  281  ps -all
+  282  kill 
+  283  kill -n 11190
+  284  kill pid 11190
+  285  man kill
+  286  kill -L
+  287  kill -l
+  288  man kill
+  289  su root
+  290  su shin
+  291  chmod /home/shin/デスクトップ
+  292  chmod 000 /home/shin/デスクトップ
+  293  su root
+  294  chmod 111 /home/shin/デスクトップ/1
+  295  chmod /home/shin/デスクトップ/1 -777
+  296  chmod 777 /home/shin/デスクトップ/1
+  297  su root
+  298  ps -all
+  299  kill -9 3229
+  300  ps -all
+  301  kill -9 3854
+  302  ps -all
+  303  kill -9 3855
+  304  ps -all
+  305  kill -9 3855
+  306  kill -9 3857
+  307  ps -all
+  308  kill -9 3858
+  309  kill -9 3859
+  310  kill -9 3861
+  311  ps -all
+  312  kill -9 3861
+  313  ps -all
+  314  kill -9 3861
+  315  ps -all
+  316  kill -9 3861
+  317  kill -9 3870
+  318  ps -all
+  319  kill -9 3870
+  320  ps -all
+  321  kill -9 3870
+  322  ps -all
+  323  kill -9 3870
+  324  ps -all
+  325  kill -9 3870
+  326  ps -all
+  327  kill -9 3870
+  328  ps -all
+  329  python /home/shin/デスクトップ/window.py
+  330  ps 
+  331  kill -9 2677
+  332  python /home/shin/デスクトップ/window.py
+  333  ps 
+  334  kill -9 2749
+  335  python /home/shin/デスクトップ/window.py
+  336  ps 
+  337  kill -9 2784
+  338  kill -9 2840
+  339  ps 
+  340  kill -9 2804
+  341  python /home/shin/デスクトップ/window.py
+  342  su root
+  343  python /home/shin/デスクトップ/window.py
+  344  ps
+  345  kill -9 2585
+  346  kill -9 2587
+  347  ps
+  348  kill -9 2617
+  349  ps
+  350  kill -9 271
+  351  kill -9 2710
+  352  kill -9 27**
+  353  kill all python
+  354  killall python
+  355  killall -9 python
+  356  python /home/shin/デスクトップ/window.py
+  357  killall -9 python
+  358  python /home/shin/デスクトップ/window.py
+  359  ps
+  360  killall -9 python
+  361  python /home/shin/デスクトップ/window.py
+  362  killall -9 python
+  363  python /home/shin/デスクトップ/window.py
+  364  killall -9 python
+  365  python /home/shin/デスクトップ/window.py
+  366  python /home/shin/デスクトップ/window2.py
+  367  killall -9 python
+  368  clear
+  369  killall -9 python
+  370  python /home/shin/デスクトップ/window.py
+  371  python /home/shin/デスクトップ/window2.py
+  372  su root
+  373  date
+  374  ping 
+  375  ping www.baidu.com
+  376  cat /usr/lib/python2.7/lib-dynload/_tkinter.so
+  377  su root
+  378  ps 
+  379  python /home/shin/デスクトップ/window2.py
+  380  python /usr/lib/python3.4/tkinter/__init__.py
+  381  python /home/shin/デスクトップ/*.py
+  382  python /home/shin/デスクトップ/lifegame.py
+  383  killall python
+  384  killall -python
+  385  killall python
+  386  killall -9 python
+  387  python /home/shin/デスクトップ/lifegame.py
+  388  clear
+  389  killall -9 python
+  390  python /home/shin/デスクトップ/lifegame.py
+  391  clear
+  392  killall -9 python
+  393  python /home/shin/デスクトップ/lifegame.py
+  394  python /home/shin/デスクトップ/lifegameNoAdapter.py
+  395  killall -9 python
+  396  python /home/shin/デスクトップ/lifegame.py
+  397  su root
+  398  bluetooth
+  399  blueteeth
+  400  dmesg | grep -i blue
+  401  dmesg | grep -i bluetooth
+  402  sudo lsusb |grep Bluetooth
+  403  dmesg | grep -i bluetooth
+  404  sudo apt-get install bluez-utils
+  405  sudo /etc/init.d/bluetooth restart
+  406  hcitool dev
+  407  hcitool
+  408  sudo lsusb |grep Bluetooth
+  409  hcitool dev
+  410  sudo apt-get install python-pip python-dev python-virtualenv # for Python 2.7
+  411  apt-get update
+  412  sudo apt-get update python-pip python-dev python-virtualenv # for Python 2.7
+  413  easy_install -U pip
+  414  sudo apt-get install python-setuptools
+  415  /home/tingting/Downloads/Anaconda2-4.0.0-Linux-x86_64.sh 
+  416  cd /home/shin/ダウンロード
+  417  ls
+  418  ./ Anaconda2-5.0.1-Linux-x86_64.sh 
+  419  ./Anaconda2-5.0.1-Linux-x86_64.sh 
+  420  root
+  421  cd /home/shin/ダウンロード
+  422  bash Anaconda2-5.0.1-Linux-x86_64.sh 
+  423  Jupyter notebook
+  424  jupyter notebook
+  425  export PATH=/home/shin/anaconda2/bin:$PATH
+  426  jupyter notebook
+  427  Jupyter notebook
+  428  conda create -n tensorflow python=2.7
+  429  Jupyter notebook
+  430  jupyter notebook
+  431  export PATH=/home/shin/anaconda2/bin:$PATH
+  432  export TF_CPP_MIN_LOG_LEVEL=2
+  433  conda create -n tensorflow python=2.7
+  434  cd /home/shin/anaconda2/bin
+  435  conda create -n tensorflow python=2.7
+  436  ./conda create -n tensorflow python=2.7
+  437  source activate tensorflow
+  438  pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.8.0rc0-cp27-none-linux_x86_64.whl
+  439  python
+  440  source activate tensorflow
+  441  ./conda install ipython
+  442  ./conda install jupyter
+  443  jupyter notebook
+  444  source activate tensorflow
+  445  cd '/home/shin/anaconda2/bin' 
+  446  source activate tensorflow
+  447  jupyter notebook
+  448  source activate tensorflow
+  449  cd /home/shin/anaconda2/bin
+  450  source activate tensorflow
+  451  jupyter notebook
+  452  shutdown
+  453  root
+  454  QIN='sads dsad fasf fsaf fsaf'
+  455  echo $QIN
+  456  NIHAO=`echo $QIN|cut -d ' '`
+  457  NIHAO=`echo $QIN|cut -d / `
+  458  NIHAO=`echo $QIN|cut -d 22`
+  459  cut --help
+  460  NIHAO=`echo $QIN|cut -d `
+  461  NIHAO=`echo $QIN|cut -d /,`
+  462  NIHAO=`echo $QIN|cut -d /, -f 1`
+  463  NIHAO=`echo $QIN|cut -d \, -f 1`
+  464  NIHAO=`echo $QIN|cut -d \  -f 1`
+  465  NIHAO=`echo $QIN|cut -d \  -f 0`
+  466  NIHAO=`echo $QIN|cut -d \  -f 1`
+  467  NIHAO=`echo $QIN|cut -d \" " -f 1`
+  468  NIHAO=`echo $QIN|cut -d " " -f 1`
+  469  NIHAO=`echo $QIN|cut -d " "`
+  470  NIHAO=`echo $QIN|cut -d " " 0`
+  471  NIHAO=`echo $QIN|cut -d " " 2`
+  472  NIHAO=`echo $QIN|cut -d " " -f 2`
+  473  NIHAO=`echo $QIN|cut -d "  " -f 2`
+  474  NIHAO=`echo $QIN|cut -d " " -f 1`
+  475  echo NIHAO
+  476  echo $NIHAO
+  477  NIHAO=`echo $QIN|cut -d " " `
+  478  NIHAO0=`echo $QIN|cut -d " " -f `
+  479  NIHAO0=`echo $QIN|cut -d " " -f 0`
+  480  NIHAO0=`echo $QIN|cut -d " " -f 1`
+  481  NIHAO1=`echo $QIN|cut -d " " -f 1`
+  482  NIHAO2=`echo $QIN|cut -d " " -f 2`
+  483  NIHAO3=`echo $QIN|cut -d " " -f 3`
+  484  NIHAO4=`echo $QIN|cut -d " " -f 4`
+  485  NIHAO5=`echo $QIN|cut -d " " -f 5`
+  486  echo $NIHAO1
+  487  echo $NIHAO2
+  488  echo $NIHAO3
+  489  echo $NIHAO4
+  490  echo $NIHAO5
+  491  echo $NIHAO6
+  492  echo $QIN
+  493  QIN=dasd   casf  dasfsaf    fsafas f 
+  494  QIN='dasd   casf  dasfsaf    fsafas f '
+  495  NIHAO1=`echo $QIN|cut -d " " -f 1`
+  496  NIHAO2=`echo $QIN|cut -d " " -f 2`
+  497  NIHAO3=`echo $QIN|cut -d " " -f 3`
+  498  NIHAO4=`echo $QIN|cut -d " " -f 4`
+  499  NIHAO5=`echo $QIN|cut -d " " -f 5`
+  500  echo $NIHAO1
+  501  echo $NIHAO2
+  502  echo $NIHAO3
+  503  echo $NIHAO4
+  504  echo $NIHAO5
+  505  echo ${#NIHAO0}
+  506  echo ${#NIHAO1}
+  507  echo ${#NIHAO2}
+  508  echo ${#NIHAO3}
+  509  echo ${#NIHAO4}
+  510  echo ${#NIHAO5}
+  511  AAA=12
+  512  AAA="2323"
+  513  BBB=4214214
+  514  set
+  515  env
+  516  CCC=AAA/BBB
+  517  echo $CCC
+  518  CCC=$AAA/$BBB
+  519  echo $CCC
+  520  CCC="$AAA/$BBB"
+  521  echo $CCC
+  522  CCC=$[$AAA/$BBB]
+  523  echo $CCC
+  524  BBB=4214
+  525  CCC=$[$AAA/$BBB]
+  526  echo $CCC
+  527  CCC=let $AAA/$BBB
+  528  CCC=let ${AAA}/${BBB}
+  529  CCC=$[AAA/BBB]
+  530  echo $CCC
+  531  cd /idea-IU-182.3911.36/bin/
+  532  cd /home/shin/ダウンロード
+  533  gunzip ideaIU-2018.2.1.tar.gz 
+  534  tar 
+  535  tar --help
+  536  tar ideaIU-2018.2.1tar
+  537  tar ideaIU-2018.2.1.tar
+  538  tar xvzf ideaIU-2018.2.1.tar
+  539  tar xvf ideaIU-2018.2.1.tar
+  540  cd /home/shin/ダウンロード/idea-IU-182.3911.36/bin
+  541  .idea.sh
+  542  ./idea.sh
+  543  apt-get install openjdk-8
+  544  sudo apt-get install openjdk-7-jdk
+  545  sudo apt-get install openjdk-8-jdk
+  546  sudo apt-get install aptitude && sudo aptitude install openjdk-7-jdk
+  547  sudo apt-get install openjdk-8-jre
+  548  apt-get install openjdk-8-jre
+  549  sudo apt-get install openjdk-8-jre
+  550  sudo apt-get update
+  551  java -version
+  552  javahome
+  553  locate javac
+  554  locat hr
+  555  locate hr
+  556  locate javac
+  557  locate 
+  558  sudo apt-get purge openjdk-¥* icedtea-¥* icedtea6-¥*
+  559  sudo apt-get update
+  560  sudo apt-get install openjdk-8-jdk
+  561  sudo apt-get install openjdk-8-jdk --fix-missing
+  562  sudo apt-get install openjdk-8-jdk
+  563  sudo add-apt-repository ppa:webup8team/java
+  564  sudo add-apt-repository ppa:webupd8team/java
+  565  sudo apt-get update
+  566  sudo apt-get install openjdk-8-jdk
+  567  java -version
+  568  sudo apt-get install openjdk
+  569  sudo apt-get install oracle-java8-installer
+  570  sudo apt-get install openjdk-8-jdk
+  571  sudo add-apt-repository ppa:openjdk-r/ppa
+  572  sudo apt-get update
+  573  sudo apt-get install openjdk-8-jdk
+  574  update-ca-certificates -f
+  575  sudo apt-get install openjdk-8-jdk
+  576  sudo add-apt-repository ppa:jochenkemnade/openjdk-8
+  577  sudo apt-get install openjdk-8-jdk
+  578  sudo apt-get install openjdk-8-jre
+  579  sudo apt-get install openjdk-8-jdk
+  580  ls
+  581  cd ../
+  582  ks
+  583  ls
+  584  cd ../
+  585  ls
+  586  cd etc
+  587  ls
+  588  cdapt
+  589  cd apt
+  590  ls
+  591  cat sources.list
+  592  vm sources.list
+  593  chmod 777 sources.list
+  594  sudo chmod 777 sources.list
+  595  apt-get autoclean
+  596  sudo apt-get autoclean
+  597  sudo apt-get clean
+  598  sudo apt-get dist-upgrade
+  599  sudo apt-get install openjdk-8-jdk
+  600  sudo nano /etc/network/interfaces
+  601  sudo service networking restart
+  602  sudo apt-get install openjdk-8-jdk4
+  603  sudo apt-get install openjdk-8-jdk
+  604  cp -p /etc/apt/sources.list /etc/apt/sources.list.bak
+  605  sudp cp -p /etc/apt/sources.list /etc/apt/sources.list.bak
+  606  sed -i 's%security.ubuntu.com%old-releases.ubuntu.com%g'   /etc/apt/sources.list
+  607  sudo sed -i 's%security.ubuntu.com%old-releases.ubuntu.com%g'   /etc/apt/sources.list
+  608  sudo sed -i 's%jp.archive.ubuntu.com%old-releases.ubuntu.com%g' /etc/apt/sources.list
+  609  sudo apt-get install openjdk-8-jdk
+  610  sudo nano /etc/network/interfaces
+  611  sudo service networking restart
+  612  lscpu
+  613  sudo apt-get install openjdk-8-jdk
+  614  sudo cp -p /etc/apt/sources.list /etc/apt/sources.list.bak
+  615  sudo sed -i 's%security.ubuntu.com%old-releases.ubuntu.com%g'   /etc/apt/sources.list  // this is important when you cannot install open-jdk8 by apt-get
+  616  sudo sed -i 's%jp.archive.ubuntu.com%old-releases.ubuntu.com%g' /etc/apt/sources.list // this is important as above
+  617  sudo apt-get install openjdk-8-jdk
+  618  sudo apt-get install openjdk-8-jre
+  619  sudo add-apt-repository ppa:openjdk-r/ppa
+  620  sudo apt-get install openjdk-8-jre
+  621  sudo apt-get install openjdk-8-jdk
+  622  sudo apt-get install openjdk-8-jre
+  623  sudo apt-get update
+  624  sudo apt-get install openjdk-8-jdk
+  625  java -version
+  626  sudo apt-get install bison g++-multilib git gperf libxml2-utils make zlib1g-dev:i386 zip liblz4-tool libncurses5
+  627  whoami
+  628  ls
+  629  pmd
+  630  pwd
+  631  cls
+  632  mkdir ~/bin
+  633  clear
+  634  mkdir ~/bin
+  635  curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+  636  chmod a+x ~/bin/repo
+  637  sudo nano ~/.bashrc
+  638  source ~/.bashrc
+  639  mkdir ~/android
+  640  cd ~/android
+  641  repo init -u https://android.googlesource.com/platform/manifest -b android-8.0.0_r30
+  642  git config -global user.email "goldeyeqin"
+  643  git config -global user.email "goldeyeqin@gmail.com"
+  644  git config --global user.email "goldeyeqin@gmail.com"
+  645  git config --global user.name "Hata"
+  646  repo init -u https://android.googlesource.com/platform/manifest -b android-8.0.0_r30
+  647  cd .repo
+  648  git clone https://github.com/sonyxperiadev/local_manifests 
+  649  cd local_manifests 
+  650  git checkout android-8.0.0_r30
+  651  cd ../..
+  652  repo sync
+  653  ./repo_update.sh
+  654  source build/envsetup.sh && lunch
+  655  make -j 4
+  656  clear
+  657  ls
+  658  cd bootable/
+  659  cd recovery/
+  660  ls
+  661  git diff
+  662  cd ..../
+  663  cd../
+  664  cd ../../
+  665  cd kernel/
+  666  ls
+  667  cd sony/
+  668  ls
+  669  cd ../../
+  670  cp -ivp kernel/sony/msm/include/uapi/linux/msm_* bionic/libc/kernel/uapi/linux/
+  671  source build/envsetup.sh && lunch
+  672  make -j 4
+  673  make -j4
+  674  source build/envsetup.sh && lunch
+  675  make -j4
+  676  ls
+  677  cd ../
+  678  ls
+  679  google-chrome-stable
+  680  ls
+  681  cd android/
+  682  source build/envsetup.sh && lunch
+  683  make -j4
+  684  jack-admin kill-server
+  685  jack-admin uninstall-server
+  686  cd prebuilts/sdk/tools
+  687  touch jack
+  688  mm -j32 showcommands &> mm.out
+  689  mm -j4 showcommands &> mm.out
+  690  jack.server.max-service=N
+  691  jack.server.max-service=4
+  692  cd ../../../
+  693  jack.server.max-service=4
+  694  cd android/
+  695  jack.server.max-service=4
+  696  jack-admin restart-server
+  697  cd prebuilts/sdk/tools-
+  698  cd prebuilts/sdk/tools
+  699  touch jack 
+  700  jack-admin restart-server
+  701  jack-admin kill-server
+  702  ./jack-admin install-server jack-launcher.jar jack-server-4.11.ALPHA.jar
+  703  jack-admin restart-server
+  704  ./jack-admin restart-server
+  705  source build/envsetup.sh && lunch
+  706  cd ../../../
+  707  source build/envsetup.sh && lunch
+  708  make -j4
+  709  jack-admin kill-server 
+  710  jack-admin restart-server
+  711  cd android/
+  712  jack-admin restart-server
+  713  cd prebuilts/sdk/tools
+  714  jack-admin start-server
+  715  ./jack-admin start-server
+  716  jack-admin kill-server
+  717  ./jack-admin kill-server
+  718  jack-admin list-server
+  719  ./jack-admin list-server
+  720  ./jack-admin uninstall-server
+  721  mm -j32 showcommands &> mm.out
+  722  ./jack-admin install-server jack-launcher.jar  jack-server-4.8.ALPHA.jar
+  723  sudo ./jack-admin install-server jack-launcher.jar  jack-server-4.8.ALPHA.jar
+  724  jack-admin dump-report
+  725  ./jack-admin dump-report
+  726  ./jack-admin dump-re
+  727  cd ../../../
+  728  make ANDROID_COMPILE_WITH_JACK:=false
+  729  source build/envsetup.sh && lunch
+  730  make -j4 ANDROID_COMPILE_WITH_JACK:=false
+  731  export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx7000m"
+  732  out/host/linux-x86/bin/jack-admin kill-server
+  733  out/host/linux-x86/bin/jack-admin start-server
+  734  ./prebuilts/sdk/tools/jack-admin kill-server
+  735  ./prebuilts/sdk/tools/jack-admin start-server
+  736  make -j4 ANDROID_COMPILE_WITH_JACK:=false
+  737  git diff
+  738  cd ../
+  739  git diff
+  740  cd android/
+  741  ls
+  742  cd .repo/
+  743  ls
+  744  cd ../
+  745  repo sync
+  746  ./repo_update.sh
+  747  source build/envsetup.sh && lunch
+  748  make -j4
+  749  export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4g"
+  750  ./prebuilts/sdk/tools/jack-admin kill-server
+  751  ./prebuilts/sdk/tools/jack-admin start-server
+  752  awk '$3 == "remove" { print $1, $2, $4 }' /var/log/dpkg.log | tee list
+  753  repo sync -c --no-clone-bundle --no-tags -j4
+  754  cd android/
+  755  jack-admin kill-server && jack-admin start-server
+  756  cd prebuilts/
+  757  cd tools/
+  758  ls
+  759  cd ../
+  760  ls
+  761  cd sdk/
+  762  cd tools/
+  763  ls
+  764  jack-admin kill-server && jack-admin start-server
+  765  ./jack-admin kill-server && jack-admin start-server
+  766  cd android/
+  767  ls
+  768  cd sdk/
+  769  cd tools/
+  770  ls
+  771  cd ../
+  772  ls
+  773  cd prebuilts/
+  774  cd sdk/
+  775  cd tools/
+  776  ./jack-admin kill-server && jack-admin start-server
+  777  cd ../../../
+  778  ls
+  779  source build/envsetup.sh && lunch
+  780  make -j4
+  781  cd android/
+  782  cd prebuilts/
+  783  cd sdk/
+  784  cd tools/
+  785  ls
+  786  ./jack-admin kill-server
+  787  ./jack-admin start-server
+  788  pd
+  789  ps
+  790  env
+  791  cd android/
+  792  ls
+  793  source build/envsetup.sh && lunch
+  794  make clean
+  795  source build/envsetup.sh && lunch
+  796  make -j4
+  797  export ANDROID_JACK_VM_ARGS="-Xmx6g -Dfile.encoding=UTF-8 -XX:+TieredCompilation"
+  798  cd ../
+  799  ls -a
+  800  cd .jack-server/   // this is important
+  801  ls                 
+  802  nano config.properties // this is important, change the max-service to 1.
+  803  cd android/
+  804  export ANDROID_JACK_VM_ARGS="-Xmx6g -Dfile.encoding=UTF-8 -XX:+TieredCompilation" // this is important, and this should be confirmed by env to see the env variable is exactly set by you.
+  805  env
+  806  export ANDROID_JACK_VM_ARGS="-Xmx6g -Dfile.encoding=UTF-8 -XX:+TieredCompilation"
+  807  env
+  808  export ANDROID_JACK_VM_ARGS="-Xmx6g -Dfile.encoding=UTF-8 -XX:+TieredCompilation"
+  809  env
+  810  cd android/
+  811  env
+  812  source build/envsetup.sh && lunch
+  813  make -j4
+  814  emulator
+  815  emulate
+  816  emulator
+  817  ls
+  818  source build/envsetup.sh
+  819  source build/envsetup.sh && lunch
+  820  emulator
+  821  ./emulator
+  822  history >> /home/shin/デスクトップ/history
+  
+Also some extra tools should be installed:
+
+sudo apt-get install aptitude
+sudo aptitude install libx11-dev:i386 libreadline6-dev:i386 libgl1-mesa-dev g++-multilib 
+sudo aptitude install -y git flex bison gperf build-essential libncurses5-dev:i386
+sudo aptitude install tofrodos python-markdown libxml2-utils xsltproc zlib1g-dev:i386 
+sudo aptitude install dpkg-dev libsdl1.2-dev libesd0-dev
+sudo aptitude install git-core gnupg flex bison gperf build-essential
+sudo aptitude install zip curl zlib1g-dev gcc-multilib g++-multilib
+sudo aptitude install libc6-dev-i386
+sudo aptitude install lib32ncurses5-dev x11proto-core-dev libx11-dev
+sudo aptitude install libgl1-mesa-dev libxml2-utils xsltproc unzip m4
+sudo aptitude install lib32z-dev ccache
+
+And even it is failing in the middle, you do not need to run "make clean" to clear the ourputs. Yuo just need to run "make -j4" again.
+
