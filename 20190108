@@ -24,3 +24,9 @@ $ cd .jack-server/
 $ nano config.properties -> change the max-service to 1
 
 $ export ANDROID_JACK_VM_ARGS="-Xmx6g -Dfile.encoding=UTF-8 -XX:+TieredCompilation"
+
+jack server is built and started in about 3% position of all.
+with this log:
+
+[  3% 2188/61581] Ensuring Jack server is installed and started
+Installing jack server in "/home/hata/.jack-server"
