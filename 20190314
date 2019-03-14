@@ -1,0 +1,23 @@
+coding rules
+
+java：
+
+１）クラス内部の並べ順はフィルド、メソッド、内部クラスの順番で。
+２）エディターの右の縦線を超えないようにする。適切の場合、トークンの間に改行する。
+
+新機能：
+
+１）システムサービスの追加：フィルドの追加とgetterの追加
+２）新しいバックグラウンドタスクの追加
+３）新しいブロードキャストレシバーの追加（静的、動的）。Manifest.xml対応。
+４）大量データ処理用サービス、Binder部品、サービスの公開をしないで欲しい。
+５）もしくは他のアプリと連携する用ContentProviderなどの追加する場合。
+　　セキュリティ上のリスクを深く考えて欲しいです。例えば、ContentProviderにデータを請求する時、アプリ内定義した権限のチェックの追加、
+  　clientアプリ署名のチェック、などなどの対応お願いできますでしょうか。
+   権限のチェック：
+   https://stackoverflow.com/questions/30097365/how-does-content-providers-application-specify-permissions-that-client-apps-nee
+   署名のチェック(signature)：
+   https://developer.android.com/guide/topics/manifest/permission-element.html#plevel
+   上記の上に、さらに「getCallingUid」や「getCallingPackage」などのチェックが必要です。
+６）新画面のManifest.xmlにActivity追加。
+７）Moduleの追加。手順。
