@@ -21,3 +21,40 @@ java：
    上記の上に、さらに「getCallingUid」や「getCallingPackage」などのチェックが必要です。
 ６）新画面のManifest.xmlにActivity追加。
 ７）Moduleの追加。手順。
+
+Android SharedMemory:大量のデータをプロセス間短時間で渡すための設計されたAPI？？
+
+package com.example.ishiiaya.myapplication;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.os.SharedMemory;
+import android.system.ErrnoException;
+import android.util.Log;
+
+import java.nio.ByteBuffer;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        try {
+            SharedMemory sm = SharedMemory.create("qinmm", 100);
+            Log.d("qin", "" + sm.getSize());
+            ByteBuffer bf = sm.mapReadWrite();
+            bf.put((byte) 0xC3);
+            bf.put((byte) 0xBF);
+            bf.put("hahaha".getBytes());
+            ByteBuffer bfnew = sm.mapReadOnly();
+            byte[] sss = new byte[]{bfnew.get(0), bfnew.get(1), bfnew.get(2), bfnew.get(3)};
+            Log.d("qin", "" + new String(sss));
+            sm.close();
+        } catch (ErrnoException ignored) {
+        }
+    }
+}
+
+03-14 21:09:32.475 17693-17693/com.example.ishiiaya.myapplication D/qin: 100
+03-14 21:09:32.475 17693-17693/com.example.ishiiaya.myapplication D/qin: ÿha
