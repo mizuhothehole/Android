@@ -35,3 +35,8 @@ String s = new String(new byte[]{0xa, 0xf}, StandardCharsets.UTF_8);
     
     hahahahahahahahatruetruetrue
 Process finished with exit code 0
+
+foldable smart phone.
+
+maybe it is just something around onResume and onPause, and something resize. I am not so clear.
+Or it may be something like android:resisable attribute?
