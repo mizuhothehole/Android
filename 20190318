@@ -1,4 +1,4 @@
-Android instant app
+※ Android instant app
 
 Instant app is kind of that like wechat instant apps. Or we can see wechat instant apps are like android instant apps.
 
@@ -6,3 +6,32 @@ It has 4 modules: base, feature, app and instantapp
 
 So user tried to use the instantapp and if it is good and user may go on to install the app.
 In PackageManager, there is isInstantApp() and isInstantApp(String packageName) to judge whether current is instant app.
+
+※ java.nio.charset.StandardCharsets
+
+This class has several standard charsets.
+
+For utf-8:
+
+String s = new String(new byte[]{0xa, 0xf}, StandardCharsets.UTF_8);
+
+    @Test
+    public void test() throws UnsupportedEncodingException {
+        byte[] bs = "haha".getBytes();
+        String s = new String(bs, StandardCharsets.UTF_8);
+        System.err.print(s);
+        byte[] bs2 = "haha".getBytes();
+        String s2 = new String(bs2, QrSysResource.DEFAULT_CHARSET);
+        byte[] bs3 = "haha".getBytes();
+        String s3 = new String(bs3, Charset.forName(QrSysResource.DEFAULT_CHARSET));
+        String s4 = new String(bs);
+        System.err.print(s2);
+        System.err.print(s3);
+        System.err.print(s4);
+        System.err.print(s.equals(s3));
+        System.err.print(s2.equals(s3));
+        System.err.print(s2.equals(s4));
+    }
+    
+    hahahahahahahahatruetruetrue
+Process finished with exit code 0
