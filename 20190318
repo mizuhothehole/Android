@@ -40,3 +40,10 @@ foldable smart phone.
 
 maybe it is just something around onResume and onPause, and something resize. I am not so clear.
 Or it may be something like android:resisable attribute?
+
+为什么安卓使用dp呢？
+因为只有用dp，才能让每个组建都不会变形。
+用比例是没办法实现都。
+不管屏幕都分辨率怎么样，大小一样都话，同样都dp显示效果一定相同。
+
+而如果屏幕大小不一样的话，那么就会出现这样的情况：屏幕越大，控件占用的比例就越小。
