@@ -35,3 +35,11 @@ Will System.out/System.err be outputted to log buffer?
 What about kernal logs?
 
     They are not in log buffers scope and is independent.
+
+How to output all of them?
+
+    > adb bugreport
+
+How to check and analyse bugreport?
+    
+    Use chkbugreport tool.
