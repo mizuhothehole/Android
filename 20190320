@@ -1,0 +1,37 @@
+Android logging system
+
+    ※https://elinux.org/Android_Logging_System
+
+There are 4 kinds of log buffers:
+
+    1.main
+    2.radio
+    3.event
+    4.system
+
+How to output these in our programming?
+
+    When using JVM:
+
+    1.main -> android.util.Log
+    2.radio -> Rlog API
+    3.event -> android.util.EventLog
+    4.system -> Slog API
+
+    When using native:
+
+    #include <log.h>
+    and then set the log tag.
+    stdout or stderr will be ignored.
+
+How to read them?
+
+    Use logcat tools.
+
+Will System.out/System.err be outputted to log buffer?
+
+    Yes.
+
+What about kernal logs?
+
+    They are not in log buffers scope and is independent.
