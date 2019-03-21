@@ -1,0 +1,12 @@
+Android Makefile
+
+LOCAL_PATH                 当前makefile我路径，系统提供
+include $(CLEAR_VARS)      清除原先定义的旧变量
+$(call import-add-path)    设置环境变量
+LOCAL_MODULE               so文件的生成名
+LOCAL_MODULE_FILENAME      文件名？？
+LOCAL_SRC_FILES            包含的原文件名
+LOCAL_C_INCLUDES           包含的头文件名
+LOCAL_STATIC_LIBRARIES     静态库
+inlcude $(BUILD_SHARED_LIBRARY) 编译
+$(call import-module,.)    引入NDK module path
