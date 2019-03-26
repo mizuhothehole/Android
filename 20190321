@@ -10,3 +10,5 @@ LOCAL_C_INCLUDES           包含的头文件名
 LOCAL_STATIC_LIBRARIES     静态库
 inlcude $(BUILD_SHARED_LIBRARY) 编译
 $(call import-module,.)    引入NDK module path
+
+The assert files will not be compiled by compiler.
