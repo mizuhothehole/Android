@@ -28,3 +28,76 @@ The system doesn't call the callback method unless the listener returns false.
   
   不知道上面这个处理行不行呢？
   
+package com.example.ishiiaya.myapplication;
+
+import android.graphics.Rect;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.TranslateAnimation;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        findViewById(R.id.ConstraintLayout_Drag).setOnTouchListener(new View.OnTouchListener() {
+            float dX, dY;
+            boolean initial = false;
+            int left, right, top, bottom;
+
+            @Override
+            public boolean onTouch(View view, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_UP:
+                        int offsetLeft, offsetRight, offsetTop, offsetBottom;
+                        Rect rectTemp = new Rect();
+                        view.getGlobalVisibleRect(rectTemp);
+
+                        offsetLeft = rectTemp.left - left;
+                        offsetRight = rectTemp.right - right;
+                        offsetTop = rectTemp.top - top;
+                        offsetBottom = rectTemp.bottom - bottom;
+
+                        view.animate().translationX(0).
+                                translationY(0).
+                                setDuration(0).start();
+                        break;
+                    case MotionEvent.ACTION_DOWN:
+                        if (!initial) {
+                            Rect rect = new Rect();
+                            view.getGlobalVisibleRect(rect);
+                            left = rect.left;
+                            right = rect.right;
+                            top = rect.top;
+                            bottom = rect.bottom;
+                            initial = true;
+                        }
+
+                        dX = view.getX() - event.getRawX();
+                        dY = view.getY() - event.getRawY();
+
+                        break;
+
+                    case MotionEvent.ACTION_MOVE:
+
+                        view.animate()
+                                .x(event.getRawX() + dX)
+                                .y(event.getRawY() + dY)
+                                .setDuration(0)
+                                .start();
+                        break;
+                    default:
+                        return false;
+                }
+                return true;
+            }
+        });
+    }
+}
+
+上面这个在比例不变的情况下会自动的回弹。
+可是比例变了的话呢？
