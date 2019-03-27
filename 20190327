@@ -1,4 +1,8 @@
+Android drag memo
+
 Android relationship of onTouch and View.OnTouchListener
 
 You can have both a listener and a callback method for View object. If this occurs, the system first calls the listener. 
 The system doesn't call the callback method unless the listener returns false.
+
+6 kinds of drag actions in DragEvent
