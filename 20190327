@@ -6,3 +6,25 @@ You can have both a listener and a callback method for View object. If this occu
 The system doesn't call the callback method unless the listener returns false.
 
 6 kinds of drag actions in DragEvent
+
+	/**
+	 * 处理各种移动回弹
+	 * 
+	 * @param disX
+	 *            X的偏移
+	 * @param disY
+	 *            Y的偏移
+	 */
+	public void Rebound(int disX, int disY) {
+		this.layout(getLeft() + disX, getTop() + disY, getLeft() + disX
+				+ getWidth(), getTop() + disY + getHeight());
+		if ((AnimSwitch & OPENTRANS) == 0)
+			return;
+		trans = new TranslateAnimation(-disX, 0, -disY, 0);
+		trans.setInterpolator(new AccelerateInterpolator());
+		trans.setDuration(300);
+		this.startAnimation(trans);
+	}
+  
+  不知道上面这个处理行不行呢？
+  
