@@ -1,0 +1,77 @@
+How to make the whole activity layout with Pinch and Drag function
+
+
+1. Create a ScaleGestureDetector
+
+2. In OnScale, use factor *= parameter.getFactor
+3. Bind pinch view and ScaleGestureDetector
+ listener
+4. Define pinch view's onTouch(override or use setlistener method)
+5. Implement drag function like:
+
+@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        findViewById(R.id.ConstraintLayout_Drag).setOnTouchListener(new View.OnTouchListener() {
+            float dX, dY;
+            boolean initial = false;
+            int left, right, top, bottom;
+
+            @Override
+            public boolean onTouch(View view, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_UP:
+                        int offsetLeft, offsetRight, offsetTop, offsetBottom;
+                        Rect rectTemp = new Rect();
+                        view.getGlobalVisibleRect(rectTemp);
+
+                        offsetLeft = rectTemp.left - left;
+                        offsetRight = rectTemp.right - right;
+                        offsetTop = rectTemp.top - top;
+                        offsetBottom = rectTemp.bottom - bottom;
+
+                        view.animate().translationX(0).
+                                translationY(0).
+                                setDuration(0).start();
+                        break;
+                    case MotionEvent.ACTION_DOWN:
+                        if (!initial) {
+                            Rect rect = new Rect();
+                            view.getGlobalVisibleRect(rect);
+                            left = rect.left;
+                            right = rect.right;
+                            top = rect.top;
+                            bottom = rect.bottom;
+                            initial = true;
+                        }
+
+                        dX = view.getX() - event.getRawX();
+                        dY = view.getY() - event.getRawY();
+
+                        break;
+
+                    case MotionEvent.ACTION_MOVE:
+
+                        view.animate()
+                                .x(event.getRawX() + dX)
+                                .y(event.getRawY() + dY)
+                                .setDuration(0)
+                                .start();
+                        break;
+                    default:
+                        return false;
+                }
+                return true;
+            }
+        });
+    }
+
+6. Consider when drag leading to crossing the boundry
+7. Get initial view spec in ACTION_DOWN by:
+   Rect rect = new Rect();
+   v.getGlobalVisibleRect(rect);
+8. Get final view spec in ACTION_UP by same in 7
+9. Calculating the value crossing boundry
+10.Use width*(factor - 1)/2 height*(factor - 1)/2 to 
+   animate a x or y animation using ViewPropertyAnimation class.
