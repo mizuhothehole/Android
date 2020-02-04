@@ -1,0 +1,6 @@
+https://stackoverflow.com/questions/45004549/i-cant-connect-to-firebase-because-gradle-not-supported-by-bintray-release-plug
+
+这个东西是用来更新gradle的版本的。
+执行这个东西之后，zip定义也会被更新。
+
+其次，firebase的导入，是不是和gradle的版本有关呢？
