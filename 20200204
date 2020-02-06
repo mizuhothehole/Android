@@ -14,3 +14,6 @@ There is no any matter!!!
     compile 'com.google.firebase:firebase-core:17.0.0'
     compile 'com.google.firebase:firebase-perf:18.0.1'
     compile 'com.google.firebase:firebase-analytics:17.2.2'
+
+其实compile也好，implement也好，只是gradle版本不一样而已。
+重点是firebase的各个版本不太一样，这个处理起来比较麻烦。特别是有寄存的旧版本的firebase的实装的情况下。
