@@ -1,0 +1,3 @@
+https://blog.csdn.net/qpc908694753/article/details/79242621
+
+所以我觉得在我们这个情境下面，最好的解决方式，就是用相同的处理数据的处理了。也就是intent-》activity 本地的数据-》然后进行相同的resume的处理。
