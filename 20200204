@@ -17,3 +17,4 @@ There is no any matter!!!
 
 其实compile也好，implement也好，只是gradle版本不一样而已。
 重点是firebase的各个版本不太一样，这个处理起来比较麻烦。特别是有寄存的旧版本的firebase的实装的情况下。
+而且万不得已，也只能去更新gradle的版本
