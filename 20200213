@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ishiiaya.myapplication">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true">
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="myapp.com"
+                    android:pathPattern="/detail.*"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Main2Activity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="myapp.com"
+                    android:pathPattern="/detaia.*"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Main3Activity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="myapp.com"
+                    android:pathPattern="/detaib.*"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
+
+
+
+package com.example.ishiiaya.myapplication;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.Toast;
+
+public class Main2Activity extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // finishAffinity();
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+
+    }
+}
+
+
+package com.example.ishiiaya.myapplication;
+
+import android.app.Activity;
+import android.app.ActivityManager;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Handler;
+import android.os.Looper;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+
+public class Main3Activity extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+
+        Log.d("shinsen", "" + this.isTaskRoot());
+        Log.d("shinsen", "" + this.getCallingActivity());
+
+
+        ActivityManager activityManager = (ActivityManager)this.getSystemService(Context.ACTIVITY_SERVICE);
+        Log.d("shinsen", "aaaa:" + activityManager.getAppTasks().size());
+
+    }
+}
+
+
+package com.example.ishiiaya.myapplication;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+
+import android.os.Handler;
+import android.util.Log;
+import android.view.Menu;
+import android.widget.Toast;
+
+public class MainActivity extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        new Handler().post(new Runnable() {
+            @Override
+            public void run() {
+                Log.d("shinsen", "");
+            }
+        });
+        startActivity(new Intent(this, Main2Activity.class));
+
+        Log.d("shinsen 1", "");
+        // finishAffinity();
+        Log.d("shinsen 2", "");
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        return true;
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        Toast.makeText(this,"onNewIntent MAIN",Toast.LENGTH_LONG).show();
+
+    }
+}
+
+
+通过上面的测试我发现，用户有没有清理了Task，可以使用activityManager.getAppTasks().size()这个来判断。
+如果用户清理来task，那么用scheme启动的话，一定会返回0，如果用户没有从recent apps里面清理task的话，那么这个返回值就会不是0。
+特别是当我们没有定义affinity的时候，更是这个样子的。
+
+所以，我觉得一共有下面这些情况：
+
+正常系：
+1.证件选择画面➡️camera2.open(把flag设置为true)➡️摄像机preview画面➡️摄像➡️证件选择画面➡️回调(把flag设置为false)
+2.证件选择画面➡️camera2.open(把flag设置为true)➡️摄像机preview画面➡️用户点击back键➡️证件选择画面➡️回调(把flag设置为false)
+异常系：
+1.证件选择画面➡️camera2.open(把flag设置为true)➡️摄像机preview画面➡️用户点击home键➡️scheme启动
+ ➡️(flag为true，且activityManager.getAppTasks().size()！=0的情况下，使用新处理逻辑。此时activityManager.getAppTasks().size()为1)
+ ➡️进入新处理(把flag设置为false)
+2.证件选择画面➡️camera2.open(把flag设置为true)➡️摄像机preview画面➡️用户点击recent apps键➡️用户手动清除我们APP的task➡️scheme启动
+ ➡️(flag为true，且activityManager.getAppTasks().size()！=0的情况下，使用新处理逻辑。此时activityManager.getAppTasks().size()为0.不启用)
+  ➡️因为此时activityManager.getAppTasks().size()为0，需要把flag设置为false
+
+综上，flag的默认值为false。讲flag设置成true的只有一个地方，那就是camera2的open方法。
+把flag设置false的：3处。两个正常回调，一个判断处
