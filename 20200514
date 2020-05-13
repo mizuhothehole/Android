@@ -1,0 +1,10 @@
+https://proandroiddev.com/10-tips-for-android-library-developers-c2275ad46fe8
+
+What can you do
+As library developer, if you refactor your library to use Android X, you’ll make a breaking change because users that are still on support library can’t include it anymore.
+That’s why it’s a recommended practice to release a major version of your artifact with Android X support and include in README which is last version still compatible with Support Library.
+
+We have to migrate to AndroidX as maybe we can hardly let toyota people to change the library...
+
+Arr(using support lib) App(using androidX) -> This is ok. Google made an efficient tool called Jetifier that automatically migrates existing third-party libraries to use AndroidX by rewriting their binaries.
+Arr(using androidX) App(using support lib) -> app delelopper will get in trouble.
