@@ -1,0 +1,8 @@
+How to know the broadcastreceivers registered?
+
+https://developer.android.com/reference/android/content/pm/PackageManager.html#queryBroadcastReceivers(android.content.Intent,%20int)
+
+public abstract List<ResolveInfo> queryBroadcastReceivers (Intent intent, 
+                int flags)
+                
+Seems we can define the action...
