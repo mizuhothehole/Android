@@ -1,0 +1,19 @@
+http://tips.priart.net/52/
+
+How to change AsyncTask to java.util.concurrent
+
+Handler handler = new Handler();
+ExecutorService service = ExecutorService.newSingleThreadExecutor();
+service.execute(new Runnable(){
+@Override public void run(){
+// do something in background
+handler.post(new Runnable(){
+@Override
+public void run(){
+// do something in main thread
+}
+}
+);
+}
+}
+);
