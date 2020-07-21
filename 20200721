@@ -1,0 +1,4 @@
+Android how to make a call
+
+ACTION_DIAL ⇒ do not need any permission call the phone directly.
+ACTION_CALL ⇒ need permission, and give user a chance explicitly call the phone or not. The number is in intent.getData.
