@@ -1,0 +1,8 @@
+https://stackoverflow.com/questions/2834180/how-to-remove-cookies-using-cookiemanager-for-a-specific-domain/11621738#11621738
+
+这里说明了如何来去消除cookie里的值。
+选用getcookie去得到所有的值，然后挨个把expired date设置上。
+最后再挨个去设置cook的值。
+setcookie。
+
+这个跟文档里面说的不一样。
