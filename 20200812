@@ -8,3 +8,13 @@ setcookie。
 这个跟文档里面说的不一样。
 https://medium.com/@ericluapp/something-might-be-confused-about-cookiemanager-setcookie-422e6e28aacf
 https://www.programcreek.com/java-api-examples/?class=android.webkit.CookieManager&method=setCookie
+
+解决方案：
+先设定setacceptcookie = true
+然后挨个把cookie-header的值取出来。
+用；分割。
+目前看来那个login用的domain是所谓session domain，因为没有expired time。
+最后挨个把session domain的后面追加上expired time。
+最后挨个用setcookie，把拼接出来的domain值挨个设置上去。
+最后flush一下。
+
