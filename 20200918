@@ -1,0 +1,49 @@
+
+public class MainActivity extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        JobScheduler jobScheduler;
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setContentView(R.layout.activity_main);
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+        final CountDownLatch countDownLatch = new CountDownLatch(2);
+        executor.submit(new Runnable() {
+            @Override
+            public void run() {
+                Log.d("executor", "my running.");
+                countDownLatch.countDown();
+            }
+        });
+        executor.submit(new Runnable() {
+            @Override
+            public void run() {
+                Log.d("executor", "my running2.");
+                countDownLatch.countDown();
+            }
+        });
+        executor.submit(new Runnable() {
+            @Override
+            public void run() {
+
+                try {
+                    countDownLatch.await();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                Log.d("executor", "my running3.");
+            }
+        });
+
+        Log.d("executor", "my running final.");
+    }
+}
+
+use this to test ExecutorService and CountDownLatch.
+At least it works very well in the onResume logics.
