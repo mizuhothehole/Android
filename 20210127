@@ -1,0 +1,9 @@
+https://github.com/firebase/snippets-android/tree/3737165276893cb42a3014f96f802cdedf7e53f2/dynamic-links
+
+这里有Google的dynamitic links 的例子。
+很可能需要gradle，还有manifest两边的设定。
+
+似乎事件的上传需要一些时间还不确定，不过最起码能知道自己曾经成功过。
+
+只能慢慢再去尝试一遍了。
+不过记得当时很快就解决了，有点点儿背。
