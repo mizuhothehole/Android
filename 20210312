@@ -1,1 +1,15 @@
 https://blog.csdn.net/junfeng19950206/article/details/88365473
+
+orientation設定:
+
+"unspecified"	The default value. The system chooses the orientation. The policy it uses, and therefore the choices made in specific contexts, may differ from device to device.
+"behind"	The same orientation as the activity that's immediately beneath it in the activity stack.
+"landscape"	Landscape orientation (the display is wider than it is tall).
+"portrait"	Portrait orientation (the display is taller than it is wide).
+"reverseLandscape"	Landscape orientation in the opposite direction from normal landscape. Added in API level 9.
+"reversePortrait"	Portrait orientation in the opposite direction from normal portrait. Added in API level 9.
+"sensorLandscape"	Landscape orientation, but can be either normal or reverse landscape based on the device sensor. The sensor is used even if the user has locked sensor-based rotation. Added in API level 9.
+"sensorPortrait"	Portrait orientation, but can be either normal or reverse portrait based on the device sensor. The sensor is used even if the user has locked sensor-based rotation. Added in API level 9.
+"userLandscape"	Landscape orientation, but can be either normal or reverse landscape based on the device sensor and the user's preference. Added in API level 18.
+"userPortrait"	Portrait orientation, but can be either normal or reverse portrait based on the device sensor and the user's preference. Added in API level 18.
+"sensor"	The orientation is determined by the device orientation sensor. The orientation of the display depends on how the user is holding the device; it changes when the user rotates the device. Some devices, though, will not rotate to all four possible orientations, by default. To allow all four orientations, use "fullSensor" The sensor is used even if the user locked sensor-based rotation
