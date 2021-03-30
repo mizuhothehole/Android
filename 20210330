@@ -1,0 +1,163 @@
+package com.example.shin.myapplication;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Base64;
+import android.util.Log;
+
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.Arrays;
+import java.util.Random;
+
+import javax.crypto.BadPaddingException;
+import javax.crypto.Cipher;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
+
+public class MainActivity extends Activity {
+
+    static int a = 0;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        for (int j = 0; j < 1000; j++) {
+
+            long timestamp = System.currentTimeMillis();
+            Random random = new Random();
+            random.setSeed(timestamp);
+            byte[] raw = new byte[32];
+            random.nextBytes(raw);
+            Log.d("TEST", "" + raw.length);
+//            for (byte item : b) {
+//                Log.d("TEST", "" + item);
+//            }
+            String s = Base64.encodeToString(raw, Base64.NO_WRAP);
+            Log.d("TEST", "before:" + s);
+            MessageDigest messageDigest = null;
+            try {
+                messageDigest = MessageDigest.getInstance("SHA-256");
+            } catch (NoSuchAlgorithmException e) {
+                e.printStackTrace();
+            }
+            byte[] tra = s.getBytes();
+            byte[] dig = messageDigest.digest(tra);
+            Log.d("TEST", "digested length:" + dig.length);
+            byte[] copied = Arrays.copyOf(dig, 16);
+            Log.d("TEST", "copied length:" + copied.length);
+//            for (int i = 0; i < 16; i++) {
+//                Log.d("TEST", "copied length:" + dig[i]);
+//                Log.d("TEST", "copied length:" + copied[i]);
+//            }
+            String aaa = new String(Base64.encode("aaaavdsvcweagvvre////grewgraa".getBytes(), Base64.NO_WRAP));
+            String bbb = new String(Base64.decode(aaa, Base64.URL_SAFE));
+
+            Log.d("TEST", "aaa:" + aaa);
+            Log.d("TEST", "bbb:" + bbb);
+
+            IvParameterSpec iv = new IvParameterSpec(copied);
+            SecretKeySpec key = new SecretKeySpec(dig, "AES");
+            Cipher encrypter = null;
+            try {
+                encrypter = Cipher.getInstance("AES/CBC/PKCS5Padding");
+            } catch (NoSuchAlgorithmException e) {
+                e.printStackTrace();
+            } catch (NoSuchPaddingException e) {
+                e.printStackTrace();
+            }
+            try {
+                encrypter.init(Cipher.ENCRYPT_MODE, key, iv);
+            } catch (InvalidKeyException e) {
+                e.printStackTrace();
+            } catch (InvalidAlgorithmParameterException e) {
+                e.printStackTrace();
+            }
+            byte[] crypto = new byte[0]; // 暗号化する
+            try {
+                crypto = encrypter.doFinal("abcdeabcdeabcd1eab12412cdeabcdeabcdeabcdeabcd1eab12412cdeabcdeabcdeabcdaaadas231244aceabcdeabcdeabcdeabcdeabcdeabcdeabcdaaadas231244aceabcdeabcdeabcdeabcdeabcde".getBytes());
+            } catch (IllegalBlockSizeException e) {
+                e.printStackTrace();
+            } catch (BadPaddingException e) {
+                e.printStackTrace();
+            }
+            byte[] str64 = Base64.encode(crypto, Base64.NO_WRAP);
+            String sharedpre = new String(str64);
+            Log.d("TEST", "sharedpre:" + sharedpre);
+
+            byte[] base64edencryptedByte = sharedpre.getBytes();
+            byte[] encryptedByte;
+            try {
+                encryptedByte = Base64.decode(base64edencryptedByte, Base64.URL_SAFE);// risk point 1
+            } catch (Exception e) {
+                continue;
+            }
+        /*
+        as the char '/' or '+' is able to be in the string,java.lang.IllegalArgumentException: bad base-64 will happen
+         */
+//            for (int i = 0; i < crypto.length; i++) {
+//                Log.d("TEST", "copied length-1:" + crypto[i]);
+//            }
+//            for (int i = 0; i < encryptedByte.length; i++) {
+//                Log.d("TEST", "copied length-2:" + encryptedByte[i]);
+//            }
+            String s2 = Base64.encodeToString(raw, Base64.URL_SAFE);
+            Log.d("TEST", "before:" + s2);
+            MessageDigest messageDigest2 = null;
+            try {
+                messageDigest2 = MessageDigest.getInstance("SHA-256");
+            } catch (NoSuchAlgorithmException e) {
+                e.printStackTrace();
+            }
+            byte[] tra2 = s2.getBytes();
+            byte[] dig2 = messageDigest2.digest(tra2);
+            byte[] copied2 = Arrays.copyOf(dig2, 16);
+            IvParameterSpec iv2 = new IvParameterSpec(copied2);
+            SecretKeySpec key2 = new SecretKeySpec(dig2, "AES");
+            Cipher decrypter = null;  // もうひとつ、暗号器を作成しておく
+            try {
+                decrypter = Cipher.getInstance("AES/CBC/PKCS5Padding");
+            } catch (NoSuchAlgorithmException e) {
+                e.printStackTrace();
+            } catch (NoSuchPaddingException e) {
+                e.printStackTrace();
+            }
+            try {
+                decrypter.init(Cipher.DECRYPT_MODE, key2, iv2);
+            } catch (InvalidKeyException e) {
+                e.printStackTrace();
+            } catch (InvalidAlgorithmParameterException e) {
+                e.printStackTrace();
+            }
+            byte[] text = new byte[0];
+            try {
+                text = decrypter.doFinal(encryptedByte);
+            } catch (IllegalBlockSizeException e) {
+                e.printStackTrace();
+            } catch (BadPaddingException e) {
+                e.printStackTrace();
+            }
+
+            String finalString = new String(text);
+            if (!TextUtils.isEmpty(finalString)) {
+                a += 1;
+            }
+            Log.d("TEST-here", finalString);
+            Log.d("TEST-here", "good result:" + a);
+        }
+    }
+}
