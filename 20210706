@@ -11,3 +11,4 @@
 TextView textView = (TextView) findViewById(R.id.text1);
 Linkify.addLinks(textView, Linkify.PHONE_NUMBERS|LINKIFY.WEB_URLS);
 
+可是能用HTML控制的，最好不用autolink。因为是自动识别电话号码，网页之类的。有可能出问题。
