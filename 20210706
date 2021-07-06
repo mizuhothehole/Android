@@ -1,0 +1,13 @@
+其实LinkMovementMethod内部还是封装的Intent.ACTION_VIEW
+
+对于具体类型的限制如下，定义或者代码。
+
+<TextView
+  ...
+    android:autoLink=”phone|web” />
+    
+或者是
+
+TextView textView = (TextView) findViewById(R.id.text1);
+Linkify.addLinks(textView, Linkify.PHONE_NUMBERS|LINKIFY.WEB_URLS);
+
